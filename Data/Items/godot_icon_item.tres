@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://d2bevhnx0egs1"]
+
+[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="1_67js1"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_sjot0"]
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="2_fvgnc"]
+
+[sub_resource type="Resource" id="Resource_6ovr6"]
+script = ExtResource("2_fvgnc")
+attribute_type = 0
+
+[resource]
+script = ExtResource("1_sjot0")
+id = 0
+sell_price = 45
+name = "Godot Icon"
+description = "The default godot icon"
+item_attributes = Array[ExtResource("2_fvgnc")]([SubResource("Resource_6ovr6")])
+inventory_icon = ExtResource("1_67js1")
