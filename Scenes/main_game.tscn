@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7hs5wie2t40n" path="res://Scenes/item_pickup.tscn" id="2_lva3y"]
 [ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="3_i0ch5"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="4_ya4oq"]
+[ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]

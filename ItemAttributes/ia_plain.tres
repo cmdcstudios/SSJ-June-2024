@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ItemAttribute" load_steps=2 format=3 uid="uid://bcxudyyuna1ok"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_lhxgp"]
+
+[resource]
+script = ExtResource("1_lhxgp")
+attribute_type = 0
