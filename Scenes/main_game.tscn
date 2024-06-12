@@ -1,33 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=7 format=3 uid="uid://18fcv8pdliix"]
 
-[ext_resource type="Script" path="res://Scenes/panel_container.gd" id="1_34jk2"]
 [ext_resource type="PackedScene" uid="uid://c7hs5wie2t40n" path="res://Scenes/item_pickup.tscn" id="2_lva3y"]
 [ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="3_i0ch5"]
+[ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="4_ya4oq"]
+[ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
 [node name="MainGame" type="Node3D"]
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_34jk2")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button"
-
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button"
-
-[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button"
 
 [node name="ItemPickup" parent="." instance=ExtResource("2_lva3y")]
 position = Vector2(134, 255)
@@ -37,9 +18,25 @@ position = Vector2(622, 178)
 item = ExtResource("3_i0ch5")
 
 [node name="Player" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("4_ya4oq")
 
 [node name="MouseArea" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MouseArea"]
 shape = SubResource("CircleShape2D_w5ke0")
+
+[node name="UIRoot" type="CanvasLayer" parent="."]
+script = ExtResource("4_72xad")
+
+[node name="InventoryDialog" parent="UIRoot" instance=ExtResource("5_ggvh3")]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -17.5
+offset_right = 71.0
+offset_bottom = 17.5
