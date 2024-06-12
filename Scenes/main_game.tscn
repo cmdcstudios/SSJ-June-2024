@@ -22,6 +22,7 @@ unique_name_in_owner = true
 script = ExtResource("4_ya4oq")
 
 [node name="MouseArea" type="Area2D" parent="Player"]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MouseArea"]
 shape = SubResource("CircleShape2D_w5ke0")
@@ -31,12 +32,11 @@ script = ExtResource("4_72xad")
 
 [node name="InventoryDialog" parent="UIRoot" instance=ExtResource("5_ggvh3")]
 unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -71.0
+offset_left = -142.0
 offset_top = -17.5
-offset_right = 71.0
 offset_bottom = 17.5
+grow_horizontal = 0

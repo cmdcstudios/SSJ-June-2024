@@ -11,9 +11,11 @@ script = ExtResource("1_wjet6")
 item = ExtResource("2_usyh3")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
+unique_name_in_owner = true
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_l1s52")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -21,6 +21,12 @@ func get_item(item: Item):
 func get_inventory_contents() -> Array[Item]:
 	return _contents
 
+func get_slot_number() -> int:
+	return _inv_slots
+	
+func set_slot_number(num_of_slots: int) -> void:
+	_inv_slots = num_of_slots
+
 # todo: must haves
 # - slots (need to have at least 16)
 

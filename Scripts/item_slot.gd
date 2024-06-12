@@ -4,3 +4,4 @@ extends PanelContainer
 
 func display_item(item:Item):
 	texture_rect.texture = item.inventory_icon
+	print(texture_rect.texture.resource_name)
