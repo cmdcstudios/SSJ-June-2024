@@ -3,16 +3,13 @@
 [ext_resource type="Script" path="res://Scripts/tooltip.gd" id="1_l3apk"]
 [ext_resource type="PackedScene" uid="uid://c0cvuts4mf1jl" path="res://Scenes/item_attribute_slot.tscn" id="1_vcvi2"]
 
-[node name="Tooltip" type="PopupPanel"]
-size = Vector2i(550, 400)
-visible = true
+[node name="Tooltip" type="PanelContainer" groups=["Tooltips"]]
+offset_right = 550.0
+offset_bottom = 400.0
 script = ExtResource("1_l3apk")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 546.0
-offset_bottom = 396.0
+layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 15
@@ -25,6 +22,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ItemNameLabel" type="Label" parent="MarginContainer/VBoxContainer/HeaderContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 1, 1, 1)
@@ -88,4 +86,6 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 text = "SELL?"
 
+[connection signal="item_sold" from="." to="." method="_on_item_sold"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HeaderContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Button" to="." method="_on_button_pressed"]

@@ -5,7 +5,7 @@ extends Node2D
 
 @onready var area_2d: Area2D = %Area2D
 
-var _is_tooltip_open: bool = false
+var _tooltip: Tooltip = null
 
 func _ready() -> void:
 	var sprite_texture = item.inventory_icon
@@ -13,20 +13,15 @@ func _ready() -> void:
 	sprite.texture = sprite_texture
 	add_child(sprite)
 
-#func load_item_info(tooltip: PackedScene, item: Item):
-	#
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
-		if !_is_tooltip_open:
-			var tooltip = item_tooltip.instantiate() as Tooltip
-			tooltip.load_item_info(item)
-			await get_tree().create_timer(0.35).timeout
-			self.add_child(tooltip)
-			toggle_tooltip()
-
-func toggle_tooltip() -> void:
-	_is_tooltip_open = !_is_tooltip_open
-
+	if _tooltip == null && TooltipInfo.tooltips.size() == 0:
+		_tooltip = item_tooltip.instantiate() as Tooltip
+		TooltipInfo.tooltips.append(_tooltip)
+		_tooltip.load_item_info(item)
+		await get_tree().create_timer(0.35).timeout
+		self.add_child(_tooltip)
+		_tooltip.tooltip_closed.connect(_on_tooltip_closed)
+		_tooltip.item_sold.connect(_on_item_sold)
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event.is_action_pressed("inventory_button_click")):
@@ -34,4 +29,10 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if player.has_method("on_item_pickup"):
 			player.on_item_pickup(item)
 
+func _on_item_sold() -> void:
+	print("GODDAMN I SoLD IT")
+	pass
+	
+func _on_tooltip_closed() -> void:
+	print("tooltip closed")
 

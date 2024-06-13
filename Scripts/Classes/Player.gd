@@ -21,3 +21,4 @@ func _input(event: InputEvent) -> void:
 func on_item_pickup(item:Item):
 	print("Item added: " + item.name)
 	game_inventory.add_item(item)
+
