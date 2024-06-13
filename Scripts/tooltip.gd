@@ -1,20 +1,21 @@
 class_name Tooltip
-extends PanelContainer
+extends CanvasLayer
 
 static var tooltips: Array[Tooltip] = []
 
 signal item_sold
 signal tooltip_closed
+signal tooltip_changed
 
 # Tooltip Elements
 var item_name_label: Label = null
 var price: Label = null
 
 func load_item_info(item:Item):
-	item_name_label = get_node("MarginContainer/VBoxContainer/HeaderContainer/ItemNameLabel") as Label
-	var description_label = get_node("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription") as Label
-	var grid_container = get_node("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer") as GridContainer
-	price = get_node("MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Label")
+	item_name_label = get_node("PanelContainer/MarginContainer/VBoxContainer/HeaderContainer/ItemNameLabel") as Label
+	var description_label = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription") as Label
+	var grid_container = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer") as GridContainer
+	price = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Label")
 	item_name_label.text = item.name
 	description_label.text = item.description
 	price.text = str(item.sell_price)
@@ -34,6 +35,6 @@ func _on_item_sold() -> void:
 	print(int(price.text))
 	pass # Replace with function body.
 
-func _on_button_pressed() -> void:
+func _on_sell_button_pressed() -> void:
 	item_sold.emit()
 	queue_free()

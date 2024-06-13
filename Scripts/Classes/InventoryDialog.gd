@@ -11,11 +11,12 @@ func open_inv_dialog(inventory:Inventory):
 	clear_inv_dialog()
 	
 	# if you can avoid it refactor so you don't use else statements
-	for slots in inventory.get_slot_number():
+	for slots in inventory.get_slot_number_amount():
 		var slot = item_slot.instantiate()
 		grid_container.add_child(slot)
 		if slots < inventory.get_inventory_contents().size():
 			slot.display_item(inventory.get_inventory_contents()[slots])
+		slot.slot_sold.connect(_on_slot_sold.bind(inventory))
 
 func _on_close_button_pressed() -> void:
 	hide()
@@ -24,3 +25,8 @@ func clear_inv_dialog() -> void:
 	for child in grid_container.get_children():
 		child.queue_free()
 
+func _on_slot_sold(inventory:Inventory) -> void:
+	print("slot removed")
+	inventory.remove_slot()
+	print(inventory.get_slot_number_amount())
+	pass

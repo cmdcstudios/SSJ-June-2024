@@ -3,24 +3,30 @@ extends PanelContainer
 @export var item_tooltip: PackedScene
 @export var item: Item
 @onready var texture_rect: TextureRect = %TextureRect
-var _is_tooltip_open: bool = false
-var stored_item: Item = null
+
+var _tooltip: Tooltip = null
+var _stored_item: Item = null
+
+signal slot_sold
 
 func display_item(item:Item):
-	stored_item = item
+	_stored_item = item
 	texture_rect.texture = item.inventory_icon
 
-func toggle_tooltip() -> void:
-	_is_tooltip_open = !_is_tooltip_open
-
-#
 func _on_texture_rect_mouse_entered() -> void:
-	print(stored_item)
-	if !_is_tooltip_open:
-		var tooltip = item_tooltip.instantiate() as Tooltip
-		if stored_item != null:
-			tooltip.load_item_info(stored_item)
-		tooltip.load_item_info(item)
+	if _tooltip == null && TooltipInfo.tooltips.size() == 0:
+		_tooltip = item_tooltip.instantiate() as Tooltip
+		TooltipInfo.tooltips.append(_tooltip)
+		if _stored_item != null:
+			_tooltip.load_item_info(_stored_item)
+		_tooltip.load_item_info(item)
+		_stored_item = item
 		await get_tree().create_timer(0.35).timeout
-		self.get_parent().add_child(tooltip)
-		toggle_tooltip()
+		self.get_parent().add_child(_tooltip)
+		_tooltip.item_sold.connect(_on_item_sold)
+		
+func _on_item_sold() -> void:
+	slot_sold.emit()
+	print("GODDAMN I SoLD IT")
+	queue_free()
+	

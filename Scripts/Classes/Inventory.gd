@@ -1,7 +1,7 @@
 class_name Inventory
 
 var _contents: Array[Item] = []
-var _inv_slots: int = 16
+static var _inv_slots: int = 16
 ## Adds an item to the inventory.
 func add_item(item: Item):
 	# add a valid item to the array
@@ -21,12 +21,15 @@ func get_item(item: Item):
 func get_inventory_contents() -> Array[Item]:
 	return _contents
 
-func get_slot_number() -> int:
+func get_slot_number_amount() -> int:
 	return _inv_slots
 	
 func set_slot_number(num_of_slots: int) -> void:
 	_inv_slots = num_of_slots
 
+func remove_slot() -> void:
+	if (get_slot_number_amount() > 0):
+		set_slot_number(get_slot_number_amount() - 1)
 # todo: must haves
 # - slots (need to have at least 16)
 
