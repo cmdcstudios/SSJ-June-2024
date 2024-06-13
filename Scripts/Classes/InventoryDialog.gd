@@ -2,6 +2,8 @@ class_name InventoryDialog
 extends PanelContainer
 
 @export var item_slot: PackedScene
+@export var item_tooltip: PackedScene
+
 @onready var grid_container: GridContainer = %GridContainer
 
 func open_inv_dialog(inventory:Inventory):
@@ -21,3 +23,4 @@ func _on_close_button_pressed() -> void:
 func clear_inv_dialog() -> void:
 	for child in grid_container.get_children():
 		child.queue_free()
+

@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc6yft8cbmu7r"]
+
+[ext_resource type="Script" path="res://Scripts/tooltip.gd" id="1_l3apk"]
+[ext_resource type="PackedScene" uid="uid://c0cvuts4mf1jl" path="res://Scenes/item_attribute_slot.tscn" id="1_vcvi2"]
+
+[node name="Tooltip" type="PopupPanel"]
+size = Vector2i(550, 400)
+visible = true
+script = ExtResource("1_l3apk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 546.0
+offset_bottom = 396.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 13
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HeaderContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemNameLabel" type="Label" parent="MarginContainer/VBoxContainer/HeaderContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "<ItemName>"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/HeaderContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Descriptions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemDescription" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<description>"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions"]
+layout_mode = 2
+text = "Attribute(s):"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+columns = 2
+
+[node name="ItemAttributeSlot" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer" instance=ExtResource("1_vcvi2")]
+layout_mode = 2
+
+[node name="Visuals" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "<price>"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+text = "SELL?"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HeaderContainer/CloseButton" to="." method="_on_close_button_pressed"]

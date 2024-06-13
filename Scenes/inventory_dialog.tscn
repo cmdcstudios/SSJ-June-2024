@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdxvq8fhepfty"]
+[gd_scene load_steps=4 format=3 uid="uid://cdxvq8fhepfty"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/InventoryDialog.gd" id="1_1yycd"]
 [ext_resource type="PackedScene" uid="uid://1sordm4ifq47" path="res://Scenes/item_slot.tscn" id="2_mqwlb"]
+[ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="3_0x8gh"]
 
 [node name="InventoryDialog" type="PanelContainer"]
 anchors_preset = 15
@@ -11,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1yycd")
 item_slot = ExtResource("2_mqwlb")
+item_tooltip = ExtResource("3_0x8gh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

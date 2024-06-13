@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7hs5wie2t40n"]
+[gd_scene load_steps=5 format=3 uid="uid://c7hs5wie2t40n"]
 
-[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_wjet6"]
+[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_rvan8"]
 [ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="2_usyh3"]
+[ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="3_t8c0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1s52"]
 size = Vector2(110, 110)
 
 [node name="ItemPickup" type="Node2D"]
-script = ExtResource("1_wjet6")
+script = ExtResource("1_rvan8")
 item = ExtResource("2_usyh3")
+item_tooltip = ExtResource("3_t8c0o")
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true

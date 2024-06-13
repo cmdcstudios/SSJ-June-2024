@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0cvuts4mf1jl"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vq7q4"]
+size = Vector2(32, 32)
+
+[node name="ItemAttributeSlot" type="PanelContainer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_vq7q4")
+
+[node name="ItemAttributeLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "<attr_name>"
