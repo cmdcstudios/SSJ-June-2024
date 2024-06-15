@@ -24,7 +24,7 @@ func dir_contents(path):
 			else:
 				print("Found file: " + file_name)
 				inventorys.append(ResourceLoader.load("res://Data/Inventory/" + file_name))
-				print(inventorys)
+				#print(inventorys)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")
