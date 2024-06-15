@@ -8,6 +8,16 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/array_color_tint=100.0
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+
 [application]
 
 config/name="SSJ June 2024"
@@ -18,6 +28,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+SignalManager="*res://Scripts/Managers/signal_manager.gd"
+GameManager="*res://Scripts/Managers/game_manager.gd"
 
 [display]
 
@@ -26,7 +38,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [input]
 

@@ -88,6 +88,5 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 text = "SELL?"
 
-[connection signal="item_sold" from="." to="." method="_on_item_sold"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HeaderContainer/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SellButton" to="." method="_on_sell_button_pressed"]

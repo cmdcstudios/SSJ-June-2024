@@ -3,7 +3,7 @@ extends CanvasLayer
 
 static var tooltips: Array[Tooltip] = []
 
-signal item_sold
+
 signal tooltip_closed
 signal tooltip_changed
 
@@ -30,11 +30,11 @@ func _on_close_button_pressed() -> void:
 	if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
 	queue_free()
 
-func _on_item_sold() -> void:
-	if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
-	print(int(price.text))
-	pass # Replace with function body.
+#func _on_item_sold() -> void:
+	#if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
+	#print(int(price.text))
+	#pass # Replace with function body.
 
 func _on_sell_button_pressed() -> void:
-	item_sold.emit()
+	SignalManager.item_sold.emit(int(price.text))
 	queue_free()
