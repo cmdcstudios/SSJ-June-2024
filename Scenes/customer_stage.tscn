@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btjy08uwelbac"]
+[gd_scene load_steps=3 format=3 uid="uid://c4wadefwf0p55"]
 
-[ext_resource type="PackedScene" uid="uid://bu4vji03m2um3" path="res://Scenes/customer.tscn" id="1_hjr6w"]
+[ext_resource type="PackedScene" uid="uid://cabemq10wdjli" path="res://Scenes/customer.tscn" id="1_hjr6w"]
+[ext_resource type="Script" path="res://Scenes/customer_stage.gd" id="1_nuevh"]
 
 [node name="CustomerStage" type="Control"]
 layout_mode = 3
@@ -9,5 +10,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nuevh")
 
 [node name="Customer" parent="." instance=ExtResource("1_hjr6w")]
+position = Vector2(1012, 555)
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(1014, 555)
+
+[node name="SummonButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 174.0
+offset_bottom = 15.5
+grow_vertical = 2
+text = "SUMMON CUSTOMER"
+
+[connection signal="pressed" from="SummonButton" to="." method="_on_summon_button_pressed"]
