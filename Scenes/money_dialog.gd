@@ -8,4 +8,4 @@ func _ready() -> void:
 func _on_item_sold(money_amount: int, item_sold:Item) -> void:
 	GameManager.money += money_amount
 	var money_label = self.get_child(0) as Button
-	money_label.text = str(GameManager.money) + "G"
+	money_label.text = str(GameManager.money) + " G"

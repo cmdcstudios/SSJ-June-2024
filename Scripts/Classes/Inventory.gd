@@ -1,6 +1,8 @@
 class_name Inventory
+extends Resource
 
 var _contents: Array[Item] = []
+
 static var _inv_slots: int = 16
 ## Adds an item to the inventory.
 func add_item(item: Item):

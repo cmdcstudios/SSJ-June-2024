@@ -12,4 +12,4 @@ script = ExtResource("1_6be51")
 
 [node name="MoneyLabel" type="Button" parent="."]
 layout_mode = 2
-text = "<money> G"
+text = "0 G"
