@@ -1,7 +1,7 @@
 class_name Inventory
 extends Resource
 
-var _contents: Array[Item] = []
+@export var _contents: Array[Item] = []
 
 static var _inv_slots: int = 16
 ## Adds an item to the inventory.

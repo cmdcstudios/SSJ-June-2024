@@ -9,6 +9,7 @@ var game_inventory:Inventory = Inventory.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	game_inventory = GameManager.get_inventory(0)
 	pass # Replace with function body.
 
 
@@ -22,3 +23,5 @@ func on_item_pickup(item:Item):
 	print("Item added: " + item.name)
 	game_inventory.add_item(item)
 
+func check_day(inventory: Inventory):
+	pass

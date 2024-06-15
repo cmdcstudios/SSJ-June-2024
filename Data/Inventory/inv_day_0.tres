@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=2 format=3 uid="uid://iyvvkgsn1njy"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=4 format=3 uid="uid://iyvvkgsn1njy"]
 
-[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_e1rjn"]
+[ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="1_5auo8"]
+[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_wpvtq"]
+[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="2_ux7d5"]
 
 [resource]
-script = ExtResource("1_e1rjn")
-_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([])
+script = ExtResource("1_wpvtq")
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_5auo8"), ExtResource("2_ux7d5")])
