@@ -1,4 +1,3 @@
 extends Node
 
-
-signal item_sold(int)
+signal item_sold(money_amount: int, item_sold: Item)

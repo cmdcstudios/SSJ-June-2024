@@ -38,3 +38,4 @@ layout_mode = 2
 texture = SubResource("PlaceholderTexture2D_c6c3e")
 
 [connection signal="mouse_entered" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_mouse_exited"]
