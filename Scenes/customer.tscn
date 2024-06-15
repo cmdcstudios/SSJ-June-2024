@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu4vji03m2um3"]
+
+[ext_resource type="Script" path="res://Scripts/customer.gd" id="1_epmwu"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="2_njkbu"]
+[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="2_tkrtt"]
+
+[node name="Customer" type="Node2D"]
+script = ExtResource("1_epmwu")
+item_preference = ExtResource("2_njkbu")
+
+[node name="CustomerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_tkrtt")
+
+[node name="PreferenceSprite" type="Sprite2D" parent="CustomerSprite"]

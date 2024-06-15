@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://fmuqglxm00bd"]
+
+[ext_resource type="Texture2D" uid="uid://mj8fhljbn4os" path="res://Assets/Temp/flatDark19.png" id="1_hk1xt"]
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="2_nmuw7"]
+
+[resource]
+script = ExtResource("2_nmuw7")
+attribute_type = 3
+attribute_icon = ExtResource("1_hk1xt")
