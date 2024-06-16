@@ -16,14 +16,18 @@ func display_item(inv_item:Item):
 func _on_texture_rect_mouse_entered() -> void:
 	if _tooltip == null && TooltipInfo.tooltips.size() == 0:
 		_tooltip = item_tooltip.instantiate() as Tooltip
-		TooltipInfo.tooltips.append(_tooltip) #tooltips == 1
-		_tooltip.load_item_info(item)
+
+		print(TooltipInfo.tooltips)
+		if (GameManager.current_game_state == GameManager.GameFlags.SELLABLE):
+			TooltipInfo.tooltips.append(_tooltip) #tooltips == 1
+			_tooltip.load_item_info(item)
+
 		if _stored_item != null:
+			TooltipInfo.tooltips.append(_tooltip) #tooltips == 1
 			_tooltip.load_item_info(_stored_item)
-		#_tooltip.load_item_info(item)
-		#_stored_item = item
-		await get_tree().create_timer(0.35).timeout
-		self.get_parent().add_child(_tooltip)
+			#_stored_item = item
+			await get_tree().create_timer(0.35).timeout
+			self.get_parent().add_child(_tooltip)
 		if (!SignalManager.item_sold.is_connected(_on_item_sold)):
 			SignalManager.item_sold.connect(_on_item_sold)
 
