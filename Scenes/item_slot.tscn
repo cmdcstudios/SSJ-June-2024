@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://1sordm4ifq47"]
+[gd_scene load_steps=6 format=3 uid="uid://1sordm4ifq47"]
 
+[ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="1_ta4vu"]
 [ext_resource type="Script" path="res://Scripts/item_slot.gd" id="1_u7l74"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="2_s7bws"]
 [ext_resource type="Resource" uid="uid://cifihinlc8gdu" path="res://Data/Items/item_slot.tres" id="3_62mjb"]
@@ -8,6 +9,8 @@
 size = Vector2(128, 128)
 
 [node name="ItemSlot" type="PanelContainer"]
+theme = ExtResource("1_ta4vu")
+theme_type_variation = &"ItemSlot"
 script = ExtResource("1_u7l74")
 item_tooltip = ExtResource("2_s7bws")
 item = ExtResource("3_62mjb")

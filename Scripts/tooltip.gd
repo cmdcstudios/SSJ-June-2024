@@ -40,7 +40,6 @@ func load_item_info(item:Item):
 func _on_close_button_pressed() -> void:
 	tooltip_closed.emit()
 	subviewport.queue_free()
-	print(scene)
 	if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
 	queue_free()
 

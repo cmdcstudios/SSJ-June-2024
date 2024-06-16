@@ -19,7 +19,7 @@ func open_inv_dialog(inventory:Inventory):
 		slot.slot_sold.connect(_on_slot_sold.bind(inventory))
 		if (!SignalManager.item_sold.is_connected(_on_item_sold)):
 			SignalManager.item_sold.connect(_on_item_sold.bind(inventory))
-		
+		#
 
 func _on_close_button_pressed() -> void:
 	hide()
@@ -33,8 +33,8 @@ func _on_slot_sold(inventory:Inventory) -> void:
 	inventory.remove_slot()
 	print(inventory.get_slot_number_amount())
 	pass
-
+#
 func _on_item_sold(money_amount: int, item_sold: Item, inventory:Inventory):
 	inventory.remove_item(item_sold)
-	print(inventory._contents)
+	#print(inventory._contents)
 	

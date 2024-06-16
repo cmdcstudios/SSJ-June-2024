@@ -1,0 +1,59 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://p5svvfmiui2v"]
+
+[ext_resource type="FontFile" uid="uid://b3a7bnxkcgewp" path="res://Themes/Toriko.ttf" id="1_36omk"]
+[ext_resource type="Texture2D" uid="uid://52mbd1bkn2df" path="res://Assets/panel6.png" id="1_e4e1o"]
+[ext_resource type="Texture2D" uid="uid://cye3rqi56leit" path="res://Themes/tool_tip_panel4.png" id="1_hegcf"]
+[ext_resource type="Texture2D" uid="uid://d0nxs3q43werm" path="res://Themes/UI_Paper_Button_Medium_Press_01a2.png" id="1_lp202"]
+[ext_resource type="Texture2D" uid="uid://b2w1li34hq0dx" path="res://Themes/UI_Paper_Button_Medium_Press_01a1.png" id="2_7fuoy"]
+[ext_resource type="Texture2D" uid="uid://bfnyohd0kkib7" path="res://Themes/UI_Paper_Button_Medium_Press_01a3.png" id="3_8f7n7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4bn36"]
+texture = ExtResource("1_lp202")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42f6e"]
+texture = ExtResource("2_7fuoy")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swxk8"]
+texture = ExtResource("3_8f7n7")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wg27x"]
+texture = ExtResource("1_hegcf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0ue6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("1_e4e1o")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+default_font = ExtResource("1_36omk")
+default_font_size = 42
+Button/constants/outline_size = 16
+Button/styles/hover = SubResource("StyleBoxTexture_4bn36")
+Button/styles/normal = SubResource("StyleBoxTexture_42f6e")
+Button/styles/pressed = SubResource("StyleBoxTexture_swxk8")
+Fonts/fonts/normal = ExtResource("1_36omk")
+ItemSlot/base_type = &"PanelContainer"
+ItemSlot/styles/panel = SubResource("StyleBoxTexture_wg27x")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_m0ue6")
