@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="3_0x8gh"]
 
 [node name="InventoryDialog" type="PanelContainer"]
+custom_minimum_size = Vector2(200, 200)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

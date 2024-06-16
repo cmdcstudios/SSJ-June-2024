@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://c8bj8klvushft"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_2exp3"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_kjyg3"]
+[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="1_xav1i"]
+[ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Assets/mushrooms.glb" id="2_fsjbj"]
+
+[sub_resource type="Resource" id="Resource_ryu01"]
+script = ExtResource("1_2exp3")
+attribute_type = 0
+
+[resource]
+script = ExtResource("1_kjyg3")
+id = 4
+sell_price = 20
+name = "Mushroom Trio"
+description = "A tiny bunch of mushrooms. Yum yum!"
+item_attributes = Array[ExtResource("1_2exp3")]([SubResource("Resource_ryu01")])
+inventory_icon = ExtResource("1_xav1i")
+scene = ExtResource("2_fsjbj")

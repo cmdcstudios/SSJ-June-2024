@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxn3v761ovyg1"]
+
+[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="1_y7e4g"]
+
+[node name="GodotIconScene" type="Node3D"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_y7e4g")

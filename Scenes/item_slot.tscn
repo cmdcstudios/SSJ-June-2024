@@ -1,23 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://1sordm4ifq47"]
+[gd_scene load_steps=5 format=3 uid="uid://1sordm4ifq47"]
 
 [ext_resource type="Script" path="res://Scripts/item_slot.gd" id="1_u7l74"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="2_s7bws"]
-[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="3_1cfki"]
-[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="4_0dh7c"]
-[ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Data/Items/mushrooms.glb" id="4_4s8r0"]
-
-[sub_resource type="Resource" id="Resource_rio8p"]
-script = ExtResource("3_1cfki")
-attribute_type = 0
-
-[sub_resource type="Resource" id="Resource_4w87e"]
-script = ExtResource("4_0dh7c")
-id = 3
-sell_price = 222
-name = "Item Slot"
-description = "An item slot in your store inventory. You must be seriously desperate to sell one of these off."
-item_attributes = Array[ExtResource("3_1cfki")]([SubResource("Resource_rio8p")])
-scene = ExtResource("4_4s8r0")
+[ext_resource type="Resource" uid="uid://cifihinlc8gdu" path="res://Data/Items/item_slot.tres" id="3_62mjb"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c6c3e"]
 size = Vector2(128, 128)
@@ -25,7 +10,7 @@ size = Vector2(128, 128)
 [node name="ItemSlot" type="PanelContainer"]
 script = ExtResource("1_u7l74")
 item_tooltip = ExtResource("2_s7bws")
-item = SubResource("Resource_4w87e")
+item = ExtResource("3_62mjb")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

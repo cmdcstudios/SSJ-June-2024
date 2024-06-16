@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwr1xjfj6y2dv"
-path="res://.godot/imported/mushrooms.glb-5e7fd1101554bb82d2357c30d72d1d4c.scn"
+path="res://.godot/imported/mushrooms.glb-aaf46376a0021ede0a9c2229db93be99.scn"
 
 [deps]
 
-source_file="res://Data/Items/mushrooms.glb"
-dest_files=["res://.godot/imported/mushrooms.glb-5e7fd1101554bb82d2357c30d72d1d4c.scn"]
+source_file="res://Assets/mushrooms.glb"
+dest_files=["res://.godot/imported/mushrooms.glb-aaf46376a0021ede0a9c2229db93be99.scn"]
 
 [params]
 
