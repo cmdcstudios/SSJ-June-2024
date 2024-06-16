@@ -1,10 +1,10 @@
 class_name Tooltip
 extends CanvasLayer
 
-static var tooltips: Array[Tooltip] = []
-
 signal tooltip_closed
 signal tooltip_changed
+
+const ITEM_ATTRIBUTE_SLOT = preload("res://Scenes/item_attribute_slot.tscn")
 
 # Tooltip Elements
 var stored_item: Item = null
@@ -31,11 +31,30 @@ func load_item_info(item:Item):
 	
 	#var test = item.scene.instantiate() as Node
 	#add_child(scene)
-	
-	if (item.item_attributes.size() == 1):
-		if item.item_attributes[0].attribute_type == ItemAttribute.Attribute.PLAIN:
-			grid_container.get_child(0).get_child(0).get_child(1).text = "Plain"
-			#print(grid_container.get_child(0).get_child(0).get_child(1))
+
+	for attribute in item.item_attributes:
+		print(attribute.attribute_type)
+		match attribute.attribute_type:
+			ItemAttribute.Attribute.PLAIN:
+				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
+				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
+				attr_slot.get_child(0).get_child(1).text = "Plain"
+				grid_container.add_child(attr_slot)
+			ItemAttribute.Attribute.FLASHY:
+				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
+				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
+				attr_slot.get_child(0).get_child(1).text = "Flashy"
+				grid_container.add_child(attr_slot)
+			ItemAttribute.Attribute.COOL:
+				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
+				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
+				attr_slot.get_child(0).get_child(1).text = "Cool"
+				grid_container.add_child(attr_slot)
+			ItemAttribute.Attribute.CUTE:
+				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
+				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
+				attr_slot.get_child(0).get_child(1).text = "Cute"
+				grid_container.add_child(attr_slot)				
 
 func _on_close_button_pressed() -> void:
 	tooltip_closed.emit()

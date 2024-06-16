@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc6yft8cbmu7r"]
+[gd_scene load_steps=5 format=3 uid="uid://cc6yft8cbmu7r"]
 
 [ext_resource type="Script" path="res://Scripts/tooltip.gd" id="1_l3apk"]
-[ext_resource type="PackedScene" uid="uid://c0cvuts4mf1jl" path="res://Scenes/item_attribute_slot.tscn" id="1_vcvi2"]
 [ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="2_3g0vw"]
 [ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Assets/mushrooms.glb" id="3_hcapm"]
 [ext_resource type="Script" path="res://Scenes/spin_node.gd" id="3_yb5be"]
@@ -79,9 +78,6 @@ layout_mode = 2
 theme_override_constants/h_separation = 30
 columns = 2
 
-[node name="ItemAttributeSlot" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer" instance=ExtResource("1_vcvi2")]
-layout_mode = 2
-
 [node name="Visuals" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
@@ -99,6 +95,7 @@ size = Vector2i(66, 66)
 render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("3_yb5be")
 
 [node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_hcapm")]
@@ -106,7 +103,7 @@ transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
 visible = false
 
 [node name="Camera3D" type="Camera3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.63497, 0.47097, -0.612372, -0.150384, 0.852868, 0.5, 0.757758, -0.225394, 0.612372, -0.544737, 0.611243, 0.522414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 1.562)
 projection = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
