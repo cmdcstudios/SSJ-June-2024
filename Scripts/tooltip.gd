@@ -28,33 +28,20 @@ func load_item_info(item:Item):
 	item_name_label.text = item.name
 	description_label.text = item.description
 	price.text = str(item.sell_price)
-	
-	#var test = item.scene.instantiate() as Node
-	#add_child(scene)
 
 	for attribute in item.item_attributes:
-		print(attribute.attribute_type)
+		var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
+		attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
+		grid_container.add_child(attr_slot)
 		match attribute.attribute_type:
 			ItemAttribute.Attribute.PLAIN:
-				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
-				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
 				attr_slot.get_child(0).get_child(1).text = "Plain"
-				grid_container.add_child(attr_slot)
 			ItemAttribute.Attribute.FLASHY:
-				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
-				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
 				attr_slot.get_child(0).get_child(1).text = "Flashy"
-				grid_container.add_child(attr_slot)
 			ItemAttribute.Attribute.COOL:
-				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
-				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
 				attr_slot.get_child(0).get_child(1).text = "Cool"
-				grid_container.add_child(attr_slot)
 			ItemAttribute.Attribute.CUTE:
-				var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
-				attr_slot.get_child(0).get_child(0).texture = attribute.attribute_icon
 				attr_slot.get_child(0).get_child(1).text = "Cute"
-				grid_container.add_child(attr_slot)				
 
 func _on_close_button_pressed() -> void:
 	tooltip_closed.emit()
