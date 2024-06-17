@@ -9,7 +9,7 @@ size = Vector2(32, 32)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="ItemAttributeIcon" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
 texture = SubResource("PlaceholderTexture2D_vq7q4")
 

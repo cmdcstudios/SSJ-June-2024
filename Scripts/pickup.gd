@@ -12,6 +12,7 @@ func _ready() -> void:
 	var sprite = Sprite2D.new()
 	sprite.texture = sprite_texture
 	add_child(sprite)
+	SignalManager.item_sold.connect(_on_item_sold)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if _tooltip == null && TooltipInfo.tooltips.size() == 0:
@@ -20,8 +21,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		_tooltip.load_item_info(item)
 		await get_tree().create_timer(0.35).timeout
 		self.add_child(_tooltip)
-		_tooltip.tooltip_closed.connect(_on_tooltip_closed)
-		_tooltip.item_sold.connect(_on_item_sold)
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if (event.is_action_pressed("inventory_button_click")):
@@ -32,21 +31,11 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(item)
 			self.add_child(_tooltip)
-			_tooltip.tooltip_changed.connect(_on_tooltip_changed)
-			print(TooltipInfo.tooltips)
 
 		var player = area_2d.get_overlapping_areas()[0].get_parent() as Player
 		if player.has_method("on_item_pickup"):
 			player.on_item_pickup(item)
 
-func _on_item_sold() -> void:
-	print("GODDAMN I SoLD IT")
-	queue_free()
-	pass
-	
-func _on_tooltip_closed() -> void:
-	print("tooltip closed")
-	
-func _on_tooltip_changed() -> void:
-	pass
-
+func _on_item_sold(money_amount: int, item_sold: Item) -> void:
+	if item == item_sold:
+		queue_free()
