@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=3 format=3 uid="uid://bpuw8vw6d1kd7"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_0ce5m"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://ItemAttributes/ia_plain.tres" id="1_n0jj8"]
+
+[resource]
+script = ExtResource("1_0ce5m")
+item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_n0jj8")])

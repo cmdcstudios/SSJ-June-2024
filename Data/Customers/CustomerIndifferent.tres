@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=2 format=3 uid="uid://d2dg4tnaejbgw"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_dtie8"]
+
+[resource]
+script = ExtResource("1_dtie8")
+item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])

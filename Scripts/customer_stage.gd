@@ -11,12 +11,15 @@ var current_customer : Customer
 func _ready() -> void:
 	SignalManager.item_pref.connect(_on_item_preference_sold)
 
+
+# Refactor to take array as arg
 func spawn_customer(preference : ItemAttribute):
 	free_customer()
 	current_customer = customer.instantiate()
-	current_customer.item_preference = preference
+	current_customer.item_preference.append(preference)
 	spawn_point.add_child(current_customer)
-	print(current_customer.item_preference.name)
+	for n in current_customer.item_preference:
+		print(n.name)
 
 
 func free_customer():
@@ -55,6 +58,26 @@ func _on_solid_customer_pressed():
 func _on_free_customer_pressed():
 	free_customer()
 
+
 func _on_item_preference_sold(item_attr: ItemAttribute):
 	pass
 
+
+func _on_indifferent_customer_pressed():
+	free_customer()
+	
+	var preferences : Array[ItemAttribute] = [
+		load("res://ItemAttributes/ia_cool.tres"),
+		load("res://ItemAttributes/ia_cute.tres"),
+		load("res://ItemAttributes/ia_flashy.tres"),
+		load("res://ItemAttributes/ia_plain.tres"),
+		load("res://ItemAttributes/ia_solid.tres")
+	]
+	
+	current_customer = customer.instantiate()
+	current_customer.item_preference = preferences
+	spawn_point.add_child(current_customer)
+	for n in current_customer.item_preference:
+		print(n.name)
+		
+	text_box.text = "This chump will buy anything..."

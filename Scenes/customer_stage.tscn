@@ -44,6 +44,10 @@ text = "Plain Customer"
 layout_mode = 2
 text = "Solid Customer"
 
+[node name="IndifferentCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Indifferent Customer"
+
 [node name="FreeCustomer" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Free Customer"
@@ -78,4 +82,5 @@ text = "A nice day in the shop..."
 [connection signal="pressed" from="VBoxContainer/FlashyCustomer" to="." method="_on_flashy_customer_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlainCustomer" to="." method="_on_plain_customer_pressed"]
 [connection signal="pressed" from="VBoxContainer/SolidCustomer" to="." method="_on_solid_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/IndifferentCustomer" to="." method="_on_indifferent_customer_pressed"]
 [connection signal="pressed" from="VBoxContainer/FreeCustomer" to="." method="_on_free_customer_pressed"]

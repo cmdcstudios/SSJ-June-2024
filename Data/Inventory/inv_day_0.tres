@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="1_5auo8"]
 [ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_wpvtq"]
 [ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="2_ux7d5"]
-[ext_resource type="Resource" uid="uid://c8bj8klvushft" path="res://Data/Items/mushrooms.tres" id="3_ytid0"]
+[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/mushrooms.tres" id="3_ytid0"]
 
 [resource]
 script = ExtResource("1_wpvtq")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c6h7y1nxfs5u6" path="res://Assets/DinoSprites - doux.png" id="1_6x2su"]
 [ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="2_xyn5c"]
-[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="3_760ca"]
+[ext_resource type="PackedScene" uid="uid://byt87s74335nm" path="res://Scenes/money_dialog.tscn" id="3_760ca"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="3_dj0ce"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sk0lk"]
