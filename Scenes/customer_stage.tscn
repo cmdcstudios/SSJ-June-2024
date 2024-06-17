@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4wadefwf0p55"]
+[gd_scene load_steps=2 format=3 uid="uid://c4wadefwf0p55"]
 
-[ext_resource type="PackedScene" uid="uid://cabemq10wdjli" path="res://Scenes/customer.tscn" id="1_hjr6w"]
-[ext_resource type="Script" path="res://Scenes/customer_stage.gd" id="1_nuevh"]
+[ext_resource type="Script" path="res://Scripts/customer_stage.gd" id="1_nuevh"]
 
 [node name="CustomerStage" type="Control"]
 layout_mode = 3
@@ -12,21 +11,71 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nuevh")
 
-[node name="Customer" parent="." instance=ExtResource("1_hjr6w")]
-position = Vector2(1012, 555)
-
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(1014, 555)
 
-[node name="SummonButton" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 174.0
-offset_bottom = 15.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
 grow_vertical = 2
-text = "SUMMON CUSTOMER"
 
-[connection signal="pressed" from="SummonButton" to="." method="_on_summon_button_pressed"]
+[node name="CoolCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Cool Customer"
+
+[node name="CuteCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Cute Customer"
+
+[node name="FlashyCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Flashy Customer"
+
+[node name="PlainCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Plain Customer"
+
+[node name="SolidCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Solid Customer"
+
+[node name="FreeCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Free Customer"
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "A nice day in the shop..."
+
+[connection signal="pressed" from="VBoxContainer/CoolCustomer" to="." method="_on_cool_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/CuteCustomer" to="." method="_on_cute_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/FlashyCustomer" to="." method="_on_flashy_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlainCustomer" to="." method="_on_plain_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/SolidCustomer" to="." method="_on_solid_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/FreeCustomer" to="." method="_on_free_customer_pressed"]
