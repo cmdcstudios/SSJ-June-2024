@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://0c7ngrkwn42u" path="res://example/Random Upgrades/icons/all_icons/all_icons_16.tres" id="1_e6pxl"]
 [ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_lhxgp"]
+[ext_resource type="Texture2D" uid="uid://yn321wda74w8" path="res://Assets/Temp/flatDark13.png" id="1_yxb3t"]
 
 [resource]
 script = ExtResource("1_lhxgp")
+name = "Plain"
 attribute_type = 0
-attribute_icon = ExtResource("1_e6pxl")
+attribute_icon = ExtResource("1_yxb3t")
