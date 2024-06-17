@@ -1,6 +1,5 @@
 extends PanelContainer
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalManager.item_sold.connect(_on_item_sold)

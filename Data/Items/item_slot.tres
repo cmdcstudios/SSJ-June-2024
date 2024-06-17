@@ -6,6 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_aocxj"]
 script = ExtResource("1_3bhda")
+name = ""
 attribute_type = 0
 
 [resource]

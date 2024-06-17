@@ -9,7 +9,7 @@ enum GameFlags {
 	ENDGAME,
 }
 
-var current_game_state: GameFlags = GameFlags.TUTORIAL
+var current_game_state: GameFlags = GameFlags.NORMAL
 var inventorys: Array[Inventory] = []
 
 func _ready() -> void:

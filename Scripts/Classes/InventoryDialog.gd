@@ -19,7 +19,6 @@ func open_inv_dialog(inventory:Inventory):
 		slot.slot_sold.connect(_on_slot_sold.bind(inventory))
 		if (!SignalManager.item_sold.is_connected(_on_item_sold)):
 			SignalManager.item_sold.connect(_on_item_sold.bind(inventory))
-		#
 
 func _on_close_button_pressed() -> void:
 	hide()

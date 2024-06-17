@@ -1,22 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=7 format=3 uid="uid://18fcv8pdliix"]
 
-[ext_resource type="PackedScene" uid="uid://c7hs5wie2t40n" path="res://Scenes/item_pickup.tscn" id="2_lva3y"]
-[ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="3_i0ch5"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
+[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="5_sxr4y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
 [node name="MainGame" type="Node3D"]
-
-[node name="ItemPickup" parent="." instance=ExtResource("2_lva3y")]
-position = Vector2(134, 255)
-
-[node name="ItemPickup2" parent="." instance=ExtResource("2_lva3y")]
-position = Vector2(622, 178)
-item = ExtResource("3_i0ch5")
 
 [node name="Player" type="Node" parent="."]
 unique_name_in_owner = true
@@ -30,6 +22,9 @@ shape = SubResource("CircleShape2D_w5ke0")
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 script = ExtResource("4_72xad")
+
+[node name="CustomerStage" parent="UIRoot" instance=ExtResource("5_sxr4y")]
+visible = false
 
 [node name="MoneyDialog" parent="UIRoot" instance=ExtResource("5_5k482")]
 anchors_preset = 5

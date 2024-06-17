@@ -8,6 +8,8 @@ var customer = load("res://Scenes/customer.tscn")
 var cool_attribute = load("res://ItemAttributes/ia_cool.tres")
 var current_customer : Customer
 
+func _ready() -> void:
+	SignalManager.item_pref.connect(_on_item_preference_sold)
 
 func spawn_customer(preference : ItemAttribute):
 	free_customer()
@@ -52,3 +54,7 @@ func _on_solid_customer_pressed():
 
 func _on_free_customer_pressed():
 	free_customer()
+
+func _on_item_preference_sold(item_attr: ItemAttribute):
+	pass
+

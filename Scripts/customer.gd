@@ -1,4 +1,5 @@
-class_name Customer extends Node2D
+class_name Customer
+extends Node2D
 
 @export var item_preference : ItemAttribute
 

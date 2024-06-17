@@ -21,7 +21,6 @@ func load_item_info(item:Item):
 	price = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Label")
 	subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/")
 	scene = item.scene.instantiate()
-	print(subviewport)
 	subviewport.get_child(0).add_child(scene)
 	#visuals.move_child(scene, 0)
 	#scene = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport")
@@ -45,12 +44,20 @@ func load_item_info(item:Item):
 
 func _on_close_button_pressed() -> void:
 	tooltip_closed.emit()
-	subviewport.queue_free()
-	if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
+	#subviewport.queue_free()
+	if TooltipInfo.tooltips.size() >= 1:
+		for tip in TooltipInfo.tooltips:
+			TooltipInfo.tooltips.pop_front()
 	queue_free()
 
 func _on_sell_button_pressed() -> void:
-	subviewport.queue_free()
-	if TooltipInfo.tooltips.size() >= 1:TooltipInfo.tooltips.pop_front()
+	#subviewport.queue_free()
+	if TooltipInfo.tooltips.size() >= 1:
+		#TooltipInfo.tooltips = []
+		for tip in TooltipInfo.tooltips:
+			tip.queue_free()
+			TooltipInfo.tooltips.pop_front()
+		print(TooltipInfo.tooltips)
 	SignalManager.item_sold.emit(int(price.text), stored_item)
+	SignalManager.item_pref.emit(stored_item.item_attributes[0])
 	queue_free()

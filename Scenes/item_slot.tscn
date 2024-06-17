@@ -4,9 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/item_slot.gd" id="1_u7l74"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="2_s7bws"]
 [ext_resource type="Resource" uid="uid://cifihinlc8gdu" path="res://Data/Items/item_slot.tres" id="3_62mjb"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c6c3e"]
-size = Vector2(128, 128)
+[ext_resource type="Texture2D" uid="uid://cye3rqi56leit" path="res://Themes/tool_tip_panel4.png" id="5_yvt6o"]
 
 [node name="ItemSlot" type="PanelContainer"]
 theme = ExtResource("1_ta4vu")
@@ -22,10 +20,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+[node name="TextureRect" type="TextureButton" parent="MarginContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_c6c3e")
+disabled = true
+texture_normal = ExtResource("5_yvt6o")
+stretch_mode = 5
 
 [connection signal="mouse_entered" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_mouse_exited"]

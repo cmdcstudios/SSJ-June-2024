@@ -1,12 +1,23 @@
 {
   "hidden_columns": {
+    "res://Data/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://Data/Item/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
     "res://Data/Items/": {
       "resource_local_to_scene": true,
       "resource_name": true
     }
   },
   "recent_paths": [
-    "res://Data/Items/"
+    "res://Data/Items/",
+    "res://Data/",
+    "res://Dialogue/",
+    "res://Data/Item/"
   ],
   "table_functions": {
     "filter": [
