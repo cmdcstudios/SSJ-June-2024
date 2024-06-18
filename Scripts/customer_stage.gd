@@ -3,13 +3,25 @@ extends Control
 
 @onready var spawn_point = $SpawnPoint
 @onready var text_box : Label = $Panel/Label
+@onready var buttons : VBoxContainer = $VBoxContainer
+
 
 var customer = load("res://Scenes/customer.tscn")
 var cool_attribute = load("res://ItemAttributes/ia_cool.tres")
 var current_customer : Customer
 
 func _ready() -> void:
+	# TO-DO refactor so debugger mode off is default state, not set on ready
+	debugger_deactivate()
 	SignalManager.item_pref.connect(_on_item_preference_sold)
+
+
+func debugger_activate() -> void:
+	add_child(buttons)
+
+
+func debugger_deactivate() -> void:
+	remove_child(buttons)
 
 
 # Refactor to take array as arg
