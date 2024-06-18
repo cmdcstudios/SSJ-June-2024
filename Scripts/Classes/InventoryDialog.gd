@@ -39,7 +39,8 @@ func _on_slot_sold(inventory:Inventory) -> void:
 	pass
 #
 func _on_item_sold(money_amount: int, item_sold: Item, inventory:Inventory):
-	inventory.remove_item(item_sold)
+	pass
+	#inventory.remove_item(item_sold)
 	#print(inventory._contents)
 	
 
