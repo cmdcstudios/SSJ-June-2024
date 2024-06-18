@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_185l1"]
 [ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="1_hhojd"]
-[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="3_k0uih"]
+[ext_resource type="Texture2D" uid="uid://d04gbr64a3x5e" path="res://Assets/Temp/flatDark47.png" id="3_yij88"]
 
 [resource]
 script = ExtResource("1_185l1")
-name = ""
-sprite = ExtResource("3_k0uih")
+name = "Cool Guy"
+greeting = "They look pretty cool!"
+sprite = ExtResource("3_yij88")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_hhojd")])

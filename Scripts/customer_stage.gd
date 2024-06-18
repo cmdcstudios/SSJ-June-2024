@@ -1,12 +1,13 @@
 extends Control
 
 
-@export var CustomerQueue : CustomerQueue
+@export var queue_resource : CustomerQueue
 
 
 @onready var spawn_point = $SpawnPoint
 @onready var text_box : Label = $Panel/Label
 @onready var buttons : VBoxContainer = $VBoxContainer
+@onready var customer_queue : Array[CustomerResource] = queue_resource.customer_queue
 
 
 var customer = load("res://Scenes/customer.tscn")
@@ -17,16 +18,21 @@ var next_customer : Customer
 
 func prestage_customer(customer_data : CustomerResource) -> void:
 	next_customer = customer.instantiate()
-	next_customer
+	next_customer.customer_name = customer_data.name
+	next_customer.customer_greeting = customer_data.greeting
+	next_customer.sprite_texture = customer_data.sprite
 	next_customer.item_preference = customer_data.item_preference
 
 
 func complete_customer() -> void:
 	free_customer()
-	prestage_customer(load("res://Data/Customers/CustomerCool.tres"))
-	current_customer = next_customer
-	spawn_point.add_child(current_customer)
-	text_box.text = "The next customer walks in."
+	if customer_queue.is_empty() == false:
+		prestage_customer(customer_queue.pop_front())
+		current_customer = next_customer
+		spawn_point.add_child(current_customer)
+		text_box.text = "The next customer walks in...\n" + current_customer.customer_greeting
+	else:
+		text_box.text = "That was the last customer of the day!"
 
 
 func _ready() -> void:

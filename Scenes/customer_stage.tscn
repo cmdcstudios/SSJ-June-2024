@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4wadefwf0p55"]
+[gd_scene load_steps=3 format=3 uid="uid://c4wadefwf0p55"]
 
 [ext_resource type="Script" path="res://Scripts/customer_stage.gd" id="1_nuevh"]
+[ext_resource type="Resource" uid="uid://cbeq2ocvlnb80" path="res://Data/Customer Queues/CQ_Day00.tres" id="2_l2ijm"]
 
 [node name="CustomerStage" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nuevh")
+queue_resource = ExtResource("2_l2ijm")
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(1014, 555)

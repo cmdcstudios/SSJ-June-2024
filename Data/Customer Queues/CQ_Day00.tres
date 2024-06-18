@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CustomerQueue" load_steps=8 format=3 uid="uid://cbeq2ocvlnb80"]
+
+[ext_resource type="Resource" uid="uid://bpuw8vw6d1kd7" path="res://Data/Customers/CustomerPlain.tres" id="1_5h8wu"]
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="1_gxuos"]
+[ext_resource type="Resource" uid="uid://c2k7k3j41vjd1" path="res://Data/Customers/CustomerSolid.tres" id="2_vesxb"]
+[ext_resource type="Resource" uid="uid://diwp2qrv5a1ng" path="res://Data/Customers/CustomerCool.tres" id="3_4vgnk"]
+[ext_resource type="Resource" uid="uid://bdhigjrgy3lu6" path="res://Data/Customers/CustomerCute.tres" id="4_s8ry3"]
+[ext_resource type="Resource" uid="uid://cqnqrqniajigr" path="res://Data/Customers/CustomerFlashy.tres" id="5_eiyj2"]
+[ext_resource type="Resource" uid="uid://d2dg4tnaejbgw" path="res://Data/Customers/CustomerIndifferent.tres" id="6_3cos2"]
+
+[resource]
+script = ExtResource("1_gxuos")
+customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([ExtResource("1_5h8wu"), ExtResource("2_vesxb"), ExtResource("3_4vgnk"), ExtResource("4_s8ry3"), ExtResource("5_eiyj2"), ExtResource("6_3cos2")])

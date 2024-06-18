@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_0ce5m")
-name = ""
+name = "Plain Jane"
+greeting = "Just an average customer"
 sprite = ExtResource("3_lbayi")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_n0jj8")])
