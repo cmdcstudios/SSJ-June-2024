@@ -41,6 +41,8 @@ func load_item_info(item:Item):
 				attr_slot.get_child(0).get_child(1).text = "Cool"
 			ItemAttribute.Attribute.CUTE:
 				attr_slot.get_child(0).get_child(1).text = "Cute"
+			ItemAttribute.Attribute.SOLID:
+				attr_slot.get_child(0).get_child(1).text = "Cute"
 
 func _on_close_button_pressed() -> void:
 	tooltip_closed.emit()

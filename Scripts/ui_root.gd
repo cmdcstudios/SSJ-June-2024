@@ -19,3 +19,8 @@ func _on_debug_on_pressed():
 
 func _on_debug_off_pressed():
 	$CustomerStage.debugger_deactivate()
+
+
+func _on_start_day_button_pressed():
+	SignalManager.start_day.emit()
+	remove_child($StartDayButton)

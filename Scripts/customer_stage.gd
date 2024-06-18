@@ -1,14 +1,13 @@
 extends Control
 
-
 @export var queue_resource : CustomerQueue
-
 
 @onready var spawn_point = $SpawnPoint
 @onready var text_box : Label = $Panel/Label
 @onready var buttons : VBoxContainer = $VBoxContainer
 @onready var customer_queue : Array[CustomerResource] = queue_resource.customer_queue
 
+signal customer_entered(customer : Customer)
 
 var customer = load("res://Scenes/customer.tscn")
 var cool_attribute = load("res://ItemAttributes/ia_cool.tres")
@@ -38,7 +37,7 @@ func complete_customer() -> void:
 func _ready() -> void:
 	# TO-DO refactor so debugger mode off is default state, not set on ready
 	debugger_deactivate()
-	SignalManager.item_pref.connect(_on_item_preference_sold)
+	SignalManager.start_day.connect(_on_start_day)
 
 
 func debugger_activate() -> void:
@@ -66,6 +65,10 @@ func free_customer():
 		text_box.text = "The customer left."
 	else:
 		text_box.text = "There's no customers here..."
+	
+
+func _on_start_day() -> void:
+	complete_customer()
 
 
 # ----------- DEBUGGER UI ----------- 
@@ -98,10 +101,6 @@ func _on_solid_customer_pressed():
 
 func _on_free_customer_pressed():
 	free_customer()
-
-
-func _on_item_preference_sold(item_attr: ItemAttribute):
-	pass
 
 
 func _on_indifferent_customer_pressed():
