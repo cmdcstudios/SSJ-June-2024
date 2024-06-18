@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
-[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
+[ext_resource type="PackedScene" uid="uid://byt87s74335nm" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="5_sxr4y"]
 
@@ -24,7 +24,6 @@ shape = SubResource("CircleShape2D_w5ke0")
 script = ExtResource("4_72xad")
 
 [node name="CustomerStage" parent="UIRoot" instance=ExtResource("5_sxr4y")]
-visible = false
 
 [node name="MoneyDialog" parent="UIRoot" instance=ExtResource("5_5k482")]
 anchors_preset = 5
@@ -38,7 +37,6 @@ grow_vertical = 1
 
 [node name="InventoryDialog" parent="UIRoot" instance=ExtResource("5_ggvh3")]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -47,3 +45,35 @@ offset_left = -142.0
 offset_top = -17.5
 offset_bottom = 17.5
 grow_horizontal = 0
+
+[node name="Debugger" type="VBoxContainer" parent="UIRoot"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="ExitButton" type="Button" parent="UIRoot/Debugger"]
+layout_mode = 2
+text = "EXIT"
+
+[node name="Label" type="Label" parent="UIRoot/Debugger"]
+layout_mode = 2
+text = "DEBUGGER"
+
+[node name="DebuggerButtons" type="HBoxContainer" parent="UIRoot/Debugger"]
+layout_mode = 2
+
+[node name="DebugOn" type="Button" parent="UIRoot/Debugger/DebuggerButtons"]
+layout_mode = 2
+text = "ON"
+
+[node name="DebugOff" type="Button" parent="UIRoot/Debugger/DebuggerButtons"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "OFF"
+
+[connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]
+[connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOff" to="UIRoot" method="_on_debug_off_pressed"]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bs0ypwdtix61d"]
+
+[ext_resource type="Texture2D" uid="uid://yn321wda74w8" path="res://Assets/Temp/flatDark13.png" id="1_1grr8"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://ItemAttributes/ia_plain.tres" id="1_2grwu"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_ut5o6"]
+
+[resource]
+script = ExtResource("1_ut5o6")
+id = 0
+sell_price = 0
+name = "Plain Item"
+description = "I kind of forget that it's even there..."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_2grwu")])
+inventory_icon = ExtResource("1_1grr8")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bfl8p52kthrcv"]
+
+[ext_resource type="Texture2D" uid="uid://mj8fhljbn4os" path="res://Assets/Temp/flatDark19.png" id="1_buqe1"]
+[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://ItemAttributes/ia_cute.tres" id="1_eaxwl"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_g6eyj"]
+
+[resource]
+script = ExtResource("1_g6eyj")
+id = 0
+sell_price = 0
+name = "Cute Item"
+description = "IT'S SO FLUFFY"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_eaxwl")])
+inventory_icon = ExtResource("1_buqe1")

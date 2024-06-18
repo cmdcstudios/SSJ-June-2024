@@ -1,15 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://cabemq10wdjli"]
+[gd_scene load_steps=3 format=3 uid="uid://cabemq10wdjli"]
 
 [ext_resource type="Script" path="res://Scripts/customer.gd" id="1_epmwu"]
-[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://ItemAttributes/ia_cute.tres" id="2_qixjw"]
 [ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="2_tkrtt"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_epmwu")
-item_preference = ExtResource("2_qixjw")
+sprite_texture = ExtResource("2_tkrtt")
+customer_name = "CUSTOMER"
+customer_greeting = "HELLO I AM CUSTOMER"
 
 [node name="CustomerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_tkrtt")
 
-[node name="PreferenceSprite" type="Sprite2D" parent="CustomerSprite"]
-position = Vector2(-101, -102)
+[node name="PreferenceBox" type="HBoxContainer" parent="CustomerSprite"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+
+[node name="NameLabel" type="Label" parent="CustomerSprite"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -35.0
+offset_right = -44.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 2

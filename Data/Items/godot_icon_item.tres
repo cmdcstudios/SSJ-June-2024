@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="1_67js1"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_sjot0"]
 [ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://ItemAttributes/ia_plain.tres" id="2_1rs5j"]
-[ext_resource type="PackedScene" uid="uid://cxn3v761ovyg1" path="res://Scenes/godot_icon_scene.tscn" id="3_cmrvn"]
+[ext_resource type="PackedScene" path="res://Scenes/godot_icon_scene.tscn" id="3_cmrvn"]
 
 [resource]
 script = ExtResource("1_sjot0")
