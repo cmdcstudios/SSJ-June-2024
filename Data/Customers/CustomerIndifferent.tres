@@ -1,7 +1,10 @@
-[gd_resource type="Resource" script_class="CustomerResource" load_steps=2 format=3 uid="uid://d2dg4tnaejbgw"]
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=3 format=3 uid="uid://d2dg4tnaejbgw"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_dtie8"]
+[ext_resource type="Texture2D" uid="uid://d04gbr64a3x5e" path="res://Assets/Temp/flatDark47.png" id="2_tc5x8"]
 
 [resource]
 script = ExtResource("1_dtie8")
+name = ""
+sprite = ExtResource("2_tc5x8")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])

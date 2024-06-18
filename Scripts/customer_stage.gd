@@ -1,6 +1,9 @@
 extends Control
 
 
+@export var CustomerQueue : CustomerQueue
+
+
 @onready var spawn_point = $SpawnPoint
 @onready var text_box : Label = $Panel/Label
 @onready var buttons : VBoxContainer = $VBoxContainer
@@ -9,6 +12,22 @@ extends Control
 var customer = load("res://Scenes/customer.tscn")
 var cool_attribute = load("res://ItemAttributes/ia_cool.tres")
 var current_customer : Customer
+var next_customer : Customer
+
+
+func prestage_customer(customer_data : CustomerResource) -> void:
+	next_customer = customer.instantiate()
+	next_customer
+	next_customer.item_preference = customer_data.item_preference
+
+
+func complete_customer() -> void:
+	free_customer()
+	prestage_customer(load("res://Data/Customers/CustomerCool.tres"))
+	current_customer = next_customer
+	spawn_point.add_child(current_customer)
+	text_box.text = "The next customer walks in."
+
 
 func _ready() -> void:
 	# TO-DO refactor so debugger mode off is default state, not set on ready
@@ -28,6 +47,7 @@ func debugger_deactivate() -> void:
 func spawn_customer(preference : ItemAttribute):
 	free_customer()
 	current_customer = customer.instantiate()
+	# Jank.
 	current_customer.item_preference.append(preference)
 	spawn_point.add_child(current_customer)
 	for n in current_customer.item_preference:
@@ -40,6 +60,9 @@ func free_customer():
 		text_box.text = "The customer left."
 	else:
 		text_box.text = "There's no customers here..."
+
+
+# ----------- DEBUGGER UI ----------- 
 
 
 func _on_cool_customer_pressed():
@@ -93,3 +116,7 @@ func _on_indifferent_customer_pressed():
 		print(n.name)
 		
 	text_box.text = "This chump will buy anything..."
+
+
+func _on_next_customer_pressed():
+	complete_customer()

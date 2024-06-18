@@ -2,12 +2,16 @@ class_name Customer
 extends Node2D
 
 @export var item_preference : Array[ItemAttribute]
+@export var sprite_texture : Texture2D
+
 @onready var preference_box = $CustomerSprite/PreferenceBox
+@onready var customer_sprite = $CustomerSprite
 var preference_sprite
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	customer_sprite.texture = sprite_texture
 	for n in item_preference:
 		var new_preference :=  TextureRect.new()
 		new_preference.texture = n.attribute_icon

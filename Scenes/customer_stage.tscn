@@ -52,6 +52,10 @@ text = "Indifferent Customer"
 layout_mode = 2
 text = "Free Customer"
 
+[node name="NextCustomer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Next Customer"
+
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 1
@@ -84,3 +88,4 @@ text = "A nice day in the shop..."
 [connection signal="pressed" from="VBoxContainer/SolidCustomer" to="." method="_on_solid_customer_pressed"]
 [connection signal="pressed" from="VBoxContainer/IndifferentCustomer" to="." method="_on_indifferent_customer_pressed"]
 [connection signal="pressed" from="VBoxContainer/FreeCustomer" to="." method="_on_free_customer_pressed"]
+[connection signal="pressed" from="VBoxContainer/NextCustomer" to="." method="_on_next_customer_pressed"]
