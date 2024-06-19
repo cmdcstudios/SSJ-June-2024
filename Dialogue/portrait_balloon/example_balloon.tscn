@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=9 format=3 uid="uid://b83wq38cl5c4t"]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://dw1ksadru3jh4" path="res://Characters/Boss.svg" id="4_n2xt0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_udvic"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_slc6i"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_ebp5b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,7 +65,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_udvic")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -98,7 +97,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 246.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -115,7 +113,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_slc6i")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -140,17 +138,12 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
-script = ExtResource("3_72ixx")
+script = ExtResource("3_ebp5b")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
-
-[node name="Portrait" type="Sprite2D" parent="."]
-position = Vector2(127, 959)
-scale = Vector2(1.73828, 1.73828)
-texture = ExtResource("4_n2xt0")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

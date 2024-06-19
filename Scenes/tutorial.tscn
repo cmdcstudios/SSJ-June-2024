@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://nsfpe8u0obfs"]
+
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="1_7unip"]
+[ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="2_qxydp"]
+[ext_resource type="Script" path="res://Scripts/ui_root.gd" id="3_bt64y"]
+[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="4_usokq"]
+[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_d2nua"]
+[ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="6_w2hti"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
+
+[node name="MainGame" type="Node3D"]
+script = ExtResource("1_7unip")
+
+[node name="Player" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_qxydp")
+
+[node name="MouseArea" type="Area2D" parent="Player"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/MouseArea"]
+shape = SubResource("CircleShape2D_w5ke0")
+
+[node name="UIRoot" type="CanvasLayer" parent="."]
+layer = 101
+script = ExtResource("3_bt64y")
+
+[node name="CustomerStage" parent="UIRoot" instance=ExtResource("4_usokq")]
+visible = false
+
+[node name="MoneyDialog" parent="UIRoot" instance=ExtResource("5_d2nua")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 31.0
+grow_vertical = 1
+
+[node name="InventoryDialog" parent="UIRoot" instance=ExtResource("6_w2hti")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -17.5
+offset_bottom = 17.5
+grow_horizontal = 0
