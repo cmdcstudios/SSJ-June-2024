@@ -1,0 +1,23 @@
+~ start
+
+Boss: Listen up newbie, these are the instuctions on how to run the shop left by ME, your boss.
+Boss: You youngsters think you got it all figured out, huh? I bet you think running a shop is easy, don't you?.
+- Yes
+	Boss: Well you're in for a rude awakening! I bet you've never worked a hard day in your life!
+- No
+	Boss: Well darn right! Do you think it was easy for me to get where I am?
+- Skip Tutorial
+	Boss: Whaaat? You're not even gonna read my instructions!? Pshhh, kids these days...
+	- Continue Reading => start
+	- Skip Tutorial => END
+Boss: Customers THINK they know what they want, but sometimes you gotta sell them on whatever you have lying around. You gotta get CREATIVE, get it?
+- Yes
+	Boss: Yeah, now you're gettin' it. I think you might have the right attitude to make manager.
+	Boss: Well, [i]assistant[/i] manager, we'll see.
+- No
+	Boss: Like, just look around the shop rookie! Find something to sell, always be selling!
+Boss: Oh, and another thing. I expect my books to be in order. You are to maintain my record setting profit margins so I can get the bonus I deserve at the end of the year.
+Boss: In order to prove yourself, you must meet or exceed my sales standards for the entire week I'm gone on vacation.
+Boss: Remember, whatever it takes rookie. If you got a customer on the hook, sell 'em anything that's not nailed down. And I mean ANYTHING!
+
+=> END
