@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://1sordm4ifq47"]
+[gd_scene load_steps=5 format=3 uid="uid://1sordm4ifq47"]
 
 [ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="1_ta4vu"]
 [ext_resource type="Script" path="res://Scripts/item_slot.gd" id="1_u7l74"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="2_s7bws"]
-[ext_resource type="Resource" uid="uid://cifihinlc8gdu" path="res://Data/Items/item_slot.tres" id="3_62mjb"]
-[ext_resource type="Texture2D" uid="uid://cye3rqi56leit" path="res://Themes/tool_tip_panel4.png" id="5_yvt6o"]
+[ext_resource type="Resource" uid="uid://b8p28m44u1syd" path="res://Data/Items/item_slot.tres" id="3_62mjb"]
 
 [node name="ItemSlot" type="PanelContainer"]
 theme = ExtResource("1_ta4vu")
@@ -24,8 +23,7 @@ theme_override_constants/margin_bottom = 20
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-disabled = true
-texture_normal = ExtResource("5_yvt6o")
 stretch_mode = 5
 
 [connection signal="mouse_entered" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/TextureRect" to="." method="_on_texture_rect_pressed"]

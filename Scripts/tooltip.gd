@@ -11,32 +11,24 @@ var stored_item: Item = null
 var item_name_label: Label = null
 var price: Label = null
 var scene = null
-var subviewport = null
+var subviewport: SubViewport  = null
 
 func load_item_info(item:Item):
 	stored_item = item
-	'''
-	item_name_label = get_node("PanelContainer/MarginContainer/VBoxContainer/HeaderContainer/ItemNameLabel") as Label
-	var description_label = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription") as Label
-	var grid_container = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer") as GridContainer
-	price = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Label")
+	#subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/")
 	subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/")
-	scene = item.scene.instantiate()
-	subviewport.get_child(0).add_child(scene)
-	#visuals.move_child(scene, 0)
-	#scene = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport")
-	item_name_label.text = item.name
-	description_label.text = item.description
-	price.text = str(item.sell_price)
-	'''
 	item_name_label = %ItemNameLabel
+	#subviewport = %SubViewport
 	var description_label : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription
 	var attr_box : GridContainer = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer
 	var price : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/PriceLabel
-	var item_sprite : TextureRect = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SpritePanel
-	
-	item_sprite.texture = item.inventory_icon
+
+	#item_sprite.texture = item.inventory_icon
 	price.text = str(item.sell_price)
+	item_name_label.text = item.name
+	description_label.text = item.description
+	scene = item.scene.instantiate()
+	subviewport.get_child(0).add_child(scene)
 	
 	for attribute in item.item_attributes:
 		var attr_slot = ITEM_ATTRIBUTE_SLOT.instantiate()
@@ -71,5 +63,4 @@ func _on_sell_button_pressed() -> void:
 			TooltipInfo.tooltips.pop_front()
 		print(TooltipInfo.tooltips)
 	SignalManager.item_sold.emit(int(stored_item.sell_price), stored_item)
-	#SignalManager.item_pref.emit(stored_item.item_attributes[0])
 	queue_free()

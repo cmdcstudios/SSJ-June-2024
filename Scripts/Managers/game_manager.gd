@@ -7,11 +7,24 @@ enum GameFlags {
 	NORMAL,
 	SELLABLE,
 	ENDGAME,
+	CUSTOMER_ENTER,
+	CUSTOMER_EXIT
 }
 
-var current_game_state: GameFlags = GameFlags.NORMAL
+enum States {
+	TUTORIAL,
+	NORMAL,
+	CUSTOMER_ENTER,
+	CUSTOMER_EXIT
+}
+
+var current_game_state: GameFlags = GameFlags.SELLABLE
 var inventorys: Array[Inventory] = []
 
+func set_game_state(state: GameFlags, sell_mode: bool = false):
+	current_game_state = state
+	if (sell_mode and state == GameFlags.NORMAL):
+		current_game_state = GameFlags.SELLABLE
 
 func _ready() -> void:
 	dir_contents("res://Data/Inventory")
@@ -38,3 +51,4 @@ func dir_contents(path):
 # We can start the endgame and turn on the flags for everything to be sold
 func get_inventory(day: int) -> Inventory:
 	return inventorys[day]
+
