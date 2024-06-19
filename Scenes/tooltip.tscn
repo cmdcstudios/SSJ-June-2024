@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/tooltip.gd" id="1_l3apk"]
 [ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="2_3g0vw"]
 [ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Assets/mushrooms.glb" id="3_hcapm"]
-[ext_resource type="Script" path="res://Scenes/spin_node.gd" id="3_yb5be"]
+[ext_resource type="Script" path="res://Scripts/spin_node.gd" id="3_uycc5"]
 
 [node name="Tooltip" type="CanvasLayer" groups=["Tooltips"]]
 script = ExtResource("1_l3apk")
@@ -81,6 +81,10 @@ columns = 2
 [node name="Visuals" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
+[node name="SpritePanel" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+stretch_mode = 3
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
@@ -96,7 +100,8 @@ render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-script = ExtResource("3_yb5be")
+visible = false
+script = ExtResource("3_uycc5")
 
 [node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_hcapm")]
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
@@ -104,16 +109,19 @@ visible = false
 
 [node name="Camera3D" type="Camera3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 1.562)
+visible = false
 projection = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
 transform = Transform3D(0.173648, -0.204753, -0.963287, 0, 0.978148, -0.207912, 0.984808, 0.0361035, 0.169854, 0, 0, 0)
+visible = false
 light_energy = 1.508
 
 [node name="SpotLight3D" type="SpotLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.897366, 0.441287, 0, -0.441287, 0.897366, -0.0303076, 0.651762, 1.16542)
+visible = false
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+[node name="PriceLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "<price>"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
-[ext_resource type="PackedScene" uid="uid://byt87s74335nm" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
+[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="5_sxr4y"]
 
@@ -74,6 +74,22 @@ layout_mode = 2
 size_flags_horizontal = 10
 text = "OFF"
 
+[node name="StartDayButton" type="Button" parent="UIRoot"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "START DAY"
+
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOff" to="UIRoot" method="_on_debug_off_pressed"]
+[connection signal="pressed" from="UIRoot/StartDayButton" to="UIRoot" method="_on_start_day_button_pressed"]

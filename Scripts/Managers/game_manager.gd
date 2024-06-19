@@ -12,9 +12,10 @@ enum GameFlags {
 var current_game_state: GameFlags = GameFlags.NORMAL
 var inventorys: Array[Inventory] = []
 
+
 func _ready() -> void:
 	dir_contents("res://Data/Inventory")
-
+	
 func dir_contents(path):
 	var dir = DirAccess.open(path)
 	if dir:

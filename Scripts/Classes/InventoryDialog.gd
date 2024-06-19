@@ -6,6 +6,11 @@ extends PanelContainer
 
 @onready var grid_container: GridContainer = %GridContainer
 
+
+func _ready():
+	SignalManager.start_day.connect(_on_start_day)
+
+
 func open_inv_dialog(inventory:Inventory):
 	show()
 	clear_inv_dialog()
@@ -34,6 +39,10 @@ func _on_slot_sold(inventory:Inventory) -> void:
 	pass
 #
 func _on_item_sold(money_amount: int, item_sold: Item, inventory:Inventory):
-	inventory.remove_item(item_sold)
+	pass
+	#inventory.remove_item(item_sold)
 	#print(inventory._contents)
 	
+
+func _on_start_day():
+	open_inv_dialog(GameManager.get_inventory(0))

@@ -10,7 +10,6 @@ var game_inventory:Inventory = Inventory.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	game_inventory = GameManager.get_inventory(0)
-	pass # Replace with function body.
 
 
 func _input(event: InputEvent) -> void:
