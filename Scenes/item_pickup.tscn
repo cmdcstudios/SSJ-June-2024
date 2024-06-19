@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7hs5wie2t40n"]
 
 [ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_rvan8"]
-[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="2_usyh3"]
+[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="2_usyh3"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="3_t8c0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1s52"]

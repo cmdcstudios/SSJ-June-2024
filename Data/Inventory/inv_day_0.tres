@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://iyvvkgsn1njy"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_wpvtq"]
-[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="2_ux7d5"]
-[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/mushrooms.tres" id="3_ytid0"]
+[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="2_ux7d5"]
+[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/4_mushrooms.tres" id="3_ytid0"]
 [ext_resource type="Resource" uid="uid://vtvq8v8lcfhx" path="res://Data/Items/Test Items/item_cool.tres" id="4_e160b"]
 [ext_resource type="Resource" uid="uid://bfl8p52kthrcv" path="res://Data/Items/Test Items/item_cute.tres" id="5_1b2nl"]
 [ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="6_itqgn"]

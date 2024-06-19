@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dic11a2josur2"]
 
 [ext_resource type="PackedScene" uid="uid://c7hs5wie2t40n" path="res://Scenes/item_pickup.tscn" id="1_bc2ik"]
-[ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/dino_plush.tres" id="2_p27rx"]
+[ext_resource type="Resource" uid="uid://cvkb0ni4lmkq" path="res://Data/Items/1_dino_plush.tres" id="2_p27rx"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="3_vcf3y"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_romrm"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_dlv27"]

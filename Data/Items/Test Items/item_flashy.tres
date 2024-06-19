@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://ItemAttributes/ia_flashy.tres" id="1_4eoi8"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_6bu1a"]
 [ext_resource type="Texture2D" uid="uid://d4cvnt0oxwt80" path="res://Assets/Temp/flatDark16.png" id="1_233i2"]
-[ext_resource type="PackedScene" uid="uid://c3w8pffvqyrp5" path="res://Scenes/dummy_scene.tscn" id="3_vu7l7"]
+[ext_resource type="PackedScene" uid="uid://c3w8pffvqyrp5" path="res://Scenes/PackedItems/item_dummy_scene.tscn" id="3_vu7l7"]
 
 [resource]
 script = ExtResource("1_6bu1a")
