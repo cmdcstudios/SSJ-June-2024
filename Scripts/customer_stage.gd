@@ -43,9 +43,8 @@ func new_customer() -> void:
 	else:
 		text_box.text = "That was the last customer of the day!"
 	GameManager.current_game_state = GameManager.GameFlags.NORMAL
-	#if GameManager.inventorys.is_empty():
-		#GameManager.current_game_state = GameManager.GameFlags.SELLABLE	
-
+	if GameManager.inventorys.is_empty():
+		GameManager.current_game_state = GameManager.GameFlags.SELLABLE	
 
 
 func debugger_activate() -> void:
