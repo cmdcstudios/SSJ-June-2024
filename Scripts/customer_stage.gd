@@ -104,7 +104,7 @@ func evaluate_item():
 		new_customer()
 
 func _on_item_sold(price : int, item : Item):
-	print(item.name)
+	#print(item.name)
 	item_sold = item
 	evaluate_item()
 

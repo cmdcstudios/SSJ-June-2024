@@ -1,7 +1,6 @@
 class_name Tooltip
 extends CanvasLayer
 
-signal tooltip_closed
 signal tooltip_changed
 
 const ITEM_ATTRIBUTE_SLOT = preload("res://Scenes/item_attribute_slot.tscn")
@@ -47,7 +46,7 @@ func load_item_info(item:Item):
 				attr_slot.get_child(0).get_child(1).text = "Cute"
 
 func _on_close_button_pressed() -> void:
-	tooltip_closed.emit()
+	#SignalManager.tooltip_closed.emit()
 	#subviewport.queue_free()
 	if TooltipInfo.tooltips.size() >= 1:
 		for tip in TooltipInfo.tooltips:

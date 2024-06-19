@@ -18,7 +18,7 @@ enum States {
 	CUSTOMER_EXIT
 }
 
-var current_game_state: GameFlags = GameFlags.SELLABLE
+var current_game_state: GameFlags = GameFlags.NORMAL
 var inventorys: Array[Inventory] = []
 
 func set_game_state(state: GameFlags, sell_mode: bool = false):
