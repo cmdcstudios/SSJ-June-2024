@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://b8p28m44u1syd"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_3bhda"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_twufm"]
+[ext_resource type="PackedScene" uid="uid://c3w8pffvqyrp5" path="res://Data/Items/PackedItems/item_dummy_scene.tscn" id="2_srbx6"]
+
+[sub_resource type="Resource" id="Resource_aocxj"]
+script = ExtResource("1_3bhda")
+name = ""
+attribute_type = 0
+
+[resource]
+script = ExtResource("1_twufm")
+id = 3
+sell_price = 250
+name = "Inventory Item Slot"
+description = "An item slot from your store inventory. You must be in a tight spot to sell one of these!"
+item_attributes = Array[ExtResource("1_3bhda")]([SubResource("Resource_aocxj")])
+scene = ExtResource("2_srbx6")

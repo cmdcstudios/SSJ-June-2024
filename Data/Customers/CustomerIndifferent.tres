@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CustomerResource" load_steps=8 format=3 uid="uid://d2dg4tnaejbgw"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_dtie8"]
-[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="1_glqpm"]
-[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://ItemAttributes/ia_cute.tres" id="2_kkj3c"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="1_glqpm"]
+[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://Data/Items/ItemAttributes/ia_cute.tres" id="2_kkj3c"]
 [ext_resource type="Texture2D" uid="uid://d04gbr64a3x5e" path="res://Assets/Temp/flatDark47.png" id="2_tc5x8"]
-[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://ItemAttributes/ia_flashy.tres" id="3_p48sj"]
-[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://ItemAttributes/ia_plain.tres" id="4_86g6h"]
-[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://ItemAttributes/ia_solid.tres" id="5_pyolt"]
+[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://Data/Items/ItemAttributes/ia_flashy.tres" id="3_p48sj"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="4_86g6h"]
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="5_pyolt"]
 
 [resource]
 script = ExtResource("1_dtie8")

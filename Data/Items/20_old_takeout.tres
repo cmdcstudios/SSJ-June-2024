@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://ctf543ps3q4lt"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_h1v13"]
+[ext_resource type="Texture2D" uid="uid://q0cpqpvo4vhq" path="res://Assets/kenney_food-kit/Previews/styrofoamDinner.png" id="1_hyfxw"]
+[ext_resource type="Resource" uid="uid://fyk0tb8xldxu" path="res://Data/Items/ItemAttributes/ia_nasty.tres" id="2_osd5p"]
+[ext_resource type="PackedScene" uid="uid://cnp0ixeqsthbf" path="res://Data/Items/PackedItems/item_takeout.tscn" id="3_8tlic"]
+
+[resource]
+script = ExtResource("1_h1v13")
+id = 20
+sell_price = -5
+name = "Old Takeout"
+description = "This is at least 5 days old...ewww."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_osd5p")])
+inventory_icon = ExtResource("1_hyfxw")
+scene = ExtResource("3_8tlic")

@@ -31,10 +31,10 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(item)
 			self.add_child(_tooltip)
-
-		var player = area_2d.get_overlapping_areas()[0].get_parent() as Player
-		if player.has_method("on_item_pickup"):
-			player.on_item_pickup(item)
+#
+		#var player = area_2d.get_overlapping_areas()[0].get_parent() as Player
+		#if player.has_method("on_item_pickup"):
+			#player.on_item_pickup(item)
 
 func _on_item_sold(money_amount: int, item_sold: Item) -> void:
 	if item == item_sold:

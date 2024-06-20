@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://cq6cahu7uofte"]
+
+[ext_resource type="Resource" uid="uid://vtvq8v8lcfhx" path="res://Data/Items/Test Items/item_cool.tres" id="1_3xlvv"]
+[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_sgk4p"]
+[ext_resource type="Resource" uid="uid://bfl8p52kthrcv" path="res://Data/Items/Test Items/item_cute.tres" id="2_h4amd"]
+[ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="3_ja48r"]
+[ext_resource type="Resource" uid="uid://bs0ypwdtix61d" path="res://Data/Items/Test Items/item_plain.tres" id="4_frt2y"]
+[ext_resource type="Resource" uid="uid://b3xex7sntgoc2" path="res://Data/Items/Test Items/item_solid.tres" id="5_06o67"]
+
+[resource]
+script = ExtResource("1_sgk4p")
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_3xlvv"), ExtResource("2_h4amd"), ExtResource("3_ja48r"), ExtResource("4_frt2y"), ExtResource("5_06o67")])

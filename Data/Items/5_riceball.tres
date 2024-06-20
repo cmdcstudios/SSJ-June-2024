@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bssjrbtw4iptt"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_6wixw"]
+[ext_resource type="Texture2D" uid="uid://cm3yoj1d0rull" path="res://Assets/kenney_food-kit/Previews/riceBall.png" id="1_bsqun"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="2_rwhum"]
+[ext_resource type="PackedScene" uid="uid://daa00ew8f21ti" path="res://Data/Items/PackedItems/item_riceball.tscn" id="3_syvrg"]
+
+[resource]
+script = ExtResource("1_6wixw")
+id = 5
+sell_price = 1
+name = "Onigiri"
+description = "These donuts are great! Jelly-filled are my favorite. -Brock"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_rwhum")])
+inventory_icon = ExtResource("1_bsqun")
+scene = ExtResource("3_syvrg")

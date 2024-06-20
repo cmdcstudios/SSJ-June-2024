@@ -40,6 +40,16 @@ window/size/viewport_height=1080
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Data/Items/": "blue"
+}
+
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 inventory_button_click={

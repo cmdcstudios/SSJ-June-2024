@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://cvkb0ni4lmkq"]
+
+[ext_resource type="Texture2D" uid="uid://c6h7y1nxfs5u6" path="res://Assets/Temp/DinoSprites - doux.png" id="1_6x2su"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="2_xyn5c"]
+[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="3_760ca"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="3_dj0ce"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0lk"]
+atlas = ExtResource("1_6x2su")
+region = Rect2(0, -1, 22, 25)
+
+[resource]
+script = ExtResource("3_dj0ce")
+id = 1
+sell_price = 100
+name = "Dino Plush"
+description = "A tiny dino plush. Could be made into a keychain!"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_xyn5c")])
+inventory_icon = SubResource("AtlasTexture_sk0lk")
+scene = ExtResource("3_760ca")

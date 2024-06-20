@@ -33,7 +33,6 @@ func prestage_customer(customer_data : CustomerResource) -> void:
 
 func new_customer() -> void:
 	free_customer()
-	
 	if customer_queue.is_empty() == false:
 		var customer_data = customer_queue.pop_front()
 		prestage_customer(customer_data)
@@ -43,6 +42,9 @@ func new_customer() -> void:
 		SignalManager.customer_entered.emit(customer_data)
 	else:
 		text_box.text = "That was the last customer of the day!"
+	GameManager.current_game_state = GameManager.GameFlags.NORMAL
+	if GameManager.inventorys.is_empty():
+		GameManager.current_game_state = GameManager.GameFlags.SELLABLE	
 
 
 func debugger_activate() -> void:
@@ -62,6 +64,7 @@ func free_customer():
 	if current_customer != null:
 		current_customer.queue_free()
 		text_box.text = "The customer left."
+		GameManager.current_game_state = GameManager.GameFlags.CUSTOMER_EXIT
 	else:
 		text_box.text = "There's no customers here..."
 	
@@ -69,35 +72,38 @@ func free_customer():
 func _on_start_day() -> void:
 	new_customer()
 
-
 func evaluate_item():
 	# Flag for item preference match
 	var approved : bool = false
 	
+
 	# Check item attributes and customer preferences for any matches
 	for ia in item_sold.item_attributes:
-		for ip in current_customer.item_preference:
-			if ia == ip:
-				approved = true 
+		if current_customer != null:
+			for ip in current_customer.item_preference:
+				if ia == ip:
+					approved = true 
+		else:
+			"No customer, sell to the nothing"
 	
 	# If matches, customer is happy
 	if approved:
+		GameManager.current_game_state = GameManager.GameFlags.CUSTOMER_EXIT
 		text_box.text = "They liked it!"
 		await get_tree().create_timer(3.0).timeout
 		free_customer()
 		await get_tree().create_timer(3.0).timeout
-		new_customer()
-		
+		new_customer()		
 	else:
+		GameManager.current_game_state = GameManager.GameFlags.CUSTOMER_EXIT
 		text_box.text ="I'm not sure they liked that..."
 		await get_tree().create_timer(3.0).timeout
 		free_customer()
 		await get_tree().create_timer(3.0).timeout
 		new_customer()
 
-
 func _on_item_sold(price : int, item : Item):
-	print(item.name)
+	#print(item.name)
 	item_sold = item
 	evaluate_item()
 
