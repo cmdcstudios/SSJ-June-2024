@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://daa00ew8f21ti"]
+
+[ext_resource type="PackedScene" uid="uid://c2kuaooovahm2" path="res://Assets/kenney_food-kit/Models/GLTF format/riceBall.glb" id="1_6c8yy"]
+
+[node name="GodotIconScene" type="Node3D"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="riceBall2" parent="." instance=ExtResource("1_6c8yy")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, -0.461818, 0)

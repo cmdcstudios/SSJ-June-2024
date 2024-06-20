@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnp0ixeqsthbf"]
+
+[ext_resource type="PackedScene" uid="uid://bu2g18a5kgtpo" path="res://Assets/kenney_food-kit/Models/GLTF format/styrofoamDinner.glb" id="1_jne6x"]
+
+[node name="GodotIconScene" type="Node3D"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="styrofoamDinner2" parent="." instance=ExtResource("1_jne6x")]
+transform = Transform3D(0.959314, -0.282341, 0, 0.282341, 0.959314, 0, 0, 0, 1, 0, -0.68, 0)

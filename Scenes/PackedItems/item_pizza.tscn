@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://lbrmtjeeaf4m"]
-
-[ext_resource type="PackedScene" uid="uid://t45iurs2b1ai" path="res://Assets/kenney_food-kit/Models/GLTF format/pizza.glb" id="1_6q1u4"]
-
-[node name="GodotIconScene" type="Node3D"]
-transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
-
-[node name="pizza2" parent="." instance=ExtResource("1_6q1u4")]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0)

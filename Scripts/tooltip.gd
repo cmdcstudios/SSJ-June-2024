@@ -15,7 +15,7 @@ var subviewport: SubViewport  = null
 func load_item_info(item:Item):
 	stored_item = item
 	#subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/")
-	subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/")
+	subviewport = get_node("PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport/")
 	item_name_label = %ItemNameLabel
 	#subviewport = %SubViewport
 	var description_label : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription
@@ -43,7 +43,15 @@ func load_item_info(item:Item):
 			ItemAttribute.Attribute.CUTE:
 				attr_slot.get_child(0).get_child(1).text = "Cute"
 			ItemAttribute.Attribute.SOLID:
-				attr_slot.get_child(0).get_child(1).text = "Cute"
+				attr_slot.get_child(0).get_child(1).text = "Solid"
+			ItemAttribute.Attribute.CURIOUS:
+				attr_slot.get_child(0).get_child(1).text = "Curious"
+			ItemAttribute.Attribute.STRANGE:
+				attr_slot.get_child(0).get_child(1).text = "Strange"
+			ItemAttribute.Attribute.MAGICAL:
+				attr_slot.get_child(0).get_child(1).text = "Magical"
+			ItemAttribute.Attribute.NASTY:
+				attr_slot.get_child(0).get_child(1).text = "Nasty"
 
 func _on_close_button_pressed() -> void:
 	#SignalManager.tooltip_closed.emit()

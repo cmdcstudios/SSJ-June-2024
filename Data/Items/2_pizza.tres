@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_338wh"]
 [ext_resource type="Texture2D" uid="uid://d0uusivod2pes" path="res://Assets/kenney_food-kit/Previews/pizza.png" id="1_v6pmx"]
-[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://ItemAttributes/ia_solid.tres" id="2_ogn41"]
-[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="3_bmd88"]
-[ext_resource type="PackedScene" uid="uid://lbrmtjeeaf4m" path="res://Scenes/PackedItems/item_pizza.tscn" id="4_g0ega"]
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="2_ogn41"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="3_bmd88"]
+[ext_resource type="PackedScene" uid="uid://lbrmtjeeaf4m" path="res://Data/Items/PackedItems/item_pizza.tscn" id="4_g0ega"]
 
 [resource]
 script = ExtResource("1_338wh")

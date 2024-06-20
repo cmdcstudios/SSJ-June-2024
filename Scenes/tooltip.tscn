@@ -86,37 +86,44 @@ visible = false
 layout_mode = 2
 stretch_mode = 3
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+[node name="ItemPreview" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 stretch = true
 stretch_shrink = 5
 
-[node name="SubViewport" type="SubViewport" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer"]
 unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(40, 40)
 render_target_update_mode = 4
 
-[node name="Node3D" type="Node3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
+[node name="Node3D" type="Node3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport"]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("3_uycc5")
 
-[node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("4_46m61")]
+[node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("4_46m61")]
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
 visible = false
 
-[node name="Camera3D" type="Camera3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 1.562)
 projection = 1
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport"]
 transform = Transform3D(0.173648, -0.204753, -0.963287, 0, 0.978148, -0.207912, 0.984808, 0.0361035, 0.169854, 0, 0, 0)
 light_energy = 1.508
 
-[node name="SpotLight3D" type="SpotLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport"]
+[node name="SpotLight3D" type="SpotLight3D" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/ItemPreview/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 0.897366, 0.441287, 0, -0.441287, 0.897366, -0.0303076, 0.651762, 1.16542)
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+theme_override_constants/separation = 24
 
 [node name="PriceLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
 layout_mode = 2

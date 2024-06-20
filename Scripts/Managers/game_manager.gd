@@ -39,7 +39,7 @@ func dir_contents(path):
 				print("Found directory: " + file_name)
 			else:
 				print("Found file: " + file_name)
-				inventorys.append(ResourceLoader.load("res://Data/Inventory/" + file_name))
+				inventorys.push_front(ResourceLoader.load("res://Data/Inventory/" + file_name))
 				#print(inventorys)
 			file_name = dir.get_next()
 	else:
