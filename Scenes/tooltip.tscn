@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/tooltip.gd" id="1_l3apk"]
 [ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="2_3g0vw"]
-[ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Assets/mushrooms.glb" id="3_hcapm"]
 [ext_resource type="Script" path="res://Scripts/spin_node.gd" id="3_uycc5"]
+[ext_resource type="PackedScene" uid="uid://dwr1xjfj6y2dv" path="res://Assets/Temp/mushrooms.glb" id="4_46m61"]
 
 [node name="Tooltip" type="CanvasLayer" groups=["Tooltips"]]
 script = ExtResource("1_l3apk")
@@ -103,7 +103,7 @@ render_target_update_mode = 4
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 script = ExtResource("3_uycc5")
 
-[node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("3_hcapm")]
+[node name="mushrooms2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/SubViewportContainer/SubViewport/Node3D" instance=ExtResource("4_46m61")]
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
 visible = false
 
