@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://iyvvkgsn1njy"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=10 format=3 uid="uid://iyvvkgsn1njy"]
 
 [ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_wpvtq"]
 [ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="2_ux7d5"]
@@ -8,7 +8,8 @@
 [ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="6_itqgn"]
 [ext_resource type="Resource" uid="uid://bs0ypwdtix61d" path="res://Data/Items/Test Items/item_plain.tres" id="7_s6xod"]
 [ext_resource type="Resource" uid="uid://b3xex7sntgoc2" path="res://Data/Items/Test Items/item_solid.tres" id="8_iyy6s"]
+[ext_resource type="Resource" uid="uid://ck8yi0tiqjv84" path="res://Data/Items/2_pizza.tres" id="8_qxeul"]
 
 [resource]
 script = ExtResource("1_wpvtq")
-_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("2_ux7d5"), ExtResource("3_ytid0"), ExtResource("4_e160b"), ExtResource("5_1b2nl"), ExtResource("6_itqgn"), ExtResource("7_s6xod"), ExtResource("8_iyy6s")])
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("2_ux7d5"), ExtResource("3_ytid0"), ExtResource("4_e160b"), ExtResource("5_1b2nl"), ExtResource("6_itqgn"), ExtResource("7_s6xod"), ExtResource("8_iyy6s"), ExtResource("8_qxeul")])
