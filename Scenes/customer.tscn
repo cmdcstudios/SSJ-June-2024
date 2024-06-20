@@ -12,8 +12,8 @@ customer_name = "CUSTOMER"
 customer_greeting = "HELLO I AM CUSTOMER"
 
 [node name="CustomerSprite" type="Sprite2D" parent="."]
-position = Vector2(1026, 564)
-scale = Vector2(2.0486, 2.0486)
+position = Vector2(495, 628)
+scale = Vector2(1.92577, 1.92577)
 texture = ExtResource("3_6ckwg")
 
 [node name="PreferenceBox" type="HBoxContainer" parent="CustomerSprite"]
