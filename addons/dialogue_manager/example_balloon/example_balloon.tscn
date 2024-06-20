@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://dw1ksadru3jh4" path="res://Characters/Boss.svg" id="4_n2xt0"]
+[ext_resource type="Texture2D" uid="uid://fh16j4rejke5" path="res://Characters/Sum2024_Chara4.png" id="4_0oxru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -148,9 +148,9 @@ layout_mode = 2
 text = "Response example"
 
 [node name="Portrait" type="Sprite2D" parent="."]
-position = Vector2(127, 959)
-scale = Vector2(1.73828, 1.73828)
-texture = ExtResource("4_n2xt0")
+position = Vector2(131, 950)
+scale = Vector2(0.509409, 0.509409)
+texture = ExtResource("4_0oxru")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

@@ -39,8 +39,8 @@ func new_customer() -> void:
 		prestage_customer(customer_data)
 		current_customer = next_customer
 		spawn_point.add_child(current_customer)
-		#text_box.text = "A customer walks in...\n" + current_customer.customer_greeting
-		DialogueManager.show_dialogue_balloon(customer_data.dialogue, "start")
+		text_box.text = "A customer walks in...\n" + current_customer.customer_greeting
+		#DialogueManager.show_dialogue_balloon(customer_data.dialogue, "start")
 		SignalManager.customer_entered.emit(customer_data)
 	else:
 		text_box.text = "That was the last customer of the day!"

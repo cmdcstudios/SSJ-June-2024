@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cabemq10wdjli"]
+[gd_scene load_steps=5 format=3 uid="uid://cabemq10wdjli"]
 
 [ext_resource type="Script" path="res://Scripts/customer.gd" id="1_epmwu"]
 [ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="2_tkrtt"]
+[ext_resource type="Texture2D" uid="uid://fh16j4rejke5" path="res://Characters/Sum2024_Chara4.png" id="3_6ckwg"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://addons/dialogue_manager/example_balloon/example_balloon.tscn" id="4_2gk13"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_epmwu")
@@ -10,15 +12,18 @@ customer_name = "CUSTOMER"
 customer_greeting = "HELLO I AM CUSTOMER"
 
 [node name="CustomerSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_tkrtt")
+position = Vector2(1026, 564)
+scale = Vector2(2.0486, 2.0486)
+texture = ExtResource("3_6ckwg")
 
 [node name="PreferenceBox" type="HBoxContainer" parent="CustomerSprite"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -64.0
-offset_top = -64.0
-offset_right = -64.0
-offset_bottom = -64.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = -256.0
+offset_bottom = -256.0
 grow_horizontal = 2
 
 [node name="NameLabel" type="Label" parent="CustomerSprite"]
@@ -27,11 +32,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -84.0
-offset_top = -35.0
-offset_right = -44.0
-offset_bottom = -12.0
+offset_left = -573.778
+offset_top = -436.339
+offset_right = -497.778
+offset_bottom = -413.339
 grow_horizontal = 2
 grow_vertical = 0
+text = "Customer"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="ExampleBalloon" parent="." instance=ExtResource("4_2gk13")]
+visible = false
