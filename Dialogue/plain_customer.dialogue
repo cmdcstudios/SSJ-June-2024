@@ -1,0 +1,23 @@
+~ start
+
+Customer: [[Hi|Hello|Howdy]], this is some dialogue.
+Customer: Here are some choices.
+- First one
+	Customer: You picked the first one.
+- Second one
+	Customer: You picked the second one.
+- Start again => start
+- End the conversation => END
+Customer: For more information see the online documentation.
+
+=> END
+
+~ happy
+
+Customer: That's just what I wanted!
+
+=> END
+
+~ unhappy
+
+Customer: Is this really all you have...? -_-'

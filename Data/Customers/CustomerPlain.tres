@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CustomerResource" load_steps=4 format=3 uid="uid://bpuw8vw6d1kd7"]
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://bpuw8vw6d1kd7"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_0ce5m"]
+[ext_resource type="Resource" uid="uid://bbo1q7qr3i82t" path="res://Dialogue/plain_customer.dialogue" id="1_a210n"]
 [ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://ItemAttributes/ia_plain.tres" id="1_n0jj8"]
 [ext_resource type="Texture2D" uid="uid://fh16j4rejke5" path="res://Characters/Sum2024_Chara4.png" id="3_rorcf"]
 
@@ -10,3 +11,4 @@ name = "Plain Jane"
 greeting = "Just an average customer"
 sprite = ExtResource("3_rorcf")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_n0jj8")])
+dialogue = ExtResource("1_a210n")

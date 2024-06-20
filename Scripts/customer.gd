@@ -5,6 +5,7 @@ extends Node2D
 @export var sprite_texture : Texture2D
 @export var customer_name : String
 @export var customer_greeting : String
+@export var customer_dialogue : DialogueResource
 
 @onready var preference_box = $CustomerSprite/PreferenceBox
 @onready var customer_sprite = $CustomerSprite

@@ -29,6 +29,7 @@ func prestage_customer(customer_data : CustomerResource) -> void:
 	next_customer.customer_greeting = customer_data.greeting
 	next_customer.sprite_texture = customer_data.sprite
 	next_customer.item_preference = customer_data.item_preference
+	next_customer.customer_dialogue = customer_data.dialogue
 
 
 func new_customer() -> void:
@@ -39,8 +40,8 @@ func new_customer() -> void:
 		prestage_customer(customer_data)
 		current_customer = next_customer
 		spawn_point.add_child(current_customer)
-		text_box.text = "A customer walks in...\n" + current_customer.customer_greeting
-		#DialogueManager.show_dialogue_balloon(customer_data.dialogue, "start")
+		#text_box.text = "A customer walks in...\n" + current_customer.customer_greeting
+		DialogueManager.show_dialogue_balloon(customer_data.dialogue, "start")
 		SignalManager.customer_entered.emit(customer_data)
 	else:
 		text_box.text = "That was the last customer of the day!"
@@ -83,14 +84,16 @@ func evaluate_item():
 	
 	# If matches, customer is happy
 	if approved:
-		text_box.text = "They liked it!"
+		#text_box.text = "They liked it!"
+		DialogueManager.show_dialogue_balloon(current_customer.customer_dialogue, "happy")
 		await get_tree().create_timer(3.0).timeout
 		free_customer()
 		await get_tree().create_timer(3.0).timeout
 		new_customer()
 		
 	else:
-		text_box.text ="I'm not sure they liked that..."
+		#text_box.text ="I'm not sure they liked that..."
+		DialogueManager.show_dialogue_balloon(current_customer.customer_dialogue, "unhappy")
 		await get_tree().create_timer(3.0).timeout
 		free_customer()
 		await get_tree().create_timer(3.0).timeout
