@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=8 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="5_sxr4y"]
+[ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="6_fitsq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
@@ -89,6 +90,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "START DAY"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fitsq")
+volume_db = -14.715
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]

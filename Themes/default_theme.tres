@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cye3rqi56leit" path="res://Themes/tool_tip_panel4.png" id="1_hegcf"]
 [ext_resource type="Texture2D" uid="uid://dy3wjb7w0fl2y" path="res://Assets/kenney_cursor-pack/PNG/Basic/Default/cross_small.png" id="2_21rt6"]
 [ext_resource type="Texture2D" uid="uid://dswy17407op6t" path="res://Assets/kenney_cursor-pack/PNG/Basic/Default/cross_large.png" id="2_yknk6"]
-[ext_resource type="Texture2D" uid="uid://bmo0n1i7f3fwp" path="res://Assets/kenney_fantasy-ui-borders/PNG/Double/Transparent center/panel-transparent-center-001.png" id="5_ogmuq"]
+[ext_resource type="Texture2D" uid="uid://dd2oh7r0xb4ei" path="res://Assets/kenney_fantasy-ui-borders/PNG/Default/Panel/panel-001.png" id="5_g3w2k"]
 [ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="6_xo6fs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ermd"]
@@ -26,7 +26,7 @@ content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = ExtResource("5_ogmuq")
+texture = ExtResource("5_g3w2k")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0

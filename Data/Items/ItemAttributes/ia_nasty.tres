@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://fyk0tb8xldxu"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_2a8ga"]
-[ext_resource type="Texture2D" uid="uid://dn70bcoqkl0yu" path="res://icon.svg" id="1_vjtig"]
+[ext_resource type="Texture2D" uid="uid://bof0rrno0vw7u" path="res://Assets/Temp/BotW_Dubious_Food_Icon.png" id="1_h0wwl"]
 
 [resource]
 script = ExtResource("1_2a8ga")
 name = "Nasty"
 attribute_type = 8
-attribute_icon = ExtResource("1_vjtig")
+attribute_icon = ExtResource("1_h0wwl")

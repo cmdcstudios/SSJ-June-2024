@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bd5b50rnk2ayw"
+path="res://.godot/imported/mouse_select.wav-e5a80c8ed680292bb50342470e06a50f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SSJ2024-Music-SFX/SFX/Menu & Interaction/mouse_select.wav"
+dest_files=["res://.godot/imported/mouse_select.wav-e5a80c8ed680292bb50342470e06a50f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

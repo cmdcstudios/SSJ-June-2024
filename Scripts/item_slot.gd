@@ -25,7 +25,7 @@ func _on_texture_rect_mouse_entered() -> void:
 		SignalManager.tooltip_closed.emit()
 		if (GameManager.current_game_state == GameManager.GameFlags.SELLABLE):	
 			_tooltip = item_tooltip.instantiate() as Tooltip
-			print(self.global_position)
+			_tooltip.get_child(0).global_position = global_position - Vector2(800, 0)
 			_tooltip.position = self.global_position
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(_stored_item)
@@ -38,6 +38,9 @@ func _on_texture_rect_mouse_entered() -> void:
 				SignalManager.item_sold.connect(_on_item_sold)
 		if (GameManager.current_game_state == GameManager.GameFlags.NORMAL and _stored_item.id != 3):
 			_tooltip = item_tooltip.instantiate() as Tooltip
+			print(global_position)
+			print(_tooltip.get_child(0).global_position)
+			_tooltip.get_child(0).global_position = global_position - Vector2(800, 0)
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(_stored_item) # default item slot item
 			await get_tree().create_timer(0.35).timeout
@@ -54,6 +57,7 @@ func _on_texture_rect_pressed() -> void:
 			TooltipInfo.tooltips[0].queue_free()
 			TooltipInfo.tooltips.pop_front()
 			_tooltip = item_tooltip.instantiate() as Tooltip
+			_tooltip.get_child(0).global_position = global_position - Vector2(800, 0)
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(_stored_item)
 			self.add_child(_tooltip)
@@ -65,6 +69,7 @@ func _on_texture_rect_pressed() -> void:
 			TooltipInfo.tooltips[0].queue_free()
 			TooltipInfo.tooltips.pop_front()
 			_tooltip = item_tooltip.instantiate() as Tooltip
+			_tooltip.get_child(0).global_position = global_position - Vector2(800, 0)
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(_stored_item)
 			self.add_child(_tooltip)
