@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d376hlrc4k2ty"
+path="res://.godot/imported/pause.wav-9946424699bed023584d233b01982ad6.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SSJ2024-Music-SFX/SFX/Menu & Interaction/pause.wav"
+dest_files=["res://.godot/imported/pause.wav-9946424699bed023584d233b01982ad6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

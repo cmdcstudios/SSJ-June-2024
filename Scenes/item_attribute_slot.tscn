@@ -1,9 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0cvuts4mf1jl"]
+[gd_scene load_steps=5 format=3 uid="uid://c0cvuts4mf1jl"]
+
+[ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="1_plge5"]
+[ext_resource type="Texture2D" uid="uid://d1tlerlhcwt5i" path="res://Assets/kenney_fantasy-ui-borders/PNG/Default/Transparent center/panel-transparent-center-014.png" id="2_6n8cn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0nmgc"]
+texture = ExtResource("2_6n8cn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vq7q4"]
 size = Vector2(32, 32)
 
 [node name="ItemAttributeSlot" type="PanelContainer"]
+theme = ExtResource("1_plge5")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0nmgc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -17,4 +29,6 @@ expand_mode = 2
 
 [node name="ItemAttributeLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
 text = "<attr_name>"
