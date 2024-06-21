@@ -1,14 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=10 format=3 uid="uid://18fcv8pdliix"]
 
+[ext_resource type="Script" path="res://Scenes/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
-[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="5_sxr4y"]
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="5_m68xa"]
+[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="5_sxr4y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
+[sub_resource type="Resource" id="Resource_8746v"]
+script = ExtResource("5_m68xa")
+customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([])
+
 [node name="MainGame" type="Node3D"]
+script = ExtResource("1_kcqlo")
 
 [node name="Player" type="Node" parent="."]
 unique_name_in_owner = true
@@ -23,7 +30,8 @@ shape = SubResource("CircleShape2D_w5ke0")
 [node name="UIRoot" type="CanvasLayer" parent="."]
 script = ExtResource("4_72xad")
 
-[node name="CustomerStage" parent="UIRoot" instance=ExtResource("5_sxr4y")]
+[node name="CustomerStager" parent="UIRoot" instance=ExtResource("5_sxr4y")]
+queue_resource = SubResource("Resource_8746v")
 
 [node name="MoneyDialog" parent="UIRoot" instance=ExtResource("5_5k482")]
 anchors_preset = 5
@@ -89,6 +97,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "START DAY"
+
+[node name="GameOverLabel" type="Label" parent="UIRoot"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -11.5
+offset_right = 73.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "Thanks for playing!"
 
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]

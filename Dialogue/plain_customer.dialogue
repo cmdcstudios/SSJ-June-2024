@@ -1,0 +1,15 @@
+~ start
+
+Customer: [[Hi|Hello|Howdy]], this is some dialogue.
+
+=> END
+
+~ happy
+
+Customer: That's just what I wanted!
+
+=> END
+
+~ unhappy
+
+Customer: Is this really all you have...? -_-'
