@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://1sordm4ifq47"]
+[gd_scene load_steps=7 format=3 uid="uid://1sordm4ifq47"]
 
 [ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="1_ta4vu"]
 [ext_resource type="Script" path="res://Scripts/item_slot.gd" id="1_u7l74"]
 [ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="2_s7bws"]
+[ext_resource type="Texture2D" uid="uid://crlcmltqy24n8" path="res://Assets/kenney_fantasy-ui-borders/PNG/Default/Transparent center/panel-transparent-center-000.png" id="2_wy7q6"]
 [ext_resource type="Resource" uid="uid://b8p28m44u1syd" path="res://Data/Items/3_item_slot.tres" id="4_x8ns7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wn8np"]
+texture = ExtResource("2_wy7q6")
+modulate_color = Color(0.996674, 0.838478, 0.558936, 1)
 
 [node name="ItemSlot" type="PanelContainer"]
 theme = ExtResource("1_ta4vu")
 theme_type_variation = &"ItemSlot"
+theme_override_styles/panel = SubResource("StyleBoxTexture_wn8np")
 script = ExtResource("1_u7l74")
 item_tooltip = ExtResource("2_s7bws")
 item = ExtResource("4_x8ns7")
