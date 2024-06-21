@@ -1,4 +1,5 @@
 extends Control
+class_name CustomerStager
 
 # TO-DO Script is getting large, consider refactoring and breaking debugger into it's own scene
 
@@ -10,7 +11,6 @@ extends Control
 
 var item_sold : Item
 var customer = load("res://Scenes/customer.tscn")
-var cool_attribute = load("res://ItemAttributes/ia_cool.tres")
 var current_customer : Customer
 var next_customer : Customer
 # timer_length is the transition time between customers
@@ -20,8 +20,12 @@ var timer_length : float = 1.0
 func _ready() -> void:
 	# TO-DO refactor so debugger mode off is default state, not set on ready
 	debugger_deactivate()
-	SignalManager.start_day.connect(_on_start_day)
 	SignalManager.item_sold.connect(_on_item_sold)
+
+
+func begin_new_queue(queue : CustomerQueue) -> void:
+	customer_queue = queue.customer_queue
+	new_customer()
 
 
 func prestage_customer(customer_data : CustomerResource) -> void:
@@ -45,7 +49,7 @@ func new_customer() -> void:
 		SignalManager.customer_entered.emit(customer_data)
 	else:
 		# TO-DO pass message to DialogueManager & trigger EOD
-		pass
+		SignalManager.end_day.emit()
 
 
 func debugger_activate() -> void:
@@ -68,10 +72,6 @@ func free_customer():
 	else:
 		# TO-DO trigger DialogueManager message "No customers
 		pass
-	
-
-func _on_start_day() -> void:
-	new_customer()
 
 
 func evaluate_item():

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4wadefwf0p55"]
 
-[ext_resource type="Script" path="res://Scripts/customer_stage.gd" id="1_nuevh"]
+[ext_resource type="Script" path="res://Scripts/customer_stager.gd" id="1_nuevh"]
 [ext_resource type="Resource" uid="uid://cbeq2ocvlnb80" path="res://Data/Customer Queues/CQ_Day00.tres" id="2_l2ijm"]
 
 [node name="CustomerStage" type="Control"]
