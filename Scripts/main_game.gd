@@ -3,6 +3,7 @@ extends Node3D
 @onready var UIRoot : CanvasLayer = $UIRoot
 @onready var customer_stager = $UIRoot/CustomerStager
 @onready var inventory_dialogue : InventoryDialog = %InventoryDialog
+@onready var pause_menu = $"Pause Menu/Darken Layer"
 
 @onready var bgm = $BGM
 const TRACK_1 = preload("res://Assets/Audio/SSJ2024-Music-SFX/Music/track1.ogg")
@@ -62,3 +63,11 @@ func _on_bgm_finished():
 		bgm_index = 0
 	bgm.stream = bgmTracks[bgm_index]
 	bgm.play()
+
+
+func _on_pause_button_pressed():
+	pause_menu.visible = !pause_menu.visible
+
+
+func _on_close_menu_button_pressed():
+	pause_menu.visible = false

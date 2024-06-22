@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=14 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="5_sxr4y"]
 [ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="6_fitsq"]
 [ext_resource type="Texture2D" uid="uid://d4cvnt0oxwt80" path="res://Assets/Temp/flatDark16.png" id="8_2075h"]
+[ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="9_l0kp3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
@@ -16,8 +17,25 @@
 script = ExtResource("5_m68xa")
 customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([])
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lpe0"]
+bg_color = Color(0.818504, 0.487585, 0.560532, 1)
+skew = Vector2(0.215, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.145098)
+shadow_size = 8
+shadow_offset = Vector2(8, 8)
+
 [node name="MainGame" type="Node3D"]
 script = ExtResource("1_kcqlo")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fitsq")
+volume_db = -14.715
+autoplay = true
+bus = &"Music"
 
 [node name="Player" type="Node" parent="."]
 unique_name_in_owner = true
@@ -115,41 +133,144 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 72
 text = "Thanks for playing!"
 
-[node name="BGM Next" type="Button" parent="UIRoot"]
-offset_left = 99.0
-offset_top = 10.0
-offset_right = 120.0
-offset_bottom = 66.0
-focus_mode = 0
-text = ">"
+[node name="Pause Menu" type="CanvasLayer" parent="."]
+layer = 101
 
-[node name="BGM Prev" type="Button" parent="UIRoot"]
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 31.0
-offset_bottom = 66.0
-focus_mode = 0
-text = "<"
+[node name="Darken Layer" type="Panel" parent="Pause Menu"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Music Toggle" type="Button" parent="UIRoot"]
-offset_left = 37.0
+[node name="Pause Panel" type="Panel" parent="Pause Menu/Darken Layer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.5
+offset_top = -270.0
+offset_right = 257.5
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0lpe0")
+
+[node name="Paused Text" type="RichTextLabel" parent="Pause Menu/Darken Layer/Pause Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 47.0
+offset_right = 223.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("9_l0kp3")
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[center]PAUSED"
+fit_content = true
+
+[node name="Main Menu Button" type="Button" parent="Pause Menu/Darken Layer/Pause Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -11.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("9_l0kp3")
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+flat = true
+icon_alignment = 1
+
+[node name="Credits Button" type="Button" parent="Pause Menu/Darken Layer/Pause Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = 94.0
+offset_right = 70.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("9_l0kp3")
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+flat = true
+icon_alignment = 1
+
+[node name="Close Menu Button" type="Button" parent="Pause Menu/Darken Layer/Pause Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 4.5
+offset_right = 34.5
+offset_bottom = 58.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("9_l0kp3")
+theme_override_font_sizes/font_size = 48
+text = "x"
+flat = true
+
+[node name="BGM Next" type="Button" parent="Pause Menu"]
+offset_left = 171.0
 offset_top = 10.0
-offset_right = 93.0
+offset_right = 192.0
 offset_bottom = 66.0
 focus_mode = 0
+text = "🞂"
+
+[node name="BGM Prev" type="Button" parent="Pause Menu"]
+offset_left = 82.0
+offset_top = 10.0
+offset_right = 103.0
+offset_bottom = 66.0
+focus_mode = 0
+text = "🞀"
+
+[node name="Music Toggle" type="Button" parent="Pause Menu"]
+offset_left = 109.0
+offset_top = 10.0
+offset_right = 165.0
+offset_bottom = 66.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 0
 icon = ExtResource("8_2075h")
 
-[node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_fitsq")
-volume_db = -14.715
-autoplay = true
-bus = &"Music"
+[node name="Pause Button" type="Button" parent="Pause Menu"]
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 67.0
+offset_bottom = 66.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "⮌"
 
+[connection signal="finished" from="BGM" to="." method="_on_bgm_finished"]
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOff" to="UIRoot" method="_on_debug_off_pressed"]
 [connection signal="pressed" from="UIRoot/StartDayButton" to="UIRoot" method="_on_start_day_button_pressed"]
-[connection signal="pressed" from="UIRoot/BGM Next" to="." method="_on_bgm_next_pressed"]
-[connection signal="pressed" from="UIRoot/BGM Prev" to="." method="_on_bgm_prev_pressed"]
-[connection signal="pressed" from="UIRoot/Music Toggle" to="." method="_on_music_toggle_pressed"]
-[connection signal="finished" from="BGM" to="." method="_on_bgm_finished"]
+[connection signal="pressed" from="Pause Menu/Darken Layer/Pause Panel/Close Menu Button" to="." method="_on_close_menu_button_pressed"]
+[connection signal="pressed" from="Pause Menu/BGM Next" to="." method="_on_bgm_next_pressed"]
+[connection signal="pressed" from="Pause Menu/BGM Prev" to="." method="_on_bgm_prev_pressed"]
+[connection signal="pressed" from="Pause Menu/Music Toggle" to="." method="_on_music_toggle_pressed"]
+[connection signal="pressed" from="Pause Menu/Pause Button" to="." method="_on_pause_button_pressed"]
