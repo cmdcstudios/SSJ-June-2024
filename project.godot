@@ -64,7 +64,7 @@ inventory_button_click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/tutorial_dialogue.dialogue", "res://Dialogue/plain_customer.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/tutorial_dialogue.dialogue", "res://Dialogue/plain_customer.dialogue", "res://Dialogue/indifferent_customer.dialogue", "res://Dialogue/solid_customer.dialogue", "res://Dialogue/flashy_customer.dialogue", "res://Dialogue/cute_customer.dialogue", "res://Dialogue/cool_customer.dialogue")
 
 [rendering]
 

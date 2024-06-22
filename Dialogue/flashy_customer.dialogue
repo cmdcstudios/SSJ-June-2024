@@ -1,0 +1,17 @@
+~ start
+
+Customer: [[Hello shopkeep|Hello again|Good afternoon]], [[Do you have anything [wave]fancy[/wave] for me today, or will I have to go down the road again?|Your selection is looking a little thin, and you know I have [wave]expensive[/wave] tastes...|Bring me your [wave]finest[/wave] fare, and without delay.]]
+
+=> END
+
+~ happy
+
+Customer: [[Oh! Finally something [wave]refined[/wave] in this town!|Beautiful! Something befitting of my station!|That's why I come here, you always save me the top shelf stuff.]]
+
+=> END
+
+~ unhappy
+
+Customer: [[Hmmm... When will your manager be in?|Did you even look in the back!?|Unbelievable... Well, give it here! I'm not leaving empty handed...]]
+
+=> END

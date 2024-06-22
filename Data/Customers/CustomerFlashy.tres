@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://cqnqrqniajigr"]
 
-[ext_resource type="Resource" uid="uid://bbo1q7qr3i82t" path="res://Dialogue/plain_customer.dialogue" id="1_0on1e"]
-[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://ItemAttributes/ia_flashy.tres" id="1_1fiph"]
+[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://Data/Items/ItemAttributes/ia_flashy.tres" id="1_1fiph"]
+[ext_resource type="Resource" uid="uid://b0uymtrlt2xju" path="res://Dialogue/flashy_customer.dialogue" id="1_8t31i"]
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="2_14h0y"]
 [ext_resource type="Texture2D" uid="uid://d07hdh7wcfj2h" path="res://Characters/Sum2024_Chara10.png" id="4_t41rb"]
 
@@ -11,4 +11,4 @@ name = "Flash Gordan"
 greeting = "MY EEEEEYES!!!"
 sprite = ExtResource("4_t41rb")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_1fiph")])
-dialogue = ExtResource("1_0on1e")
+dialogue = ExtResource("1_8t31i")

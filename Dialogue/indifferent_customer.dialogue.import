@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://62ydhvslav2w"
+path="res://.godot/imported/indifferent_customer.dialogue-e6beb3d706a7352062ea0c165eca3b2e.tres"
+
+[deps]
+
+source_file="res://Dialogue/indifferent_customer.dialogue"
+dest_files=["res://.godot/imported/indifferent_customer.dialogue-e6beb3d706a7352062ea0c165eca3b2e.tres"]
+
+[params]
+
+defaults=true

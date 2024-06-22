@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b0uymtrlt2xju"
+path="res://.godot/imported/flashy_customer.dialogue-359f430b3e87a846db01bbbd6b797240.tres"
+
+[deps]
+
+source_file="res://Dialogue/flashy_customer.dialogue"
+dest_files=["res://.godot/imported/flashy_customer.dialogue-359f430b3e87a846db01bbbd6b797240.tres"]
+
+[params]
+
+defaults=true

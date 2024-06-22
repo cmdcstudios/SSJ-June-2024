@@ -1,0 +1,17 @@
+~ start
+
+Customer: [[Hi pal|Hello partner|Hey there]], [[you got anything with some [wave]meat on its bones?[/wave]|I could use something [wave]hefty[/wave] if you got it...|one of your [wave]sturdiest[/wave], please.]]
+
+=> END
+
+~ happy
+
+Customer: [[Yep, that'll do. Score!|Mucho thanks, that should last me.|You always hook me up, thanks again!]]
+
+=> END
+
+~ unhappy
+
+Customer: [[Ummm... well it's better than nothing I guess...|That's all you have, huh? Well, I guess I'll take it anyway...|Did you look in the back too? Well I hope you get restocked soon. I guess I'll just take what I can get...|Is there something less than zero stars..?]]
+
+=> END

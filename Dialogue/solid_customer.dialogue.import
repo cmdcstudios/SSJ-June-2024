@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dml1i7edreeow"
+path="res://.godot/imported/solid_customer.dialogue-33425ecc88c929d9b007cb5fcc1dc1d3.tres"
+
+[deps]
+
+source_file="res://Dialogue/solid_customer.dialogue"
+dest_files=["res://.godot/imported/solid_customer.dialogue-33425ecc88c929d9b007cb5fcc1dc1d3.tres"]
+
+[params]
+
+defaults=true

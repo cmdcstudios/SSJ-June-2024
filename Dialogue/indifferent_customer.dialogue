@@ -1,0 +1,17 @@
+~ start
+
+Customer: [[Hi|Hello|Hey]], [[I'm kinda looking for...whatever you got is fine.|could I get one of... whatever you have on hand?|I'd take just about anything...]]
+
+=> END
+
+~ happy
+
+Customer: [[Hey, that works.|Could be better but could also be worse, later.|That'll do me, wrap it up.]]
+
+=> END
+
+~ unhappy
+
+Customer: [[Ummm... well it's better than nothing I guess...|That's all you have, huh? Well, I guess I'll take it anyway...|Is there something less than zero stars..?]]
+
+=> END

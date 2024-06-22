@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/tutorial.gd" id="1_7unip"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="2_qxydp"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="3_bt64y"]
-[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stage.tscn" id="4_usokq"]
+[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="4_usokq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_d2nua"]
 [ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="6_w2hti"]
 
