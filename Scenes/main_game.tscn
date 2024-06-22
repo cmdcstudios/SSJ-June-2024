@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://18fcv8pdliix"]
 
-[ext_resource type="Script" path="res://Scenes/main_game.gd" id="1_kcqlo"]
+[ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]

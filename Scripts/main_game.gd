@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var UIRoot : CanvasLayer = $UIRoot
-@onready var customer_stager : CustomerStager = $UIRoot/CustomerStager
+@onready var customer_stager = $UIRoot/CustomerStager
 @onready var inventory_dialogue : InventoryDialog = %InventoryDialog
 
 var day_index : int = -1
