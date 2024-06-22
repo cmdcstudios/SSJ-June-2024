@@ -1,17 +1,17 @@
 ~ start
 
-Customer: [[Howdy there shopkeep|Hey duderino|Yo, check it out]], [[I'm looking for something that's like... [wave]wicked sick[/wave], you know?|you got anything that's so cool... it's [wave]ice cold[/wave]?|I'll take one of your absolute [wave]coolest[/wave], please and thank you!]]
+Cool Guy: [next=auto][[Howdy there shopkeep|Hey duderino|Yo, check it out]], [[I'm looking for something that's like... [wave]wicked sick[/wave], you know?|you got anything that's so cool... it's [wave]ice cold[/wave]?|I'll take one of your absolute [wave]coolest[/wave], please and thank you!]]
 
 => END
 
 ~ happy
 
-Customer: [[Ch'yeah man, right on! That's the ticket!|Why go anywhere else?! Thanks for hooking it up!|Perfect! That really fits my groove right now, you know?|You always hook it up to the max, thanks again!]]
+Cool Guy: [next=auto][[Ch'yeah man, right on! That's the ticket!|Why go anywhere else?! Thanks for hooking it up!|Perfect! That really fits my groove right now, you know?|You always hook it up to the max, thanks again!]]
 
 => END
 
 ~ unhappy
 
-Customer: [[Hmmm... well you gotta be flexible sometimes...|Very not cool... but I still am...|I'll be honest with you, it's not super cool... Ah well...|So... what's like... your return policy? Just out of curiosity...]]
+Cool Guy: [next=auto][[Hmmm... well you gotta be flexible sometimes...|Very not cool... but I still am...|I'll be honest with you, it's not super cool... Ah well...|So... what's like... your return policy? Just out of curiosity...]]
 
 => END

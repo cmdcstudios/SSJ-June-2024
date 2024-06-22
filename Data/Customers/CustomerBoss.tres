@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://bjiaobn4q0fcg"]
+
+[ext_resource type="Resource" uid="uid://bx21x12y7anqd" path="res://Dialogue/tutorial_dialogue.dialogue" id="1_tj15x"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="2_a28yc"]
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="3_ix5y7"]
+[ext_resource type="Texture2D" uid="uid://b3nbydi6i2kcc" path="res://Characters/Sum2024_Chara12.png" id="11_id83b"]
+
+[resource]
+script = ExtResource("3_ix5y7")
+name = "Boss"
+greeting = "I'm your boss"
+sprite = ExtResource("11_id83b")
+item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_a28yc")])
+dialogue = ExtResource("1_tj15x")

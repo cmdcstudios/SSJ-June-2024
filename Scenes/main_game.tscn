@@ -76,6 +76,7 @@ offset_bottom = 17.5
 grow_horizontal = 0
 
 [node name="Debugger" type="VBoxContainer" parent="UIRoot"]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -104,6 +105,7 @@ size_flags_horizontal = 10
 text = "OFF"
 
 [node name="StartDayButton" type="Button" parent="UIRoot"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
