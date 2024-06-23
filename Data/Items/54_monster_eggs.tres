@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://7r70uchpfp78"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_57qea"]
+[ext_resource type="Resource" uid="uid://cq6b3v3rg4qnq" path="res://Data/Items/ItemAttributes/ia_strange.tres" id="1_hfq5h"]
+[ext_resource type="Resource" uid="uid://fyk0tb8xldxu" path="res://Data/Items/ItemAttributes/ia_nasty.tres" id="2_tu1lf"]
+[ext_resource type="PackedScene" uid="uid://bu2r15lkd74pl" path="res://Data/Items/PackedItems/item_monster_eggs.tscn" id="3_wvn7l"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_4dgdg"]
+
+[resource]
+script = ExtResource("1_57qea")
+id = 54
+sell_price = 100
+name = "Ghostly Eggs"
+description = "These eggs sure look a bit strange..."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_hfq5h"), ExtResource("2_tu1lf")])
+inventory_icon = SubResource("ImageTexture_4dgdg")
+scene = ExtResource("3_wvn7l")

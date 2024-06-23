@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://csiiyp8uwxaq6"]
+
+[ext_resource type="Texture2D" uid="uid://0ty54r0iq2dk" path="res://Assets/kenney_cursor-pack/PNG/Basic/Default/door_disabled.png" id="1_k0m0p"]
+[ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_qnfwc"]
+
+[resource]
+script = ExtResource("1_qnfwc")
+name = "Curious"
+attribute_type = 5
+attribute_icon = ExtResource("1_k0m0p")

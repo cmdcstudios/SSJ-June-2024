@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://diwp2qrv5a1ng"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_185l1"]
-[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://ItemAttributes/ia_cool.tres" id="1_hhojd"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="1_hhojd"]
 [ext_resource type="Resource" uid="uid://bbo1q7qr3i82t" path="res://Dialogue/plain_customer.dialogue" id="1_pn1ds"]
 [ext_resource type="Texture2D" uid="uid://4f1gpwildy4d" path="res://Characters/Sum2024_Chara5.png" id="4_bkdc8"]
 

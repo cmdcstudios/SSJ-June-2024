@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=13 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scenes/main_game.gd" id="1_kcqlo"]
+[ext_resource type="PackedScene" uid="uid://dtd852yjnr62n" path="res://Assets/Shop Base Assets/shop.glb" id="2_tu3oi"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
 [ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
 [ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
@@ -8,6 +9,7 @@
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="5_m68xa"]
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="5_sxr4y"]
 [ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="6_fitsq"]
+[ext_resource type="Texture2D" uid="uid://bof0rrno0vw7u" path="res://Assets/Temp/BotW_Dubious_Food_Icon.png" id="9_xchg2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
@@ -17,6 +19,9 @@ customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]
 
 [node name="MainGame" type="Node3D"]
 script = ExtResource("1_kcqlo")
+
+[node name="shop" parent="." instance=ExtResource("2_tu3oi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5713, -15.437, 0)
 
 [node name="Player" type="Node" parent="."]
 unique_name_in_owner = true
@@ -51,9 +56,10 @@ anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -142.0
-offset_top = -17.5
-offset_bottom = 17.5
+offset_left = -463.0
+offset_top = -100.0
+offset_right = -23.0
+offset_bottom = 100.0
 grow_horizontal = 0
 
 [node name="Debugger" type="VBoxContainer" parent="UIRoot"]
@@ -119,6 +125,16 @@ stream = ExtResource("6_fitsq")
 volume_db = -14.715
 autoplay = true
 bus = &"Music"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.340651, 0.619642, 0, 0.876307, 0.481754, -0.707107, -0.340651, 0.619642, 14.4172, 13.6621, 13.014)
+projection = 1
+size = 44.373
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(892, 436)
+texture = ExtResource("9_xchg2")
 
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://dr6kxe4a0yx76"]
+
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="1_5egj6"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_kb8s5"]
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="2_r6w2t"]
+[ext_resource type="PackedScene" uid="uid://cpt78jg3p04bt" path="res://Data/Items/PackedItems/item_jam_mug.tscn" id="3_p1fiu"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_66yjj"]
+
+[resource]
+script = ExtResource("1_kb8s5")
+id = 55
+sell_price = 10
+name = "Jam Mug"
+description = "You don't really put jam in here do you?"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_5egj6"), ExtResource("2_r6w2t")])
+inventory_icon = SubResource("ImageTexture_66yjj")
+scene = ExtResource("3_p1fiu")
