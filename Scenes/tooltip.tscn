@@ -43,6 +43,7 @@ texture_margin_bottom = 32.0
 modulate_color = Color(0.80687, 0.80687, 0.80687, 1)
 
 [node name="Tooltip" type="CanvasLayer" groups=["Tooltips"]]
+layer = 2
 script = ExtResource("1_l3apk")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
