@@ -26,7 +26,8 @@ func _on_texture_rect_mouse_entered() -> void:
 		if (GameManager.current_game_state == GameManager.GameFlags.SELLABLE):	
 			_tooltip = item_tooltip.instantiate() as Tooltip
 			_tooltip.get_child(0).global_position = global_position - Vector2(800, 0)
-			_tooltip.position = self.global_position
+			#print(_tooltip.position)
+			#_tooltip.position = self.global_position
 			TooltipInfo.tooltips.append(_tooltip)
 			_tooltip.load_item_info(_stored_item)
 			if (_stored_item.id == 3):

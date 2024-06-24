@@ -18,7 +18,7 @@ enum States {
 	CUSTOMER_EXIT
 }
 
-var current_game_state: GameFlags = GameFlags.NORMAL
+var current_game_state: GameFlags = GameFlags.SELLABLE
 var inventorys: Array[Inventory] = []
 var day_resources: Array[DayResource] = []
 
@@ -73,3 +73,6 @@ func get_dayresource(day: int) -> DayResource:
 		return null
 	else:
 		return day_resources[day]
+		
+		
+

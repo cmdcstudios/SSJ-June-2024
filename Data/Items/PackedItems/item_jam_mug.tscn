@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpt78jg3p04bt"]
+
+[ext_resource type="PackedScene" uid="uid://c5li4xxtn8nmp" path="res://Assets/Past Asset Redux/SSJMug/MugSSJ.glb" id="1_rcvh2"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="MugSSJ" parent="." instance=ExtResource("1_rcvh2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.351442, 0)

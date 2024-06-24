@@ -21,7 +21,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="SSJ June 2024"
-run/main_scene="res://Scenes/main_game.tscn"
+run/main_scene="res://Scenes/merge_conflicts/main_game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
@@ -69,4 +69,3 @@ locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.di
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"

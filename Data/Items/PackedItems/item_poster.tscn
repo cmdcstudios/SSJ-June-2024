@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfkoah68wyueg"]
+
+[ext_resource type="Texture2D" uid="uid://bqxkc4nq86sxk" path="res://Assets/Past Asset Redux/klaus_asset_environment_wanted-poster_final.png" id="1_tp2ht"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, -0.0812066, 0)
+texture = ExtResource("1_tp2ht")

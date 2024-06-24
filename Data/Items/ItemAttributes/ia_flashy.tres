@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://b00fhcvrmsj6b"]
 
-[ext_resource type="Texture2D" uid="uid://ccfavlg64mnx3" path="res://Assets/Temp/S_Light01.png" id="1_ag4cs"]
+[ext_resource type="Texture2D" uid="uid://dorxrnjoswfj6" path="res://Assets/Attribute Icons/Pixel/icon_flashy_pxl.png" id="1_8rw1u"]
 [ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="2_vtdye"]
 
 [resource]
 script = ExtResource("2_vtdye")
 name = "Flashy"
 attribute_type = 4
-attribute_icon = ExtResource("1_ag4cs")
+attribute_icon = ExtResource("1_8rw1u")

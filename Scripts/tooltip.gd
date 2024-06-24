@@ -20,7 +20,7 @@ func load_item_info(item:Item):
 	#subviewport = %SubViewport
 	var description_label : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/ItemDescription
 	var attr_box : GridContainer = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Descriptions/GridContainer
-	var price : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/PriceLabel
+	var price : Label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Price/PriceLabel
 
 	#item_sprite.texture = item.inventory_icon
 	price.text = str(item.sell_price)

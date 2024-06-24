@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://5v0545iv21lq"]
+
+[ext_resource type="PackedScene" uid="uid://bfkoah68wyueg" path="res://Data/Items/PackedItems/item_poster.tscn" id="1_0jnre"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_0yw2g"]
+[ext_resource type="Texture2D" uid="uid://fke3txcpdv04" path="res://Assets/Item Icons/poster_icon.png" id="1_gjyp4"]
+[ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="1_rsgji"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="2_ognrd"]
+
+[resource]
+script = ExtResource("1_0yw2g")
+id = 58
+sell_price = 20
+name = "Poster"
+description = "A strange poster from a futuristic looking company."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_rsgji"), ExtResource("2_ognrd")])
+inventory_icon = ExtResource("1_gjyp4")
+scene = ExtResource("1_0jnre")

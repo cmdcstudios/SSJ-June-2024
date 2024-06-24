@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0gvs8qryqsg7"]
+
+[ext_resource type="PackedScene" uid="uid://b3tc4m60vr8sb" path="res://Assets/Past Asset Redux/ShadowCreature/ShadowCreature.glb" id="1_dqw0v"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="ShadowCreature" parent="." instance=ExtResource("1_dqw0v")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.215814, 0.241986)

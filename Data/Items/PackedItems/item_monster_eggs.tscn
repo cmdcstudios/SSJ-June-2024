@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu2r15lkd74pl"]
+
+[ext_resource type="PackedScene" uid="uid://krjae2rgb5sh" path="res://Assets/Past Asset Redux/EggJar/EggJar.glb" id="1_vsstx"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="EggJar" parent="." instance=ExtResource("1_vsstx")]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, -0.53, 0)

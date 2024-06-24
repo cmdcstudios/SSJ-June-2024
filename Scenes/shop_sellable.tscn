@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg4qvypmhyypc"]
+
+[ext_resource type="PackedScene" uid="uid://dtd852yjnr62n" path="res://Assets/Shop Base Assets/shop.glb" id="1_d7xw6"]
+
+[node name="shop_sellable" instance=ExtResource("1_d7xw6")]
