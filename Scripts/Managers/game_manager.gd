@@ -73,3 +73,6 @@ func get_dayresource(day: int) -> DayResource:
 		return null
 	else:
 		return day_resources[day]
+		
+		
+

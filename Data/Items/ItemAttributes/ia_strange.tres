@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://cq6b3v3rg4qnq"]
 
-[ext_resource type="Texture2D" uid="uid://busqr6exv88h1" path="res://Assets/Temp/I_Eye.png" id="1_7kbnd"]
 [ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="1_8lvcm"]
+[ext_resource type="Texture2D" uid="uid://by25nfc0ysfds" path="res://Assets/Attribute Icons/Pixel/icon_strange_pxl.png" id="1_b3vky"]
 
 [resource]
 script = ExtResource("1_8lvcm")
 name = "Strange"
 attribute_type = 6
-attribute_icon = ExtResource("1_7kbnd")
+attribute_icon = ExtResource("1_b3vky")

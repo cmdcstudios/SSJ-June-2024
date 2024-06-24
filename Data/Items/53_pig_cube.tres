@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=7 format=3 uid="uid://b4ffwftqs7ir0"]
 
-[ext_resource type="Texture2D" uid="uid://d3lr2uas6ax8v" path="res://addons/dialogue_manager/assets/icon.svg" id="1_gyjmq"]
+[ext_resource type="Texture2D" uid="uid://u2yas6gfmy6r" path="res://Assets/Item Icons/pigCube.png" id="1_mhc0j"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_mooo0"]
 [ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="2_x66cc"]
 [ext_resource type="Resource" uid="uid://clhdgjeitxapx" path="res://Data/Items/ItemAttributes/ia_magical.tres" id="3_uaqne"]
@@ -14,5 +14,5 @@ sell_price = 1000
 name = "Pig Cube"
 description = "A pig that is made of cube? Or a cube made of pig?"
 item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_x66cc"), ExtResource("3_uaqne"), ExtResource("4_i1n8l")])
-inventory_icon = ExtResource("1_gyjmq")
+inventory_icon = ExtResource("1_mhc0j")
 scene = ExtResource("5_nfosu")

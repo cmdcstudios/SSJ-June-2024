@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://du46cxa7fike7"]
+[gd_resource type="Resource" script_class="Item" load_steps=7 format=3 uid="uid://du46cxa7fike7"]
 
+[ext_resource type="Texture2D" uid="uid://bbufin04e3xus" path="res://Assets/Item Icons/shadowCreature.png" id="1_2yfd3"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_5cgeb"]
 [ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="1_blbb3"]
 [ext_resource type="Resource" uid="uid://cq6b3v3rg4qnq" path="res://Data/Items/ItemAttributes/ia_strange.tres" id="2_mi58j"]
@@ -13,4 +14,5 @@ sell_price = 1000
 name = "Shadow Creature"
 description = "An eel like shadow creature. Dislikes the light!"
 item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_blbb3"), ExtResource("2_mi58j"), ExtResource("3_fuaa8")])
+inventory_icon = ExtResource("1_2yfd3")
 scene = ExtResource("4_wb12f")

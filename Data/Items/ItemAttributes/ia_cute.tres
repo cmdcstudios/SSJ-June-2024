@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemAttribute" load_steps=3 format=3 uid="uid://fmuqglxm00bd"]
 
-[ext_resource type="Texture2D" uid="uid://cjrllr7bylylk" path="res://Assets/Temp/S_Holy01.png" id="1_uwkct"]
+[ext_resource type="Texture2D" uid="uid://ct36cwipi0ec2" path="res://Assets/Attribute Icons/Pixel/icon_cute_pxl.png" id="1_vhmi8"]
 [ext_resource type="Script" path="res://Data/BaseResources/ItemAttribute.gd" id="2_53gvd"]
 
 [resource]
 script = ExtResource("2_53gvd")
 name = "Cute"
 attribute_type = 3
-attribute_icon = ExtResource("1_uwkct")
+attribute_icon = ExtResource("1_vhmi8")
