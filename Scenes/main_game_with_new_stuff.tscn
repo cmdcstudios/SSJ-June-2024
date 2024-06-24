@@ -1,29 +1,29 @@
-[gd_scene load_steps=20 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=20 format=3 uid="uid://jdjywjvsvbo6"]
 
-[ext_resource type="Script" path="res://Scenes/main_game.gd" id="1_kcqlo"]
-[ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
-[ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="4_ya4oq"]
-[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="5_5k482"]
-[ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="5_ggvh3"]
-[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="5_m68xa"]
-[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="5_sxr4y"]
-[ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="6_fitsq"]
-[ext_resource type="PackedScene" uid="uid://dg4qvypmhyypc" path="res://Scenes/shop_sellable.tscn" id="9_62fba"]
-[ext_resource type="PackedScene" uid="uid://cqcje1lnfv42n" path="res://Scenes/sellable_item.tscn" id="10_4jjyw"]
-[ext_resource type="Texture2D" uid="uid://cas1woxv2cgfw" path="res://Assets/mascot.png" id="10_husom"]
-[ext_resource type="Shader" path="res://Shaders/best_grid.gdshader" id="11_ea6ut"]
-[ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="11_kqnm6"]
+[ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_6lp41"]
+[ext_resource type="Script" path="res://Scripts/Classes/Player.gd" id="2_oj4o0"]
+[ext_resource type="Script" path="res://Scripts/ui_root.gd" id="3_rg3t7"]
+[ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="4_p7lqe"]
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="5_ptw7k"]
+[ext_resource type="PackedScene" uid="uid://cgncffwyttovl" path="res://Scenes/money_dialog.tscn" id="6_3chls"]
+[ext_resource type="PackedScene" uid="uid://cdxvq8fhepfty" path="res://Scenes/inventory_dialog.tscn" id="7_os6rw"]
+[ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="8_8mugp"]
+[ext_resource type="PackedScene" uid="uid://dg4qvypmhyypc" path="res://Scenes/shop_sellable.tscn" id="9_4en0u"]
+[ext_resource type="PackedScene" uid="uid://cqcje1lnfv42n" path="res://Scenes/sellable_item.tscn" id="10_xd3x7"]
+[ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="11_uvr3c"]
+[ext_resource type="Texture2D" uid="uid://cas1woxv2cgfw" path="res://Assets/mascot.png" id="12_far2w"]
+[ext_resource type="Shader" path="res://Shaders/best_grid.gdshader" id="13_58f3i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
 [sub_resource type="Resource" id="Resource_8746v"]
-script = ExtResource("5_m68xa")
+script = ExtResource("5_ptw7k")
 customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([])
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agwhc"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("10_husom")
+albedo_texture = ExtResource("12_far2w")
 texture_filter = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_ii60h"]
@@ -32,7 +32,7 @@ size = Vector2(12, 12)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fe1t"]
 render_priority = 0
-shader = ExtResource("11_ea6ut")
+shader = ExtResource("13_58f3i")
 shader_parameter/subdivisions = 18.0
 shader_parameter/grid_width = 0.0
 shader_parameter/background_color = Color(0.0806752, 0.0554993, 0.207081, 1)
@@ -61,11 +61,11 @@ material = SubResource("ShaderMaterial_6fe1t")
 size = Vector2(100, 100)
 
 [node name="MainGame" type="Node3D"]
-script = ExtResource("1_kcqlo")
+script = ExtResource("1_6lp41")
 
 [node name="Player" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("4_ya4oq")
+script = ExtResource("2_oj4o0")
 
 [node name="MouseArea" type="Area2D" parent="Player"]
 collision_mask = 3
@@ -74,12 +74,12 @@ collision_mask = 3
 shape = SubResource("CircleShape2D_w5ke0")
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
-script = ExtResource("4_72xad")
+script = ExtResource("3_rg3t7")
 
-[node name="CustomerStager" parent="UIRoot" instance=ExtResource("5_sxr4y")]
+[node name="CustomerStager" parent="UIRoot" instance=ExtResource("4_p7lqe")]
 queue_resource = SubResource("Resource_8746v")
 
-[node name="MoneyDialog" parent="UIRoot" instance=ExtResource("5_5k482")]
+[node name="MoneyDialog" parent="UIRoot" instance=ExtResource("6_3chls")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -89,7 +89,7 @@ offset_right = 122.0
 offset_bottom = 64.0
 grow_vertical = 1
 
-[node name="InventoryDialog" parent="UIRoot" instance=ExtResource("5_ggvh3")]
+[node name="InventoryDialog" parent="UIRoot" instance=ExtResource("7_os6rw")]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 6
@@ -161,7 +161,7 @@ theme_override_font_sizes/font_size = 72
 text = "Thanks for playing!"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_fitsq")
+stream = ExtResource("8_8mugp")
 volume_db = -14.715
 autoplay = true
 bus = &"Music"
@@ -180,38 +180,38 @@ handle_input_locally = false
 size = Vector2i(640, 360)
 render_target_update_mode = 4
 
-[node name="shop_sellable" parent="SubViewportContainer/SubViewport" instance=ExtResource("9_62fba")]
+[node name="shop_sellable" parent="SubViewportContainer/SubViewport" instance=ExtResource("9_4en0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4634, -10.1607, 1.11769)
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Bunker_Mug" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Bunker_Mug" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/door_jam" index="2" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/door_jam" index="2" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Env_Floor" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Env_Floor" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/pig_001" index="0" instance=ExtResource("10_4jjyw")]
-item = ExtResource("11_kqnm6")
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/pig_001" index="0" instance=ExtResource("10_xd3x7")]
+item = ExtResource("11_uvr3c")
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/register" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/register" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top_001" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top_001" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/wall_1" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/wall_1" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Cube" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/Cube" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/window_frame" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/window_frame" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/window_frame_001" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/window_frame_001" index="0" instance=ExtResource("10_xd3x7")]
 
 [node name="table_top_002" parent="SubViewportContainer/SubViewport/shop_sellable" index="11"]
 transform = Transform3D(-0.00545869, 0, 1.69822, 0, 0.169822, 0, -3.39644, 0, -0.00272935, -7.62117, 4.82232, 7.15449)
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top_002" index="0" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/table_top_002" index="0" instance=ExtResource("10_xd3x7")]
 
-[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/cabinet" index="1" instance=ExtResource("10_4jjyw")]
+[node name="SellableItem" parent="SubViewportContainer/SubViewport/shop_sellable/cabinet" index="1" instance=ExtResource("10_xd3x7")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
 transform = Transform3D(0.438149, -0.74339, 0.505368, 0.486973, 0.668858, 0.561682, -0.755568, 1.35106e-07, 0.65507, 0, 0, 0)
