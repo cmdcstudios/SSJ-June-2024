@@ -93,7 +93,8 @@ func ready_3d_items():
 					child.reparent(area_3d)
 
 func _on_credits_button_pressed():
-	animation_player.play("fade_out_credits")
+	var credits : Node = load("res://Scenes/credits.tscn").instantiate()
+	pause_menu.add_child(credits)
 
 func _on_main_menu_button_pressed():
 	animation_player.play("fade_out_title")
