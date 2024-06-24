@@ -35,8 +35,6 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta):
 	var mousepos = get_viewport().get_mouse_position() / sub_viewport_container.stretch_shrink
-	#print(mousepos)
-
 
 func on_item_pickup(item:Item):
 	print("Item added: " + item.name)
@@ -45,9 +43,7 @@ func on_item_pickup(item:Item):
 func check_day(inventory: Inventory):
 	pass
 
-
 func _on_input_event(camera, event, position, normal, shape_idx):
 	print(event)
 	if event is InputEventMouseButton and event.pressed and event.button.index == 1:
 		print("PIG")
-	pass # Replace with function body.

@@ -5,6 +5,7 @@ extends Node3D
 @onready var inventory_dialogue : InventoryDialog = %InventoryDialog
 @onready var pause_menu = $"Pause Menu/Darken Layer"
 @onready var shop_sellable = $SubViewportContainer/SubViewport/shop_sellable
+@onready var animation_player = $"Pause Menu/AnimationPlayer"
 
 @onready var bgm = $BGM
 const TRACK_1 = preload("res://Assets/Audio/SSJ2024-Music-SFX/Music/track1.ogg")
@@ -18,21 +19,26 @@ var day_index : int = -1
 var current_day : DayResource
 
 func _on_start_day():
+	animation_player.play("fade_in")
 	day_index += 1
 	current_day = GameManager.get_dayresource(day_index)
+	GameManager.current_game_state = GameManager.GameFlags.NORMAL
 	if current_day == null:
 		print("That was the final day!")
 		UIRoot.show_game_over()
 	else:
 		print("Today is day: " + str(current_day.ID))
+		if current_day.inventory.everything_must_go:
+			GameManager.current_game_state = GameManager.GameFlags.SELLABLE
+			GameManager.emg = true
 		inventory_dialogue.open_inv_dialog(current_day.inventory)
 		customer_stager.begin_new_queue(current_day.customer_queue)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalManager.start_day.connect(_on_start_day)
+	SignalManager.start_day.emit()
 	ready_3d_items()
-
 
 func _on_bgm_next_pressed():
 	if bgm_index < 2:
@@ -74,6 +80,9 @@ func _on_pause_button_pressed():
 
 func _on_close_menu_button_pressed():
 	pause_menu.visible = false
+
+# Create collision areas for each 3D object in the scene. A good compromise
+# to not have create each one by hand.
 func ready_3d_items():
 	for item_3d in shop_sellable.get_children():
 		if (item_3d is MeshInstance3D and item_3d.has_node("SellableItem")):
@@ -82,3 +91,9 @@ func ready_3d_items():
 			for child in item_3d.get_children():
 				if (child is StaticBody3D):
 					child.reparent(area_3d)
+
+func _on_credits_button_pressed():
+	animation_player.play("fade_out_credits")
+
+func _on_main_menu_button_pressed():
+	animation_player.play("fade_out_title")

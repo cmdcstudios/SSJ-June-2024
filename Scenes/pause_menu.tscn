@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://din5m6sbnntgk"]
+[gd_scene load_steps=5 format=3 uid="uid://din5m6sbnntgk"]
 
 [ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="1_idexx"]
 [ext_resource type="Texture2D" uid="uid://d4cvnt0oxwt80" path="res://Assets/Temp/flatDark16.png" id="2_e6e4a"]
+[ext_resource type="PackedScene" uid="uid://cmjwf42nlscac" path="res://Scenes/fade_in_out.tscn" id="3_4me3r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lpe0"]
 bg_color = Color(0.818504, 0.487585, 0.560532, 1)
@@ -144,3 +145,5 @@ offset_bottom = 66.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 32
 text = "⮌"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("3_4me3r")]

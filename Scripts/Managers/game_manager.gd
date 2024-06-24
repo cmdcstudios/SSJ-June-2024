@@ -18,9 +18,10 @@ enum States {
 	CUSTOMER_EXIT
 }
 
-var current_game_state: GameFlags = GameFlags.SELLABLE
+var current_game_state: GameFlags = GameFlags.NORMAL
 var inventorys: Array[Inventory] = []
 var day_resources: Array[DayResource] = []
+var emg: bool = false
 
 func _ready() -> void:
 	dir_contents("res://Data/Inventory")

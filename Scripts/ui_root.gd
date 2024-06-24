@@ -30,7 +30,8 @@ func _on_debug_off_pressed():
 
 func _on_start_day_button_pressed():
 	SignalManager.start_day.emit()
-	remove_child(start_button)
+	start_button.hide()
+	#remove_child(start_button)
 
 func  _on_end_day():
 	add_child(start_button)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://bl6rti2nkdook"]
 
-[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="1_1ldhy"]
-[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/mushrooms.tres" id="2_g0ww5"]
+[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="1_1ldhy"]
+[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/4_mushrooms.tres" id="2_g0ww5"]
 [ext_resource type="Resource" uid="uid://vtvq8v8lcfhx" path="res://Data/Items/Test Items/item_cool.tres" id="3_c82h4"]
 [ext_resource type="Resource" uid="uid://bfl8p52kthrcv" path="res://Data/Items/Test Items/item_cute.tres" id="4_iidc0"]
 [ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="5_o48gk"]
@@ -12,3 +12,4 @@
 [resource]
 script = ExtResource("8_fahna")
 _contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_1ldhy"), ExtResource("2_g0ww5"), ExtResource("3_c82h4"), ExtResource("4_iidc0"), ExtResource("5_o48gk"), ExtResource("6_gx8ik"), ExtResource("7_xslpu")])
+everything_must_go = true

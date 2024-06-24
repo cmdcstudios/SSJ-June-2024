@@ -46,6 +46,10 @@ func new_customer() -> void:
 		spawn_point.add_child(current_customer)
 		DialogueManager.show_dialogue_balloon(customer_data.dialogue, "start")
 		SignalManager.customer_entered.emit(customer_data)
+		if GameManager.emg == true:
+			GameManager.current_game_state = GameManager.GameFlags.SELLABLE
+		else:
+			GameManager.current_game_state = GameManager.GameFlags.NORMAL
 	else:
 		# TO-DO pass message to DialogueManager & trigger EOD
 		SignalManager.end_day.emit()
@@ -88,6 +92,7 @@ func evaluate_item():
 	
 	# If matches, customer is happy
 	if approved:
+		GameManager.current_game_state = GameManager.GameFlags.CUSTOMER_EXIT
 		await DialogueManager.show_dialogue_balloon(current_customer.customer_dialogue, "happy").tree_exited
 		await get_tree().create_timer(timer_length).timeout
 		free_customer()
@@ -95,6 +100,7 @@ func evaluate_item():
 		new_customer()
 		
 	else:
+		GameManager.current_game_state = GameManager.GameFlags.CUSTOMER_EXIT
 		await DialogueManager.show_dialogue_balloon(current_customer.customer_dialogue, "unhappy").tree_exited
 		await get_tree().create_timer(timer_length).timeout
 		free_customer()

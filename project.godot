@@ -20,16 +20,22 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 
 [application]
 
-config/name="SSJ June 2024"
-run/main_scene="res://Scenes/main_game.tscn"
+config/name="Everything Must Go!"
+config/description="WE MEAN EVERYTHING"
+run/main_scene="res://Scenes/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.259998, 0.00595636, 0.0715154, 1)
+boot_splash/image="res://Assets/game_icon.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://Assets/game_icon.png"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 SignalManager="*res://Scripts/Managers/signal_manager.gd"
 GameManager="*res://Scripts/Managers/game_manager.gd"
+SceneManager="*res://Scripts/Managers/scene_manager.gd"
 
 [display]
 

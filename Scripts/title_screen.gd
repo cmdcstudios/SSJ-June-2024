@@ -20,7 +20,6 @@ func _on_exit_pressed():
 func _on_animation_player_animation_finished(anim_name):
 	match anim_name:
 		"fade_out_game_start":
-			#get_tree().change_scene_to_packed(CREDITS)
 			get_tree().change_scene_to_packed(MAIN_GAME)
 		"fade_out_credits":
 			get_tree().change_scene_to_packed(CREDITS)

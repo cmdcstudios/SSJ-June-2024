@@ -19,11 +19,12 @@ texture = ExtResource("3_6ckwg")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = -256.0
-offset_bottom = -256.0
+offset_left = -213.31
+offset_top = -256.139
+offset_right = -213.31
+offset_bottom = -256.139
 grow_horizontal = 2
+scale = Vector2(0.75, 0.75)
 
 [node name="NameLabel" type="Label" parent="CustomerSprite"]
 visible = false

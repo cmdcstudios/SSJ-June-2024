@@ -18,6 +18,8 @@ func _ready():
 	for n in item_preference:
 		var new_preference :=  TextureRect.new()
 		new_preference.texture = n.attribute_icon
+		new_preference.scale = Vector2(0.1, 0.1)
+		preference_box.scale = Vector2(0.5, 0.5)
 		preference_box.add_child(new_preference)
 
 

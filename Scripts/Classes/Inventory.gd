@@ -2,6 +2,7 @@ class_name Inventory
 extends Resource
 
 @export var _contents: Array[Item] = []
+@export var everything_must_go: bool = false
 
 static var _inv_slots: int = 16
 ## Adds an item to the inventory.
