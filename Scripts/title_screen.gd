@@ -1,6 +1,6 @@
 extends Control
 #const MAIN_GAME = preload("res://Scenes/main_game.tscn")
-const MAIN_GAME = preload("res://Scenes/main_game_with_new_stuff.tscn")
+const MAIN_GAME = preload("res://Scenes/main_game.tscn")
 const CREDITS = preload("res://Scenes/debug_room.tscn") # <- Placeholder
 @onready var animation_player = $AnimationPlayer
 
