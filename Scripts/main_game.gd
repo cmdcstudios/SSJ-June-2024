@@ -37,7 +37,8 @@ func _on_start_day():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalManager.start_day.connect(_on_start_day)
-	SignalManager.start_day.emit()
+	#SignalManager.start_day.emit()
+	#remove_child(UIRoot.get_node("StartDayButton"))
 	ready_3d_items()
 
 func _on_bgm_next_pressed():
