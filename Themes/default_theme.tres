@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://p5svvfmiui2v"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://p5svvfmiui2v"]
 
 [ext_resource type="FontFile" uid="uid://b3a7bnxkcgewp" path="res://Themes/Toriko.ttf" id="1_36omk"]
 [ext_resource type="Texture2D" uid="uid://cye3rqi56leit" path="res://Themes/tool_tip_panel4.png" id="1_hegcf"]
 [ext_resource type="Texture2D" uid="uid://dy3wjb7w0fl2y" path="res://Assets/kenney_cursor-pack/PNG/Basic/Default/cross_small.png" id="2_21rt6"]
 [ext_resource type="Texture2D" uid="uid://dswy17407op6t" path="res://Assets/kenney_cursor-pack/PNG/Basic/Default/cross_large.png" id="2_yknk6"]
+[ext_resource type="Texture2D" uid="uid://c56oy3mckrgcy" path="res://Assets/kenney_fantasy-ui-borders/PNG/Double/Transparent center/panel-transparent-center-002.png" id="5_0wdip"]
 [ext_resource type="Texture2D" uid="uid://dd2oh7r0xb4ei" path="res://Assets/kenney_fantasy-ui-borders/PNG/Default/Panel/panel-001.png" id="5_g3w2k"]
 [ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="6_xo6fs"]
 
@@ -20,6 +21,14 @@ modulate_color = Color(0.501961, 0.501961, 0.501961, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wg27x"]
 texture = ExtResource("1_hegcf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1g01"]
+texture = ExtResource("5_0wdip")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+modulate_color = Color(0.183828, 0.0947163, 1.20327e-08, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0ue6"]
 content_margin_left = 10.0
@@ -43,4 +52,6 @@ Button/styles/pressed = SubResource("StyleBoxTexture_lgugj")
 Fonts/fonts/normal = ExtResource("1_36omk")
 ItemSlot/base_type = &"PanelContainer"
 ItemSlot/styles/panel = SubResource("StyleBoxTexture_wg27x")
+MoneyDialog/base_type = &"PanelContainer"
+MoneyDialog/styles/panel = SubResource("StyleBoxTexture_m1g01")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_m0ue6")

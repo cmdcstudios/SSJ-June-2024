@@ -1,13 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg4qvypmhyypc"]
+[gd_scene load_steps=2 format=3 uid="uid://dg4qvypmhyypc"]
 
 [ext_resource type="PackedScene" uid="uid://dtd852yjnr62n" path="res://Assets/Shop Base Assets/shop.glb" id="1_d7xw6"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wq43l"]
-size = Vector3(2.5, 2.5, 2.5)
-
-[node name="shop" instance=ExtResource("1_d7xw6")]
-
-[node name="Area3D" type="Area3D" parent="pig_001" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pig_001/Area3D" index="0"]
-shape = SubResource("BoxShape3D_wq43l")
+[node name="shop_sellable" instance=ExtResource("1_d7xw6")]

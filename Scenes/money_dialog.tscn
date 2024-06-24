@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgncffwyttovl"]
+[gd_scene load_steps=4 format=3 uid="uid://cgncffwyttovl"]
 
+[ext_resource type="Theme" uid="uid://p5svvfmiui2v" path="res://Themes/default_theme.tres" id="1_287vy"]
 [ext_resource type="Script" path="res://Scripts/money_dialog.gd" id="1_ag3lt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfagl"]
 
 [node name="MoneyDialog" type="PanelContainer"]
 anchors_preset = 15
@@ -8,8 +11,46 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_287vy")
+theme_type_variation = &"MoneyDialog"
 script = ExtResource("1_ag3lt")
 
-[node name="MoneyLabel" type="Button" parent="."]
+[node name="MoneyLabel" type="TextureButton" parent="."]
 layout_mode = 2
-text = "0 G"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MoneyLabel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -20.0
+offset_right = 76.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Money" type="Label" parent="MoneyLabel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_wfagl")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="G" type="Label" parent="MoneyLabel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.772549, 0.737255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 14
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1

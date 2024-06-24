@@ -50,6 +50,7 @@ script = ExtResource("1_l3apk")
 custom_minimum_size = Vector2(600, 0)
 offset_right = 600.0
 offset_bottom = 492.0
+mouse_filter = 2
 theme = ExtResource("2_3g0vw")
 theme_override_styles/panel = SubResource("StyleBoxTexture_5o4ki")
 
@@ -164,12 +165,34 @@ transform = Transform3D(1, 0, 0, 0, 0.897366, 0.441287, 0, -0.441287, 0.897366, 
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="PriceLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+[node name="Price" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
+layout_mode = 2
+
+[node name="PriceLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Price"]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
-size_flags_vertical = 6
-text = "<price>"
+size_flags_horizontal = 10
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "0
+"
 horizontal_alignment = 1
+
+[node name="G" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals/Price"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.5
+theme_override_colors/font_color = Color(0.772549, 0.737255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 14
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SellButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Visuals"]
 custom_minimum_size = Vector2(30.13, 56.62)
