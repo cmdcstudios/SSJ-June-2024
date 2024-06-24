@@ -6,6 +6,7 @@ func _on_animation_player_animation_finished(anim_name):
 		"fade_out_game_start":
 			get_tree().change_scene_to_packed(SceneManager.MAIN_GAME)
 		"fade_out_credits":
+			# caused game to crash
 			get_tree().change_scene_to_packed(SceneManager.CREDITS)
 		"fade_out_title":
 			get_tree().change_scene_to_packed(SceneManager.TITLE)

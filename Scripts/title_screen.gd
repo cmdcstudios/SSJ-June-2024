@@ -12,7 +12,8 @@ func _on_play_pressed():
 	animation_player.play("fade_out_game_start")
 
 func _on_credits_pressed():
-	animation_player.play("fade_out_credits")
+	var credits : Node = load("res://Scenes/credits.tscn").instantiate()
+	add_child(credits)
 
 func _on_exit_pressed():
 	get_tree().quit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=23 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="11_kqnm6"]
 [ext_resource type="PackedScene" uid="uid://din5m6sbnntgk" path="res://Scenes/pause_menu.tscn" id="14_h8j2v"]
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="15_f7f7p"]
+[ext_resource type="StyleBox" path="res://styles/panel_style.tres" id="16_eqi3o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
@@ -242,6 +243,9 @@ mesh = SubResource("QuadMesh_y6b1n")
 
 [node name="Pause Menu" parent="." instance=ExtResource("14_h8j2v")]
 script = ExtResource("15_f7f7p")
+
+[node name="Pause Panel" parent="Pause Menu/Darken Layer" index="0"]
+theme_override_styles/panel = ExtResource("16_eqi3o")
 
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]
