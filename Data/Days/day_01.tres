@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DayResource" load_steps=4 format=3 uid="uid://dsi51bgi4edhq"]
+
+[ext_resource type="Resource" uid="uid://6h441fws8fjg" path="res://Data/Customer Queues/CQ_Day01.tres" id="1_1hoss"]
+[ext_resource type="Resource" uid="uid://iyvvkgsn1njy" path="res://Data/Inventory/inv_day_0.tres" id="2_imeml"]
+[ext_resource type="Script" path="res://Data/BaseResources/DayResource.gd" id="3_fvybp"]
+
+[resource]
+script = ExtResource("3_fvybp")
+ID = 0
+customer_queue = ExtResource("1_1hoss")
+inventory = ExtResource("2_imeml")

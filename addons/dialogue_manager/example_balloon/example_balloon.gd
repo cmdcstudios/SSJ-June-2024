@@ -11,6 +11,7 @@ extends CanvasLayer
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 @onready var portrait = $Portrait
+@onready var talk_sound = $TalkSound
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -44,11 +45,11 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
-		var portrait_path: String = "res://Characters/%s.svg" % dialogue_line.character.to_lower()
-		if FileAccess.file_exists(portrait_path):
-			portrait.texture = load(portrait_path)
-		else:
-			portrait.texture = null
+		#var portrait_path: String = "res://Characters/%s.svg" % dialogue_line.character.to_lower()
+		#if ResourceLoader.exists(portrait_path):
+		#	portrait.texture = load(portrait_path)
+		#else:
+		#	portrait.texture = null
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
@@ -157,3 +158,9 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_dialogue_label_spoke(letter, letter_index, speed):
+	if not letter in [".", "?", " "]:
+		talk_sound.pitch_scale = randf_range(0.8, 1.1)
+		talk_sound.play()

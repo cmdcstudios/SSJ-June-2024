@@ -1,15 +1,17 @@
 ~ start
 
-Customer: [[Hi|Hello|Howdy]], this is some dialogue.
+Plain Jane: [next=auto][[Hi|Hello|Hello again|Hey|Good afternoon]], [[I'm looking for something specific but I don't want to spend too much...|I loved what I got last time but I'm not sure if you still have any..?|any chance you got something kinda [wave]plain[/wave] Jane?]]
 
 => END
 
 ~ happy
 
-Customer: That's just what I wanted!
+Plain Jane: [next=auto][[What a great deal! I'm gonna tell my friends about this place!|Oh, that's a steal! You always have the best deals!|Thanks! It's just what I was looking for!|You're gonna get five stars from me buddy, thanks!]]
 
 => END
 
 ~ unhappy
 
-Customer: Is this really all you have...? -_-'
+Plain Jane: [next=auto][[Ummm... well it's better than nothing I guess...|That's all you have, huh? Well, I guess I'll take it anyway...|Did you look in the back too? Well I hope you get restocked soon. I guess I'll just take what I can get...|Is there something less than zero stars..?]]
+
+=> END

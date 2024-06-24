@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://bdhigjrgy3lu6"]
 
-[ext_resource type="Resource" uid="uid://bbo1q7qr3i82t" path="res://Dialogue/plain_customer.dialogue" id="1_kx1tx"]
-[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://ItemAttributes/ia_cute.tres" id="1_p1m32"]
+[ext_resource type="Resource" uid="uid://58ymuyx623y7" path="res://Dialogue/cute_customer.dialogue" id="1_ck2dd"]
+[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://Data/Items/ItemAttributes/ia_cute.tres" id="1_p1m32"]
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="2_r5mn3"]
 [ext_resource type="Texture2D" uid="uid://bbxwv8tm8hnea" path="res://Characters/Sum2024_Chara8.png" id="4_d5ag1"]
 
@@ -11,4 +11,4 @@ name = "Cutie Pie"
 greeting = "Aw, they're adorable..."
 sprite = ExtResource("4_d5ag1")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_p1m32")])
-dialogue = ExtResource("1_kx1tx")
+dialogue = ExtResource("1_ck2dd")

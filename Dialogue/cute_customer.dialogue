@@ -1,0 +1,17 @@
+~ start
+
+Cutie Pie: [next=auto][[Hiii|Heeeey|Hola chica]], [[So you know me, I just [shake]need[/shake] it to look [wave]sooo adorable[/wave], do you have anything?|just make it something super [wave]kawaii[/wave] please!|so last time I was here you had something [wave]suuuper cute[/wave], do you have any more like that?]]
+
+=> END
+
+~ happy
+
+Cutie Pie: [next=auto][[Ohh. Emm. Gee. I [shake]LOVE[/shake] it!|It's [shake]ADORABLE![/shake] So are you hehe, thanks so much!|STOP! That is [wave]sooo freaking cute![/wave] I LOVE IT!!!]]
+
+=> END
+
+~ unhappy
+
+Cutie Pie: [next=auto][[Ehhh, if that's all you have... I suppose...|Did you look in the back too? Well I guess I'll just take what I can get...|Ugh, is there something less than zero stars..?]]
+
+=> END
