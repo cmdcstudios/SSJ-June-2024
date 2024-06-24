@@ -46,6 +46,10 @@ window/stretch/aspect="expand"
 mouse_cursor/custom_image="res://Assets/kenney_cursor-pack/PNG/Basic/Default/hand_small_point.png"
 mouse_cursor/custom_image_hotspot=Vector2(11, 10)
 
+[editor]
+
+export/convert_text_resources_to_binary=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
