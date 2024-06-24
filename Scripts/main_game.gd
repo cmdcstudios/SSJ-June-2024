@@ -93,6 +93,10 @@ func ready_3d_items():
 					child.reparent(area_3d)
 
 func _on_credits_button_pressed():
+	# caused game to crash with null reference to subviewport layer
+	# instantiate and add_child method used as workaround
+	# also avoids scene changer flicker bug
+	#animation_player.play("fade_out_credits")
 	var credits : Node = load("res://Scenes/credits.tscn").instantiate()
 	pause_menu.add_child(credits)
 
