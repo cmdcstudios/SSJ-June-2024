@@ -1,5 +1,6 @@
 extends Control
 #const MAIN_GAME = preload("res://Scenes/main_game.tscn")
+const MAIN_GAME = preload("res://Scenes/main_game_with_new_stuff.tscn")
 const CREDITS = preload("res://Scenes/debug_room.tscn") # <- Placeholder
 @onready var animation_player = $AnimationPlayer
 
@@ -19,7 +20,7 @@ func _on_exit_pressed():
 func _on_animation_player_animation_finished(anim_name):
 	match anim_name:
 		"fade_out_game_start":
-			get_tree().change_scene_to_packed(CREDITS)
-			#get_tree().change_scene_to_packed(MAIN_GAME)
+			#get_tree().change_scene_to_packed(CREDITS)
+			get_tree().change_scene_to_packed(MAIN_GAME)
 		"fade_out_credits":
 			get_tree().change_scene_to_packed(CREDITS)
