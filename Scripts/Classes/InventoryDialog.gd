@@ -34,6 +34,7 @@ func _on_slot_sold(inventory:Inventory) -> void:
 	print(inventory.get_slot_number_amount())
 	pass
 #
+@warning_ignore("unused_parameter")
 func _on_item_sold(money_amount: int, item_sold: Item, inventory:Inventory):
 	pass
 	#inventory.remove_item(item_sold)

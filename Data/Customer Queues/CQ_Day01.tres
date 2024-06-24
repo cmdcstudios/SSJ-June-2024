@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CustomerQueue" load_steps=8 format=3 uid="uid://6h441fws8fjg"]
+[gd_resource type="Resource" script_class="CustomerQueue" load_steps=8 format=3 uid="uid://bcw7msnragvg"]
 
 [ext_resource type="Resource" uid="uid://bpuw8vw6d1kd7" path="res://Data/Customers/CustomerPlain.tres" id="1_sxuw5"]
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="2_er1w2"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=21 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cas1woxv2cgfw" path="res://Assets/mascot.png" id="10_husom"]
 [ext_resource type="Shader" path="res://Shaders/best_grid.gdshader" id="11_ea6ut"]
 [ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="11_kqnm6"]
+[ext_resource type="PackedScene" path="res://Scenes/pause_menu.tscn" id="14_h8j2v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w5ke0"]
 
@@ -160,7 +161,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 72
 text = "Thanks for playing!"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_fitsq")
 volume_db = -14.715
 autoplay = true
@@ -236,9 +237,13 @@ skeleton = NodePath("../../../..")
 transform = Transform3D(0.554204, -0.271883, 0.786726, -0.0903245, 0.919927, 0.381544, -0.827466, -0.282514, 0.485269, -37.0726, 0, -40.115)
 mesh = SubResource("QuadMesh_y6b1n")
 
+[node name="Pause Menu" parent="." instance=ExtResource("14_h8j2v")]
+
 [connection signal="pressed" from="UIRoot/Debugger/ExitButton" to="UIRoot" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOn" to="UIRoot" method="_on_debug_on_pressed"]
 [connection signal="pressed" from="UIRoot/Debugger/DebuggerButtons/DebugOff" to="UIRoot" method="_on_debug_off_pressed"]
 [connection signal="pressed" from="UIRoot/StartDayButton" to="UIRoot" method="_on_start_day_button_pressed"]
+[connection signal="pressed" from="Pause Menu/Music Toggle" to="." method="_on_music_toggle_pressed"]
 
 [editable path="SubViewportContainer/SubViewport/shop_sellable"]
+[editable path="Pause Menu"]
