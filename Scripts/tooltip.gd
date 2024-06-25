@@ -4,6 +4,7 @@ extends CanvasLayer
 signal tooltip_changed
 
 const ITEM_ATTRIBUTE_SLOT = preload("res://Scenes/item_attribute_slot.tscn")
+const BSOD_ENDING = preload("res://Scenes/bsod_ending.tscn")
 
 # Tooltip Elements
 var stored_item: Item = null

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CustomerQueue" load_steps=3 format=3 uid="uid://c3n616k6rit2k"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="1_oasfk"]
+[ext_resource type="Resource" uid="uid://diwp2qrv5a1ng" path="res://Data/Customers/CustomerCool.tres" id="1_xjl33"]
+
+[resource]
+script = ExtResource("1_oasfk")
+customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([ExtResource("1_xjl33")])

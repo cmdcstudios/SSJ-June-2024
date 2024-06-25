@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://cbeq2ocvlnb80" path="res://Data/Customer Queues/CQ_Day00.tres" id="1_8mlla"]
 [ext_resource type="Script" path="res://Data/BaseResources/DayResource.gd" id="1_10wib"]
-[ext_resource type="Resource" uid="uid://iyvvkgsn1njy" path="res://Data/Inventory/inv_day_0.tres" id="2_pdiq5"]
+[ext_resource type="Resource" uid="uid://iyvvkgsn1njy" path="res://Data/Inventory/hidden/inv_day_0.tres" id="2_pdiq5"]
 
 [resource]
 script = ExtResource("1_10wib")

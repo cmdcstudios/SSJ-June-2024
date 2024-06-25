@@ -5,13 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://fh16j4rejke5" path="res://Characters/Sum2024_Chara4.png" id="3_6ckwg"]
 
 [node name="Customer" type="Node2D"]
+scale = Vector2(0.65, 0.65)
 script = ExtResource("1_epmwu")
 sprite_texture = ExtResource("2_tkrtt")
 customer_name = "CUSTOMER"
 customer_greeting = "HELLO I AM CUSTOMER"
 
 [node name="CustomerSprite" type="Sprite2D" parent="."]
-position = Vector2(460, 620)
+z_index = 1
+position = Vector2(560, 920)
 scale = Vector2(1.87398, 1.87398)
 texture = ExtResource("3_6ckwg")
 

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dwpjc0rksi1nh"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_4phjm"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_iwrjn"]
+
+[resource]
+script = ExtResource("1_4phjm")
+id = 59
+sell_price = 10000
+name = "Money Register"
+description = "A nice window to look out."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])
+inventory_icon = SubResource("ImageTexture_iwrjn")

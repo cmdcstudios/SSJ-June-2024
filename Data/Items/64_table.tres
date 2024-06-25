@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dxe1aepvgvcj7"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_4liqg"]
+
+[resource]
+script = ExtResource("1_4liqg")
+id = 0
+sell_price = 0
+name = ""
+description = "A solid looking table."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])

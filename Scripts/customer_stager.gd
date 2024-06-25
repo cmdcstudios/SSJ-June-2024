@@ -110,7 +110,8 @@ func evaluate_item():
 func _on_item_sold(price : int, item : Item):
 	#print(item.name)
 	item_sold = item
-	evaluate_item()
+	if item.id != 70:
+		evaluate_item()
 
 
 # ----------- DEBUGGER UI ----------- 

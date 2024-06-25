@@ -1,15 +1,18 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://bl6rti2nkdook"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=12 format=3 uid="uid://bl6rti2nkdook"]
 
-[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="1_1ldhy"]
-[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/4_mushrooms.tres" id="2_g0ww5"]
-[ext_resource type="Resource" uid="uid://vtvq8v8lcfhx" path="res://Data/Items/Test Items/item_cool.tres" id="3_c82h4"]
-[ext_resource type="Resource" uid="uid://bfl8p52kthrcv" path="res://Data/Items/Test Items/item_cute.tres" id="4_iidc0"]
-[ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="5_o48gk"]
-[ext_resource type="Resource" uid="uid://bs0ypwdtix61d" path="res://Data/Items/Test Items/item_plain.tres" id="6_gx8ik"]
-[ext_resource type="Resource" uid="uid://b3xex7sntgoc2" path="res://Data/Items/Test Items/item_solid.tres" id="7_xslpu"]
-[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="8_fahna"]
+[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/4_mushrooms.tres" id="1_e574f"]
+[ext_resource type="Resource" uid="uid://ck8yi0tiqjv84" path="res://Data/Items/2_pizza.tres" id="2_ik8w6"]
+[ext_resource type="Resource" uid="uid://bssjrbtw4iptt" path="res://Data/Items/5_riceball.tres" id="3_4rpov"]
+[ext_resource type="Resource" uid="uid://dhq1c2q52ht6r" path="res://Data/Items/6_donut.tres" id="4_o5j7a"]
+[ext_resource type="Resource" uid="uid://ctf543ps3q4lt" path="res://Data/Items/20_old_takeout.tres" id="5_a6ubj"]
+[ext_resource type="Resource" uid="uid://ca62f08n02vdk" path="res://Data/Items/56_huli_bobble.tres" id="6_4r3xe"]
+[ext_resource type="Resource" uid="uid://7r70uchpfp78" path="res://Data/Items/54_monster_eggs.tres" id="7_wh0uj"]
+[ext_resource type="Resource" uid="uid://5v0545iv21lq" path="res://Data/Items/58_poster.tres" id="8_aqy7m"]
+[ext_resource type="Resource" uid="uid://du46cxa7fike7" path="res://Data/Items/57_shadow_creature.tres" id="9_wlc8e"]
+[ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="10_mh73x"]
+[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="11_v61bg"]
 
 [resource]
-script = ExtResource("8_fahna")
-_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_1ldhy"), ExtResource("2_g0ww5"), ExtResource("3_c82h4"), ExtResource("4_iidc0"), ExtResource("5_o48gk"), ExtResource("6_gx8ik"), ExtResource("7_xslpu")])
-everything_must_go = true
+script = ExtResource("11_v61bg")
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_e574f"), ExtResource("2_ik8w6"), ExtResource("3_4rpov"), ExtResource("4_o5j7a"), ExtResource("5_a6ubj"), ExtResource("6_4r3xe"), ExtResource("7_wh0uj"), ExtResource("8_aqy7m"), ExtResource("9_wlc8e"), ExtResource("10_mh73x")])
+everything_must_go = false

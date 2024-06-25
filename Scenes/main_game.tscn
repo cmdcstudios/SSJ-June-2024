@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://18fcv8pdliix"]
+[gd_scene load_steps=26 format=3 uid="uid://18fcv8pdliix"]
 
 [ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_kcqlo"]
 [ext_resource type="Script" path="res://Scripts/ui_root.gd" id="4_72xad"]
@@ -8,7 +8,9 @@
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="5_m68xa"]
 [ext_resource type="PackedScene" uid="uid://c4wadefwf0p55" path="res://Scenes/customer_stager.tscn" id="5_sxr4y"]
 [ext_resource type="AudioStream" uid="uid://bgif2ylu378c6" path="res://Assets/Audio/SSJ2024-Music-SFX/Music/track2.ogg" id="6_fitsq"]
+[ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="8_lw0tg"]
 [ext_resource type="PackedScene" uid="uid://dg4qvypmhyypc" path="res://Scenes/shop_sellable.tscn" id="9_62fba"]
+[ext_resource type="Texture2D" uid="uid://c88bm5qt7ns16" path="res://Assets/kenney_fantasy-ui-borders/PNG/Default/Panel/panel-020.png" id="9_r6fwr"]
 [ext_resource type="PackedScene" uid="uid://cqcje1lnfv42n" path="res://Scenes/sellable_item.tscn" id="10_4jjyw"]
 [ext_resource type="Texture2D" uid="uid://cas1woxv2cgfw" path="res://Assets/mascot.png" id="10_husom"]
 [ext_resource type="Shader" path="res://Shaders/best_grid.gdshader" id="11_ea6ut"]
@@ -22,6 +24,15 @@
 [sub_resource type="Resource" id="Resource_8746v"]
 script = ExtResource("5_m68xa")
 customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([])
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8704j"]
+texture = ExtResource("9_r6fwr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agwhc"]
 transparency = 1
@@ -140,13 +151,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -144.5
+offset_top = -38.5
+offset_right = 144.5
+offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_lw0tg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_8704j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8704j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8704j")
 text = "START DAY"
 
 [node name="GameOverLabel" type="Label" parent="UIRoot"]

@@ -1,14 +1,11 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://dj2b2yjktiuu4"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://dj2b2yjktiuu4"]
 
-[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/godot_icon_item.tres" id="1_awq1n"]
-[ext_resource type="Resource" uid="uid://bwj6ubclujolb" path="res://Data/Items/mushrooms.tres" id="2_ecmym"]
-[ext_resource type="Resource" uid="uid://vtvq8v8lcfhx" path="res://Data/Items/Test Items/item_cool.tres" id="3_6xhy1"]
-[ext_resource type="Resource" uid="uid://bfl8p52kthrcv" path="res://Data/Items/Test Items/item_cute.tres" id="4_qs2yh"]
-[ext_resource type="Resource" uid="uid://bm4a3pwqjkgtr" path="res://Data/Items/Test Items/item_flashy.tres" id="5_xofs4"]
-[ext_resource type="Resource" uid="uid://bs0ypwdtix61d" path="res://Data/Items/Test Items/item_plain.tres" id="6_ffp6o"]
-[ext_resource type="Resource" uid="uid://b3xex7sntgoc2" path="res://Data/Items/Test Items/item_solid.tres" id="7_q0ub4"]
+[ext_resource type="Resource" uid="uid://d2bevhnx0egs1" path="res://Data/Items/0_godot_icon.tres" id="1_awq1n"]
+[ext_resource type="Resource" uid="uid://btu15koyl1g4e" path="res://Data/Items/71_tooltip_itself.tres" id="2_cxtns"]
+[ext_resource type="Resource" uid="uid://bj1q3uqybgfdr" path="res://Data/Items/70_the_game.tres" id="3_b2phr"]
 [ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="8_h82tt"]
 
 [resource]
 script = ExtResource("8_h82tt")
-_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_awq1n"), ExtResource("2_ecmym"), ExtResource("3_6xhy1"), ExtResource("4_qs2yh"), ExtResource("5_xofs4"), ExtResource("6_ffp6o"), ExtResource("7_q0ub4")])
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("1_awq1n"), ExtResource("2_cxtns"), ExtResource("3_b2phr")])
+everything_must_go = true

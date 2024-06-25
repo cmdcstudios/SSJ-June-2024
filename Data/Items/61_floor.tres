@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://qi3p8al32oio"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_uwmda"]
+
+[resource]
+script = ExtResource("1_uwmda")
+id = 0
+sell_price = 0
+name = ""
+description = "The ground beneath your feet. Its not really nailed down is it?"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])

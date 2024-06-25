@@ -9,5 +9,5 @@ script = ExtResource("1_qcdc8")
 id = 59
 sell_price = 2000
 name = "Money Register"
-description = "An old timey register. It has a lot of money in it. You had better hold on to that!"
+description = "Has a lot of money in it. You had better hold on to that."
 item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_5bv7m"), ExtResource("2_8fsqd")])

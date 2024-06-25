@@ -14,7 +14,7 @@ const TRACK_3 = preload("res://Assets/Audio/SSJ2024-Music-SFX/Music/track3.ogg")
 var bgmTracks : Array = [TRACK_1, TRACK_2, TRACK_3]
 var bgm_index : int = 1
 
-
+const BSOD_ENDING = preload("res://Scenes/bsod_ending.tscn")
 var day_index : int = -1
 var current_day : DayResource
 
@@ -37,6 +37,7 @@ func _on_start_day():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalManager.start_day.connect(_on_start_day)
+	SignalManager.item_sold.connect(_on_item_sold)
 	#SignalManager.start_day.emit()
 	#remove_child(UIRoot.get_node("StartDayButton"))
 	ready_3d_items()
@@ -49,7 +50,6 @@ func _on_bgm_next_pressed():
 	bgm.stream = bgmTracks[bgm_index]
 	bgm.play()
 
-
 func _on_bgm_prev_pressed():
 	if bgm_index > 0:
 		bgm_index -= 1
@@ -57,7 +57,6 @@ func _on_bgm_prev_pressed():
 		bgm_index = bgmTracks.size() - 1
 	bgm.stream = bgmTracks[bgm_index]
 	bgm.play()
-
 
 func _on_music_toggle_pressed():
 	if bgm.playing == true:
@@ -103,3 +102,8 @@ func _on_credits_button_pressed():
 
 func _on_main_menu_button_pressed():
 	animation_player.play("fade_out_title")
+
+func _on_item_sold(money_amount: int, item_sold: Item):
+	if item_sold.id == 70:
+		GameManager.current_game_state == GameManager.GameFlags.ENDGAME
+		get_tree().change_scene_to_packed(BSOD_ENDING)

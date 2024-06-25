@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Item" load_steps=13 format=3 uid="uid://btu15koyl1g4e"]
+
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="1_eg3cf"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_nlgx5"]
+[ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="2_juaas"]
+[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://Data/Items/ItemAttributes/ia_cute.tres" id="3_k4aad"]
+[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://Data/Items/ItemAttributes/ia_flashy.tres" id="4_bbgvt"]
+[ext_resource type="Resource" uid="uid://clhdgjeitxapx" path="res://Data/Items/ItemAttributes/ia_magical.tres" id="5_s5fcq"]
+[ext_resource type="Resource" uid="uid://fyk0tb8xldxu" path="res://Data/Items/ItemAttributes/ia_nasty.tres" id="6_uvcn5"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="7_2kg0n"]
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="8_xrlwr"]
+[ext_resource type="Resource" uid="uid://cq6b3v3rg4qnq" path="res://Data/Items/ItemAttributes/ia_strange.tres" id="9_vgmv2"]
+[ext_resource type="PackedScene" uid="uid://cinj7mymv0gg7" path="res://Data/Items/PackedItems/item_tooltip_itself.tscn" id="10_pjnbj"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_qhf3i"]
+
+[resource]
+script = ExtResource("1_nlgx5")
+id = 70
+sell_price = 99999999
+name = "The Tooltip"
+description = "?????????"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_eg3cf"), ExtResource("2_juaas"), ExtResource("3_k4aad"), ExtResource("4_bbgvt"), ExtResource("5_s5fcq"), ExtResource("6_uvcn5"), ExtResource("7_2kg0n"), ExtResource("8_xrlwr"), ExtResource("9_vgmv2")])
+inventory_icon = SubResource("ImageTexture_qhf3i")
+scene = ExtResource("10_pjnbj")
