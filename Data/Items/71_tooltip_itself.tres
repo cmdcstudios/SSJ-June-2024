@@ -16,7 +16,7 @@
 
 [resource]
 script = ExtResource("1_nlgx5")
-id = 70
+id = 71
 sell_price = 99999999
 name = "The Tooltip"
 description = "?????????"

@@ -1,0 +1,17 @@
+~ start
+
+Magical Customer: [next=auto][[Greetings, wise vendor|Hail, keeper of wonders|Salutations, merchant of marvels]], [[I seek an item of unparalleled [wave]enchantment[/wave], do you possess such a thing?|Do you have anything that exudes [wave]magical brilliance[/wave] beyond compare?|I desire an artifact of utmost [wave]mystical power[/wave], can you provide it?]]
+
+=> END
+
+~ happy
+
+Magical Customer: [next=auto][[Ah, splendid! This is exactly what I envisioned.|Truly, you are a master of your craft! My gratitude knows no bounds.|Marvelous! This will serve me well on my journey.|You never fail to provide the extraordinary, my thanks to you!]]
+
+=> END
+
+~ unhappy
+
+Magical Customer: [next=auto][[Alas, it seems even the best can falter...|This does not meet the level of arcane excellence I had hoped for...|I must confess, this item lacks the magic I require...|Pray, what is your policy on returns, should I need to exchange this item?]]
+
+=> END

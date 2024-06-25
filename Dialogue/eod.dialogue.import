@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://w17o7womhlux"
+path="res://.godot/imported/eod.dialogue-c4328a561de015f52d8061995f0b810b.tres"
+
+[deps]
+
+source_file="res://Dialogue/eod.dialogue"
+dest_files=["res://.godot/imported/eod.dialogue-c4328a561de015f52d8061995f0b810b.tres"]
+
+[params]
+
+defaults=true

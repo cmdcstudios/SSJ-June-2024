@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dwpjc0rksi1nh"]
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://dwpjc0rksi1nh"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_4phjm"]
+[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://Data/Items/ItemAttributes/ia_flashy.tres" id="1_cooki"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="2_3a8fi"]
+[ext_resource type="PackedScene" uid="uid://boajw8bnvu4o1" path="res://Data/Items/PackedItems/item_window.tscn" id="3_bthhh"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_iwrjn"]
 
@@ -10,5 +13,6 @@ id = 59
 sell_price = 10000
 name = "Money Register"
 description = "A nice window to look out."
-item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_cooki"), ExtResource("2_3a8fi")])
 inventory_icon = SubResource("ImageTexture_iwrjn")
+scene = ExtResource("3_bthhh")

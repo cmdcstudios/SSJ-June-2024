@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://iyvvkgsn1njy"]
+
+[ext_resource type="Script" path="res://Scripts/Classes/Inventory.gd" id="1_wpvtq"]
+[ext_resource type="Resource" uid="uid://ca62f08n02vdk" path="res://Data/Items/56_huli_bobble.tres" id="6_p00dm"]
+[ext_resource type="Resource" uid="uid://7r70uchpfp78" path="res://Data/Items/54_monster_eggs.tres" id="7_qhwmm"]
+[ext_resource type="Resource" uid="uid://dhq1c2q52ht6r" path="res://Data/Items/6_donut.tres" id="10_2yth5"]
+[ext_resource type="Resource" uid="uid://b4ffwftqs7ir0" path="res://Data/Items/53_pig_cube.tres" id="11_37a2l"]
+[ext_resource type="Resource" uid="uid://ctf543ps3q4lt" path="res://Data/Items/20_old_takeout.tres" id="11_qhfsp"]
+
+[resource]
+script = ExtResource("1_wpvtq")
+_contents = Array[Resource("res://Data/BaseResources/Item.gd")]([ExtResource("10_2yth5"), ExtResource("11_qhfsp"), ExtResource("6_p00dm"), ExtResource("7_qhwmm"), ExtResource("11_37a2l")])
+everything_must_go = false

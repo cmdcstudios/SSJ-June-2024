@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckbfajhh7820l"
-path="res://.godot/imported/Twinkle_Mascot.glb-73dc5658e530b2c14422463b154d12de.scn"
+uid="uid://deqw7t4ocrdbs"
+path="res://.godot/imported/Twinkle_Mascot_Fix.glb-18c0c5a713f9870c2a9d71f28913a7ea.scn"
 
 [deps]
 
-source_file="res://Assets/Main Character/Twinkle_Mascot.glb"
-dest_files=["res://.godot/imported/Twinkle_Mascot.glb-73dc5658e530b2c14422463b154d12de.scn"]
+source_file="res://Assets/Main Character/Twinkle_Mascot_Fix.glb"
+dest_files=["res://.godot/imported/Twinkle_Mascot_Fix.glb-18c0c5a713f9870c2a9d71f28913a7ea.scn"]
 
 [params]
 

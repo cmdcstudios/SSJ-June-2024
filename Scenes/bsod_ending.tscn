@@ -1,31 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://brebp16dhpseq"]
+[gd_scene load_steps=6 format=3 uid="uid://brebp16dhpseq"]
 
 [ext_resource type="Texture2D" uid="uid://khi5es3ealyv" path="res://Assets/funny_bsod.png" id="1_8e5wy"]
 [ext_resource type="Script" path="res://Scenes/bsod_ending.gd" id="1_giyv8"]
+[ext_resource type="Resource" uid="uid://c78vnrjgb5fjq" path="res://Data/Items/Test Items/72_bsod.tres" id="2_y01m4"]
+[ext_resource type="Resource" uid="uid://btu15koyl1g4e" path="res://Data/Items/71_tooltip_itself.tres" id="3_w4kd6"]
+[ext_resource type="PackedScene" uid="uid://cc6yft8cbmu7r" path="res://Scenes/tooltip.tscn" id="3_wnrds"]
 
-[node name="BSOD_ENDING" type="CanvasLayer"]
-script = ExtResource("1_giyv8")
-
-[node name="BG" type="ColorRect" parent="."]
-visible = false
+[node name="BSOD_ENDING" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+script = ExtResource("1_giyv8")
+item1 = ExtResource("2_y01m4")
+item2 = ExtResource("3_w4kd6")
+item_tooltip = ExtResource("3_wnrds")
+
+[node name="TheToolTip" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="BSOD" type="TextureButton" parent="."]
-visible = false
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture_normal = ExtResource("1_8e5wy")
 stretch_mode = 0
 
-[node name="TheToolTip" type="TextureButton" parent="."]
-offset_left = 624.0
-offset_top = 335.0
-offset_right = 664.0
-offset_bottom = 375.0
-
 [connection signal="pressed" from="TheToolTip" to="." method="_on_the_tool_tip_pressed"]
+[connection signal="pressed" from="BSOD" to="." method="_on_bsod_pressed"]

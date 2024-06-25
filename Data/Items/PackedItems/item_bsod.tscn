@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccunqpb0jjcp6"]
+
+[ext_resource type="Texture2D" uid="uid://khi5es3ealyv" path="res://Assets/funny_bsod.png" id="1_ycyd2"]
+
+[node name="DummyScene" type="Node3D"]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.0769231, 0, 0, 0, 0.0769231, 0, 0, 0, 0.0769231, 0, 0, 0)
+texture = ExtResource("1_ycyd2")

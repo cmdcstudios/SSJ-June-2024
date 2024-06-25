@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://wc06gayorgn0"]
 
-[ext_resource type="PackedScene" uid="uid://b56n4fbu3bire" path="res://Assets/Past Asset Redux/HuliBobble/HuliBobble.glb" id="1_mua16"]
+[ext_resource type="PackedScene" uid="uid://cli21lue3uq5l" path="res://Assets/Shop Base Assets/register.glb" id="1_c4mlk"]
 
 [node name="DummyScene" type="Node3D"]
 
-[node name="HuliBobble" parent="." instance=ExtResource("1_mua16")]
-transform = Transform3D(2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 0, -0.564, 0)
+[node name="register2" parent="." instance=ExtResource("1_c4mlk")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)

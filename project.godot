@@ -66,15 +66,20 @@ import/fbx/enabled=false
 
 [input]
 
-inventory_button_click={
+advance_dialogue={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(844, 32),"global_position":Vector2(852, 112),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/tutorial_dialogue.dialogue", "res://Dialogue/plain_customer.dialogue", "res://Dialogue/indifferent_customer.dialogue", "res://Dialogue/solid_customer.dialogue", "res://Dialogue/flashy_customer.dialogue", "res://Dialogue/cute_customer.dialogue", "res://Dialogue/cool_customer.dialogue", "res://Dialogue/ending_dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/tutorial_dialogue.dialogue", "res://Dialogue/plain_customer.dialogue", "res://Dialogue/indifferent_customer.dialogue", "res://Dialogue/solid_customer.dialogue", "res://Dialogue/flashy_customer.dialogue", "res://Dialogue/cute_customer.dialogue", "res://Dialogue/cool_customer.dialogue", "res://Dialogue/ending_dialogue.dialogue", "res://Dialogue/eod.dialogue", "res://Dialogue/magical_dialogue.dialogue")
+
+[layer_names]
+
+3d_render/layer_1="Environment"
 
 [rendering]
 

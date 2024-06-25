@@ -52,6 +52,7 @@ func new_customer() -> void:
 			GameManager.current_game_state = GameManager.GameFlags.NORMAL
 	else:
 		# TO-DO pass message to DialogueManager & trigger EOD
+		#await DialogueManager.show_dialogue_balloon(GameManager.get_dayresource(0).dialogue, "start").tree_exited
 		SignalManager.end_day.emit()
 
 

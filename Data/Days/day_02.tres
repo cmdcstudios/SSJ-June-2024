@@ -2,10 +2,10 @@
 
 [ext_resource type="Resource" uid="uid://c3n616k6rit2k" path="res://Data/Customer Queues/CQ_Day02.tres" id="1_1ckcr"]
 [ext_resource type="Script" path="res://Data/BaseResources/DayResource.gd" id="1_sclkh"]
-[ext_resource type="Resource" uid="uid://bl6rti2nkdook" path="res://Data/Inventory/inv_day_1.tres" id="2_r4jrj"]
+[ext_resource type="Resource" uid="uid://dj2b2yjktiuu4" path="res://Data/Inventory/inv_day_2.tres" id="2_lpnk5"]
 
 [resource]
 script = ExtResource("1_sclkh")
 ID = 0
 customer_queue = ExtResource("1_1ckcr")
-inventory = ExtResource("2_r4jrj")
+inventory = ExtResource("2_lpnk5")

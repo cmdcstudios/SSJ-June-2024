@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="CustomerResource" load_steps=4 format=3 uid="uid://d4hkf3o5gmnee"]
+[gd_resource type="Resource" script_class="CustomerResource" load_steps=5 format=3 uid="uid://d4hkf3o5gmnee"]
 
 [ext_resource type="Script" path="res://Data/BaseResources/CustomerResource.gd" id="1_btfbe"]
+[ext_resource type="Resource" uid="uid://yl7qqymtmgkg" path="res://Dialogue/magical_dialogue.dialogue" id="1_vx62p"]
 [ext_resource type="Resource" uid="uid://clhdgjeitxapx" path="res://Data/Items/ItemAttributes/ia_magical.tres" id="1_wkqq2"]
 [ext_resource type="Texture2D" uid="uid://cr742t7pt8fkt" path="res://Characters/Sum2024_Chara6.png" id="3_t7oql"]
 
 [resource]
 script = ExtResource("1_btfbe")
-name = "Magical Mary"
+name = "Faye Tality"
 greeting = "Something mystical about them..."
 sprite = ExtResource("3_t7oql")
 item_preference = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_wkqq2")])
+dialogue = ExtResource("1_vx62p")

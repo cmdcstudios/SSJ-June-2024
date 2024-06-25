@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dc18qflqe7pfu"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dc18qflqe7pfu"]
 
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="1_avsev"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_houw4"]
+[ext_resource type="PackedScene" uid="uid://dyxo1ux70g1w2" path="res://Data/Items/PackedItems/item_wall.tscn" id="2_brg14"]
 
 [resource]
 script = ExtResource("1_houw4")
-id = 0
-sell_price = 0
-name = ""
+id = 63
+sell_price = 10000
+name = "Wall"
 description = "These walls look paper thin, its almost if you could pass right through them."
-item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([])
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_avsev")])
+scene = ExtResource("2_brg14")
