@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://dxe1aepvgvcj7"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_4liqg"]
+[ext_resource type="Resource" uid="uid://dxb00as5oiokd" path="res://Data/Items/ItemAttributes/ia_solid.tres" id="1_cqqcb"]
+[ext_resource type="Resource" uid="uid://bcxudyyuna1ok" path="res://Data/Items/ItemAttributes/ia_plain.tres" id="2_ei6xb"]
+[ext_resource type="PackedScene" uid="uid://deos1tjjou3sq" path="res://Data/Items/PackedItems/item_table.tscn" id="3_3yx80"]
+
+[resource]
+script = ExtResource("1_4liqg")
+id = 64
+sell_price = 567
+name = "Table"
+description = "A solid looking table."
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_cqqcb"), ExtResource("2_ei6xb")])
+scene = ExtResource("3_3yx80")

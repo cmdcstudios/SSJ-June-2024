@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyxo1ux70g1w2"]
+
+[ext_resource type="PackedScene" uid="uid://clejkga3vys3g" path="res://Assets/Shop Base Assets/wall_1.glb" id="1_u8wpq"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="wall_12" parent="." instance=ExtResource("1_u8wpq")]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CustomerQueue" load_steps=9 format=3 uid="uid://c3n616k6rit2k"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/CustomerQueue.gd" id="1_oasfk"]
+[ext_resource type="Resource" path="res://Data/Customers/CustomerCool.tres" id="1_xjl33"]
+[ext_resource type="Resource" uid="uid://cqnqrqniajigr" path="res://Data/Customers/CustomerFlashy.tres" id="2_7s5w7"]
+[ext_resource type="Resource" uid="uid://bpuw8vw6d1kd7" path="res://Data/Customers/CustomerPlain.tres" id="3_tno0m"]
+[ext_resource type="Resource" uid="uid://c2k7k3j41vjd1" path="res://Data/Customers/CustomerSolid.tres" id="4_6f1ug"]
+[ext_resource type="Resource" uid="uid://bdhigjrgy3lu6" path="res://Data/Customers/CustomerCute.tres" id="5_6e0ma"]
+[ext_resource type="Resource" uid="uid://d2dg4tnaejbgw" path="res://Data/Customers/CustomerIndifferent.tres" id="6_ar7u7"]
+[ext_resource type="Resource" uid="uid://d4hkf3o5gmnee" path="res://Data/Customers/CustomerMagical.tres" id="7_32gbx"]
+
+[resource]
+script = ExtResource("1_oasfk")
+customer_queue = Array[Resource("res://Data/BaseResources/CustomerResource.gd")]([ExtResource("1_xjl33"), ExtResource("2_7s5w7"), ExtResource("1_xjl33"), ExtResource("3_tno0m"), ExtResource("4_6f1ug"), ExtResource("1_xjl33"), ExtResource("5_6e0ma"), ExtResource("6_ar7u7"), ExtResource("7_32gbx")])

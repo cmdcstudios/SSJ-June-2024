@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://43ogg6a4f2o1"]
 
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_1v6ae"]
-[ext_resource type="Texture2D" uid="uid://bt3u778rs7660" path="res://Assets/Temp/IMG_1114.jpg" id="1_htc10"]
 [ext_resource type="Texture2D" uid="uid://dqlvql1kniohq" path="res://Assets/EMG_logo_pixel-0.25x.png" id="1_pn4fu"]
+[ext_resource type="Texture2D" uid="uid://b14hrywll0666" path="res://Assets/everything-must-go-splash-no-title.png" id="2_aix4y"]
 [ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="2_i2nu6"]
 [ext_resource type="PackedScene" uid="uid://cmjwf42nlscac" path="res://Scenes/fade_in_out.tscn" id="5_2c3ii"]
 
@@ -16,11 +16,12 @@ grow_vertical = 2
 script = ExtResource("1_1v6ae")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 2
 layout_mode = 0
-offset_right = 1920.0
+offset_left = -340.0
+offset_right = 2109.0
 offset_bottom = 1080.0
-texture = ExtResource("1_htc10")
-expand_mode = 1
+texture = ExtResource("2_aix4y")
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 0

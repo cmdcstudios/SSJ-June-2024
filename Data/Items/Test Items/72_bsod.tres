@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://c78vnrjgb5fjq"]
+
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_fu37i"]
+[ext_resource type="Resource" uid="uid://b00fhcvrmsj6b" path="res://Data/Items/ItemAttributes/ia_flashy.tres" id="1_p86tb"]
+[ext_resource type="Resource" uid="uid://fyk0tb8xldxu" path="res://Data/Items/ItemAttributes/ia_nasty.tres" id="2_d6uw6"]
+[ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="3_2emuc"]
+[ext_resource type="PackedScene" uid="uid://ccunqpb0jjcp6" path="res://Data/Items/PackedItems/item_bsod.tscn" id="4_t6hsq"]
+
+[resource]
+script = ExtResource("1_fu37i")
+id = 72
+sell_price = 10000
+name = "Blue Screen of Death"
+description = "Well you sold the game already. Might as well sell this too!"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_p86tb"), ExtResource("2_d6uw6"), ExtResource("3_2emuc")])
+scene = ExtResource("4_t6hsq")

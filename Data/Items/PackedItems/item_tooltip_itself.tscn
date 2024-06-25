@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cinj7mymv0gg7"]
+
+[ext_resource type="Texture2D" uid="uid://br4nfna308abu" path="res://Assets/tooltip_item.png" id="1_8lyq1"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0)
+texture = ExtResource("1_8lyq1")

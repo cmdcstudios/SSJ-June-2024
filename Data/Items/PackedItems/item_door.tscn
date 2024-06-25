@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx3ubq2gncesr"]
+
+[ext_resource type="PackedScene" uid="uid://cru0aeo2mh5ae" path="res://Assets/Shop Base Assets/door.glb" id="1_sb1mp"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="door2" parent="." instance=ExtResource("1_sb1mp")]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)

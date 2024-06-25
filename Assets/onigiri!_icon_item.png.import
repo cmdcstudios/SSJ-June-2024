@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://can8on18lraau"
-path.s3tc="res://.godot/imported/onigiri!_icon.png-fa67b46a93cce9653be574238663ff7e.s3tc.ctex"
+uid="uid://b7h3jjvm7th3v"
+path.s3tc="res://.godot/imported/onigiri!_icon_item.png-db0d7bbbcb17e062e01013d924585fff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/onigiri!_icon.png"
-dest_files=["res://.godot/imported/onigiri!_icon.png-fa67b46a93cce9653be574238663ff7e.s3tc.ctex"]
+source_file="res://Assets/onigiri!_icon_item.png"
+dest_files=["res://.godot/imported/onigiri!_icon_item.png-db0d7bbbcb17e062e01013d924585fff.s3tc.ctex"]
 
 [params]
 

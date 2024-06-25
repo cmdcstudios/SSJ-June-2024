@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="1_224bx"]
 [ext_resource type="Script" path="res://Scripts/credits.gd" id="1_nkmh7"]
-[ext_resource type="StyleBox" path="res://styles/panel_style.tres" id="3_d1xcv"]
+[ext_resource type="StyleBox" uid="uid://xs3ovqvlqvxc" path="res://styles/panel_style.tres" id="3_d1xcv"]
 [ext_resource type="FontFile" uid="uid://8vrj02mpgm8t" path="res://VCR_OSD_MONO_1.001.ttf" id="4_6tnw6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2dmx"]
@@ -378,13 +378,40 @@ text = "CREDITS
 "
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
-theme_override_constants/line_spacing = 16
-theme_override_fonts/font = ExtResource("4_6tnw6")
-theme_override_font_sizes/font_size = 32
-text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non efficitur augue. Aliquam id commodo ex. Donec nec ligula fringilla, tempor purus at, ultrices turpis. Maecenas semper enim orci. Phasellus molestie metus in est volutpat, id faucibus eros feugiat. Mauris nec purus eget odio lobortis aliquam ut luctus mauris. Fusce egestas scelerisque lacinia. Ut at orci id tortor placerat posuere. Cras at tristique lorem. Vivamus feugiat aliquam odio, hendrerit convallis ipsum dignissim a. Integer cursus molestie suscipit. Pellentesque placerat, diam vitae semper lacinia, lorem nulla dignissim metus, ac consectetur odio ligula nec turpis. Duis id interdum augue. Sed in aliquam massa. Integer vitae orci justo."
+theme_override_fonts/normal_font = ExtResource("4_6tnw6")
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = " [center][b]Game Director[/b]  
+Katya Farinsky  
+
+[b]Gameplay Programming[/b]
+Ahria Nicholas - Inventory  
+Joel Clapp - Customers  
+Dylan Steen - Dialogue
+  
+[b]2D Illustrators[/b]
+Elyse Mollahan - Customer Portraits  
+Mary Nguyen - Splash Art  
+
+[b]3D Modelers[/b]
+Alex Garno - Shop Environment  
+Courtney Minden - Main Character
+  
+[b]Logo Design[/b]
+Ransom Reed  
+
+[b]OST/Sound Effects[/b]  
+Ransom Reed  
+
+[b]**With Special Thanks to Our Studio Artists**[/b]  
+Logan Coen - Main Character Concept  
+Dillon Gohl - Shadow Monster Model  
+Evan Astrue - Bobble Huli Model  
+Arlo Ptolemy - Game Jam Mug Model  
+Kathy Klaus - Mysterious Creature Poster[/center]"
 autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]

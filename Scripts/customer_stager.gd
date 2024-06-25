@@ -52,6 +52,7 @@ func new_customer() -> void:
 			GameManager.current_game_state = GameManager.GameFlags.NORMAL
 	else:
 		# TO-DO pass message to DialogueManager & trigger EOD
+		#await DialogueManager.show_dialogue_balloon(GameManager.get_dayresource(0).dialogue, "start").tree_exited
 		SignalManager.end_day.emit()
 
 
@@ -110,7 +111,8 @@ func evaluate_item():
 func _on_item_sold(price : int, item : Item):
 	#print(item.name)
 	item_sold = item
-	evaluate_item()
+	if item.id != 70:
+		evaluate_item()
 
 
 # ----------- DEBUGGER UI ----------- 

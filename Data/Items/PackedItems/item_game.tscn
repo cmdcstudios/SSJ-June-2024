@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://8qns76m3wjj6"]
+
+[ext_resource type="Texture2D" uid="uid://can8on18lraau" path="res://Assets/onigiri!_icon.png" id="1_ielvc"]
+
+[node name="DummyScene" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0)
+texture = ExtResource("1_ielvc")

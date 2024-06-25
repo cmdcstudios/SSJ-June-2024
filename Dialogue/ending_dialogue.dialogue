@@ -1,0 +1,13 @@
+~ sold_the_game
+
+Boss: [next=advance_dialogue]Well you've gone and done it haven't you. You just gone and sold my shop and my game.
+Boss: Well are you happy with your self? Well are you?
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one.
+- Start again => sold_the_game
+- End the conversation => END
+Nathan: For more information see the online documentation.
+
+=> END

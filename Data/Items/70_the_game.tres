@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=8 format=3 uid="uid://bj1q3uqybgfdr"]
+
+[ext_resource type="Texture2D" uid="uid://b7h3jjvm7th3v" path="res://Assets/onigiri!_icon_item.png" id="1_o4upg"]
+[ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_wxu0g"]
+[ext_resource type="Resource" uid="uid://fmuqglxm00bd" path="res://Data/Items/ItemAttributes/ia_cute.tres" id="2_e11uf"]
+[ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="3_pf0o0"]
+[ext_resource type="Resource" uid="uid://clhdgjeitxapx" path="res://Data/Items/ItemAttributes/ia_magical.tres" id="4_8ein5"]
+[ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="5_7aw6b"]
+[ext_resource type="PackedScene" uid="uid://8qns76m3wjj6" path="res://Data/Items/PackedItems/item_game.tscn" id="6_ggdxw"]
+
+[resource]
+script = ExtResource("1_wxu0g")
+id = 70
+sell_price = 100000
+name = "The Game"
+description = "Is that even possible? What would happen if you actually sold this?"
+item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("2_e11uf"), ExtResource("3_pf0o0"), ExtResource("4_8ein5"), ExtResource("5_7aw6b")])
+inventory_icon = ExtResource("1_o4upg")
+scene = ExtResource("6_ggdxw")
