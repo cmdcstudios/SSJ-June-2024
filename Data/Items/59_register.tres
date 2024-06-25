@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://nmtas3sxyk8m"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://nmtas3sxyk8m"]
 
 [ext_resource type="Resource" uid="uid://c1ho4e7hsucgx" path="res://Data/Items/ItemAttributes/ia_cool.tres" id="1_5bv7m"]
 [ext_resource type="Script" path="res://Data/BaseResources/Item.gd" id="1_qcdc8"]
 [ext_resource type="Resource" uid="uid://csiiyp8uwxaq6" path="res://Data/Items/ItemAttributes/ia_curious.tres" id="2_8fsqd"]
+[ext_resource type="PackedScene" uid="uid://wc06gayorgn0" path="res://Data/Items/PackedItems/item_register.tscn" id="3_ipxdt"]
 
 [resource]
 script = ExtResource("1_qcdc8")
@@ -11,3 +12,4 @@ sell_price = 2000
 name = "Money Register"
 description = "Has a lot of money in it. You had better hold on to that."
 item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_5bv7m"), ExtResource("2_8fsqd")])
+scene = ExtResource("3_ipxdt")

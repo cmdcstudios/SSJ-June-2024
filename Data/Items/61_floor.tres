@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_uwmda")
-id = 0
+id = 61
 sell_price = 10000
 name = "Floor"
 description = "The ground beneath your feet. Its not really nailed down is it?"

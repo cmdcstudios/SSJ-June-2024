@@ -11,7 +11,7 @@
 script = ExtResource("1_4phjm")
 id = 59
 sell_price = 10000
-name = "Money Register"
+name = "Window"
 description = "A nice window to look out."
 item_attributes = Array[Resource("res://Data/BaseResources/ItemAttribute.gd")]([ExtResource("1_cooki"), ExtResource("2_3a8fi")])
 inventory_icon = SubResource("ImageTexture_iwrjn")
